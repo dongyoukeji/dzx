@@ -73,6 +73,7 @@ class OderController extends BaseController {
      * 支付
      */
     public function pay_for(){
+
         $list = $this->_get_price();
         $data = array(
             'username'=>I('post.suser'),
@@ -151,8 +152,10 @@ class OderController extends BaseController {
         $price = I('post.price');
         $id= I('post.id');
 
+        $box = $this->_get_box();
         $city = explode('-',$_POST['city']);
         $ac = $this->get_price($city[0]);
+        $box_price = $this->_get_box_price();
 
         $total = 0;
         $kg = 0;
@@ -182,11 +185,22 @@ class OderController extends BaseController {
                         'price'=>$p,
                     );
                 }else{
+                    $ff='';
+                    $boxid ='';
+                    foreach ($box as $j => $jj) {
+                        $temp = explode('_',$jj);
+                        $boxid .= ",".$jj;
+                        if($temp[1]==$v[$i]){
+                            $ff .= ",".$jj;
+                        }
+                        
+                    }
                     $update[$k][$i]=array(
                         'id'=>$v[$i],
                         'sum'=>$n,
                         'c'=>0,
                         'price'=>$p,
+                        'box'=>substr($ff,1)
                     );
                 }
                 //类型_ID_数量_价格
@@ -195,15 +209,63 @@ class OderController extends BaseController {
 
             }
         }
+        
         $list['details']=substr($details,1);
         $list['mas']=$this->_get_mass_price($ac['price'],$ac['overweight'],$kg);
         $list['productid']=substr($productid,1);
+        $list['boxid']=substr($boxid,1);
         $list['muns']=$sums;
         $list['total']=$total;
-        $list['totals']=$total+$list['mas'];
+        $list['box_price']=$box_price;
+        $list['totals']=$total+$list['mas']+$box_price;
         $list['update']=$update;
+        p($list);die;
         return $list;
     }
+    /**
+     * [_get_box_price 获取包装价格]
+     * @return [type] [description]
+     */
+    private function _get_box_price(){
+        $box =I('post.box_num');
+        $isbox = I('post.box_num_selected');
+
+        $_result=0;
+        foreach ($isbox as $k => $v) {
+
+            if($v[0]==1){
+                
+                $tmp = explode('_', $k);
+                $pi = M('article')->field('id,price,tprice')->find($tmp[2]);
+                $sums = $box[$k][0];
+                $_result += $pi['tprice']*$sums;
+            }
+        }
+
+        return $_result;
+    }
+
+    /**
+     * [_get_box 获取包装盒信息]
+     * @return [type] [description]
+     */
+    private function _get_box(){
+        $box =I('post.box_num');
+        $isbox = I('post.box_num_selected');
+
+        $_result=array();
+        foreach ($isbox as $k => $v) {
+            if($v[0]==1){
+                $tmp = explode('_', $k);
+                $pi = M('article')->field('id,price,tprice')->find($tmp[2]);
+                $sums = $box[$k][0];
+                //类型_产品ID_盒子id_数量_价格
+                $_result[] = $k."_".$box[$k][0]."_".$pi['tprice']*$sums;
+            }
+        }
+        return $_result;
+    }
+
 
     /**
      * 获取地区价格
@@ -236,7 +298,10 @@ class OderController extends BaseController {
      * @return mixed
      */
     private function _get_mass_price($p,$p1,$h){
-        if($h<1){
+        if($h==0){
+            return 0;
+        }
+        if($h==1){
             return $p;
         }else{
             return $p+($h-1)*$p1;

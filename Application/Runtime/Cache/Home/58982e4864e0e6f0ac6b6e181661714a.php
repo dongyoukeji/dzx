@@ -25,13 +25,14 @@
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <img src="/Public/Home/images/logo1.fw.png" class="top_img img1">
+        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
         <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
         <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
         <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
+        <a href="<?php echo U('index/index');?>" class="back_home">首页</a>
     </div>
 </div>
 <div class="main">
@@ -42,11 +43,11 @@
                 <i class="hot_sell2">HOT SELL</i>
             </div>
             <div class="top_left_nav hairycrab">
-                <a href="<?php echo U('redwine/index');?>" class="wine_bg orange_col" <?php if(empty($hg)): ?>id="winecheck"<?php endif; ?>>全部</a>
-                <a href="<?php echo U('redwine/index?&to=199');?>" class="wine_bg orange_col" <?php if(($hg) == "1"): ?>id="winecheck"<?php endif; ?> >0-199</a>
-                <a href="<?php echo U('redwine/index?from=200&to=399');?>" class="wine_bg orange_col" <?php if(($hg) == "2"): ?>id="winecheck"<?php endif; ?>>200-399</a>
-                <a href="<?php echo U('redwine/index?from=400&to=599');?>" class="wine_bg orange_col" <?php if(($hg) == "4"): ?>id="winecheck"<?php endif; ?>>400-599</a>
-                <a href="<?php echo U('redwine/index?from=600');?>" class="wine_bg orange_col" <?php if(($hg) == "6"): ?>id="winecheck"<?php endif; ?>>600+</a>
+                <a href="<?php echo U('redwine/index');?>" class="gray_bg3 gray_col2" <?php if(empty($hg)): ?>id="allcheck"<?php endif; ?>>全部</a>
+                <a href="<?php echo U('redwine/index?&to=199');?>" class="gray_bg3 gray_col2" <?php if(($hg) == "1"): ?>id="allcheck"<?php endif; ?> >0-199</a>
+                <a href="<?php echo U('redwine/index?from=200&to=399');?>" class="gray_bg3 gray_col2" <?php if(($hg) == "2"): ?>id="allcheck"<?php endif; ?>>200-399</a>
+                <a href="<?php echo U('redwine/index?from=400&to=599');?>" class="gray_bg3 gray_col2" <?php if(($hg) == "4"): ?>id="allcheck"<?php endif; ?>>400-599</a>
+                <a href="<?php echo U('redwine/index?from=600');?>" class="gray_bg3 gray_col2" <?php if(($hg) == "6"): ?>id="allcheck"<?php endif; ?>>600+</a>
             </div>
             <div class="shopping_area" style="float: right;">
                 <a href="<?php echo U('Coupon/index');?>" class="shopping_check blue_bg">

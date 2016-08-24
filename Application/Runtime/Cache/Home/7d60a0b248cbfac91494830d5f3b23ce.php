@@ -25,13 +25,14 @@
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <img src="/Public/Home/images/logo1.fw.png" class="top_img img1">
+        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
         <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
         <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
         <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
+        <a href="<?php echo U('index/index');?>" class="back_home">首页</a>
     </div>
 </div>
 <div class="main">
@@ -42,11 +43,7 @@
                 <i class="gift_token2">GIFT COUPONS</i>
             </div>
             <div class="top_left_nav hairycrab">
-                <a href="<?php echo U('Coupon/index');?>" class="coupon_bg blue_col gray_col" <?php if(empty($_GET['cid'])): ?>id="couponcheck"<?php endif; ?> >全部</a>
-                <a href="<?php echo U('Coupon/index?cid=3');?>" class="coupon_bg blue_col gray_col" <?php if(($_GET['cid']) == "3"): ?>id="couponcheck"<?php endif; ?>>小众蟹券</a>
-                <a href="<?php echo U('Coupon/index?cid=4');?>" class="coupon_bg blue_col gray_col" <?php if(($_GET['cid']) == "4"): ?>id="couponcheck"<?php endif; ?>>大众蟹券</a>
-                <a href="<?php echo U('Coupon/index?cid=2');?>" class="coupon_bg blue_col gray_col" <?php if(($_GET['cid']) == "2"): ?>id="couponcheck"<?php endif; ?>>外贸蟹券</a>
-                <a href="<?php echo U('Coupon/index?cid=1');?>" class="coupon_bg blue_col gray_col" <?php if(($_GET['cid']) == "1"): ?>id="couponcheck"<?php endif; ?>>移民蟹券</a>
+                <a href="<?php echo U('Coupon/index');?>" class="gray_bg3 gray_col2" <?php if(empty($_GET['cid'])): ?>id="allcheck"<?php endif; ?> >全部</a><a href="<?php echo U('Coupon/index?cid=4');?>" class="gray_bg3 gray_col2" <?php if(($_GET['cid']) == "4"): ?>id="allcheck"<?php endif; ?>>大众蟹券</a><a href="<?php echo U('Coupon/index?cid=2');?>" class="gray_bg3 gray_col2" <?php if(($_GET['cid']) == "2"): ?>id="allcheck"<?php endif; ?>>外贸蟹券</a><a href="<?php echo U('Coupon/index?cid=1');?>" class="gray_bg3 gray_col2" <?php if(($_GET['cid']) == "1"): ?>id="allcheck"<?php endif; ?>>移民蟹券</a>
             </div>
             <div class="shopping_area" style="float: right;">
                 <a href="<?php echo U('product/list_dzx');?>" class="shopping_check claret_red_bg">

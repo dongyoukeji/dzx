@@ -68,7 +68,7 @@
             <div class="product_nav">
                 <b>推荐礼盒<font class="triangle-right"></font></b>
                 <ul class="get_com_list">
-                    <li><a href="/" class="fontcolor" data-role="1">全部</a></li>
+                    <li><a href="/index/index.html" class="fontcolor" data-role="1">全部</a></li>
                     <?php if(is_array($columns)): $i = 0; $__LIST__ = $columns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cols): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('index/get_article_list?cid='.$cols['id']);?>"><?php echo ($cols["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                     <!--<li><a href="<?php echo U('index/get_article_list?cid=3');?>">小众蟹</a></li>-->
                     <!--<li><a href="<?php echo U('index/get_article_list?cid=4');?>">大众蟹</a></li>-->

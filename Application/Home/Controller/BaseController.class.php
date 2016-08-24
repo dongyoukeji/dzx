@@ -61,7 +61,7 @@ class BaseController extends Controller {
     }
 
     protected function _get_column_list(){
-        $list = M('column')->where('status=0 and id!=5')->select();
+        $list = M('column')->where('status=0 and id!=5 and id!=10')->select();
         $list=\Tool\Category::LimitForLevel($list);
         $this->columns = $list;
     }

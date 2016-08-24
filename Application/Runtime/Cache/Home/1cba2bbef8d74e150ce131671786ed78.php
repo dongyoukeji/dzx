@@ -25,13 +25,14 @@
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <img src="/Public/Home/images/logo1.fw.png" class="top_img img1">
+        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
         <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
         <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
         <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
+        <a href="<?php echo U('index/index');?>" class="back_home">首页</a>
     </div>
 </div>
 <div class="main">

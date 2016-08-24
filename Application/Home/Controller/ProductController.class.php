@@ -214,7 +214,7 @@ class ProductController extends BaseController {
     public function list_dzx($cid=0){
         $map['status']=0;
         if(!$cid){
-            $map['column_id']=array('neq',5);
+            $map['column_id']=array('in','1,2,3,4');
         }else{
             $cols = M('column')->where('status=0')->select();
             $child = \Tool\Category::getChildrenForIds($cols,$cid);

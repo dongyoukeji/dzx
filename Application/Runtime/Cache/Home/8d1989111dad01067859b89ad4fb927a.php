@@ -58,7 +58,7 @@
 								<?php if(($vo1["type"]) == "2"): ?><div class="wine_check">
 							<input type="checkbox" id="bzhxz<?php echo ($key); ?>" class="bzhxz" data-key="<?php echo ($key); ?>" onclick="showBox(this)" />
 							<label for="bzhxz<?php echo ($key); ?>">
-								<span>选择红酒包装</span><u id="wine_pic<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"><small>￥30.00元</small></u>
+								<span>选择红酒包装</span><u id="wine_pic<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"><small></small></u>
 							</label>
 						</div><?php endif; if(($vo1["type"]) == "1"): ?><div><img src="/Public/Home/images/zhengpin.fw.png"></div><?php endif; if(($vo1["type"]) == "3"): endif; ?>
 							</strong>
@@ -79,42 +79,11 @@
 							<div class="wine_box" data-key="<?php echo ($key); ?>">
 								<ul >
 									<?php if(is_array($boxes)): $k = 0; $__LIST__ = $boxes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($k % 2 );++$k;?><li data-key="<?php echo ($key); ?>">
-											<span>￥<?php echo ($vo2["tprice"]); ?><input type="number" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" /></span>
-											<input type="checkbox" id="thbzh<?php echo ($key); ?>1" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>
-											<label for="thbzh<?php echo ($key); ?>1"><img src="<?php echo ($vo2["image"]); ?>"></label>
+											<span>￥<?php echo ($vo2["tprice"]); ?><input type="number" name="box_num[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" /></span>
+											<input type="checkbox" value="1" name="box_num_selected[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]"  id="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>" onclick="showBoxPic(this)" />
+											<label for="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1"><img src="<?php echo ($vo2["image"]); ?>"></label>
 											<em><?php echo ($vo2["title"]); ?></em>
 										</li><?php endforeach; endif; else: echo "" ;endif; ?>
-
-									<!--<li data-key="<?php echo ($key); ?>">-->
-										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
-										<!--<input type="checkbox" id="thbzh<?php echo ($key); ?>2" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>-->
-										<!--<label for="thbzh<?php echo ($key); ?>2"><img src="/Public/Home/images/12332.jpg"></label>-->
-										<!--<em>土豪包装</em>-->
-									<!--</li>-->
-									<!--<li data-key="<?php echo ($key); ?>">-->
-										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
-										<!--<input type="checkbox" id="thbzh<?php echo ($key); ?>3" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>-->
-										<!--<label for="thbzh<?php echo ($key); ?>3"><img src="/Public/Home/images/12332.jpg"></label>-->
-										<!--<em>土豪包装</em>-->
-									<!--</li>-->
-									<!--<li data-key="<?php echo ($key); ?>">-->
-										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
-										<!--<input type="checkbox" id="thbzh<?php echo ($key); ?>4" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>-->
-										<!--<label for="thbzh<?php echo ($key); ?>4"><img src="/Public/Home/images/12332.jpg"></label>-->
-										<!--<em>土豪包装</em>-->
-									<!--</li>-->
-									<!--<li data-key="<?php echo ($key); ?>">-->
-										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
-										<!--<input type="checkbox" id="thbzh<?php echo ($key); ?>5" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>-->
-										<!--<label for="thbzh<?php echo ($key); ?>5"><img src="/Public/Home/images/12332.jpg"></label>-->
-										<!--<em>土豪包装</em>-->
-									<!--</li>-->
-									<!--<li data-key="<?php echo ($key); ?>">-->
-										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
-										<!--<input type="checkbox" id="thbzh<?php echo ($key); ?>6" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"/>-->
-										<!--<label for="thbzh<?php echo ($key); ?>6"><img src="/Public/Home/images/12332.jpg"></label>-->
-										<!--<em>土豪包装</em>-->
-									<!--</li>-->
 								</ul>
 							</div><?php endif; ?>
 					</div><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
@@ -187,12 +156,12 @@
 	$(function(){
 
 		$('.wine_box_num').change(function () {
-			get_boxes_totals();
 			get_boxes_price($(this));
-		});
+			get_all_price();
+		});	
 		$('.thbzh').click(function () {
-			get_boxes_totals();
 			get_boxes_price_by_images($(this));
+			get_all_price();
 		});
 		// 选中地区
 		$("#city").click(function (e) {
@@ -287,18 +256,18 @@
 		});
 
 		// 显示红酒包装盒价格
-		$('.thbzh').click(function(){
-			var key = $(this).attr('data-key');
-			var size = $('.thbzh'+key+':checked').length;
-			if($('.thbzh'+key).is(':checked')){
-				// $('#wine_pic'+key).html('<small>￥<font>30.00</font>元</small>');
-				$('#wine_pic'+key +' small').show();
-			}else{
-				if(size==0){
-					$('#wine_pic'+key+' small').hide();
-				}
-			}
-		});
+		// $('.thbzh').click(function(){
+		// 	var key = $(this).attr('data-key');
+		// 	var size = $('.thbzh'+key+':checked').length;
+		// 	if($('.thbzh'+key).is(':checked')){
+		// 		// $('#wine_pic'+key).html('<small>￥<font>30.00</font>元</small>');
+		// 		$('#wine_pic'+key +' small').show();
+		// 	}else{
+		// 		if(size==0){
+		// 			$('#wine_pic'+key+' small').hide();
+		// 		}
+		// 	}
+		// });
 
 		// 红酒包装盒数量至少为1
 		$('.wine_box_num').change(function(){
@@ -314,8 +283,10 @@
 			$obj.parent().parent().attr('class','cart_product car_check');
 		}else{
 			$obj.parent().parent().attr('class','cart_product car_uncheck');
+			//$('#wine_pic'+$key).find('small').empty().hide();
 		}
-		$('#totals_price').text(get_all_price());
+		get_all_price();
+		//$('#totals_price').text(get_all_price());
 	}
 
 	$price = $('.single_price').text();
@@ -330,9 +301,10 @@
 			num=1;
 		}
 		$obj.next().val(num);
+		get_all_price();
 		//$tt = get_orther_price($obj,num);
 		//alert($tt);
-		$('#totals_price').text(get_all_price());
+		//$('#totals_price').text(get_all_price());
 		//$('#totals_price1').val($tt);
 		//get_ems_price();
 		//$('#pro_sum').text(num);
@@ -349,8 +321,9 @@
 		if(num < 0)
 			num = 1;
 		$obj.prev().val(num);
+		get_all_price();
 		//$tt = get_orther_price($obj,num);
-		$('#totals_price').text(get_all_price());
+		//$('#totals_price').text(get_all_price());
 
 		//get_ems_price();
 		//$('#pro_sum').text(num);
@@ -425,14 +398,19 @@
 		if($sf=='0'){
 			return 0;
 		}
-
-
+		//盒子价格
+		$pp = get_boxes_totals();
+		
+		//邮费价格
 		$tt= get_ems_price();
 		if($('.shunfeng_ems').is(':checked')){
 			$tt=0;
 		}
-		$('#totals_price1').val($prices + $tt);
-		return $prices+$tt;
+		$pry =$prices + $tt + $pp;
+		$('#totals_price1').val($pry);
+		$('#totals_price').text($pry);
+		
+		return $pry;
 	}
 	/**
 	 * 删除项
@@ -526,6 +504,20 @@
 			$obj.parent().parent().parent().siblings('div.wine_box').hide();
 		}
 	}
+
+	// 显示红酒包装盒价格
+	function showBoxPic(obj) {
+		$obj = $(obj);
+		var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('span.cart_pro_left').children('strong').children('div.wine_check').children('label').children('u').children('small');
+		if ($obj.is(":checked")) {
+			sPosition.show();
+		}else{
+			if(($obj+':checked').length==0)
+				sPosition.hide();
+		}
+	}
+
+
 	/**
 	 * 获取价格
 	 * @returns {number}
@@ -533,30 +525,37 @@
 	function get_boxes_totals() {
 		$boxes_totals=0;
 		$boxes_price=0;
-		$('.cart_product ').each(function () {
-			$is = $(this).attr('data-index');
-			if($is==2){
-				//是否选择包装盒
-				$ckeckbox = $(this).children('span.cart_pro_left').find('input.bzhxz');
+		
+		var reg = /[1-9][0-9]*/g;
+		
+		$('.wine_check').each(function(){
+			$ckeckbox = $(this).children('input.bzhxz');
+			$ckeckbox1 = $(this).parent('strong').siblings('input[type="checkbox"]');
+			var pric = $(this).children('label').children('u').find('small').text();
+			if($ckeckbox1.is(':checked')){
 				if($ckeckbox.is(':checked')){
-					//选中包装盒以及数量，并计算价格
-					$('.wine_box ul li').each(function () {
-						if($(this).find('input[type="checkbox"]').is(':checked')){	//选中盒子
-							$element=$(this).find('input.wine_box_num');
-							$num = $element.val();
-							$num = ($num<=0)?1:$num;
-							$price = $element.attr('data-price');
-							$boxes_totals +=$num*$price;
-						}
-					});
-				}
+					
+					if(pric!=''){
+						pric = pric.match(reg);
+						$boxes_totals += parseFloat(pric);
+					}
+				}	
+			}else{
+				$boxes_totals -= 0;
+				// if(pric!=''){
+				// 	pric = pric.match(reg);
+				// 	$boxes_totals1 += parseFloat(pric);
+				// }		
 			}
 		});
-		$tp = <?php echo ($totals); ?>;
-		if($boxes_totals!=0){
-			$tp = parseFloat($tp)+$boxes_totals;
-		}
-		$('#totals_price').text($tp);
+		
+		// $tp = <?php echo ($totals); ?>;		
+		
+		// if($boxes_totals!=0){
+		// 	$tp = parseFloat($tp)+$boxes_totals;
+		// }
+		// $('#totals_price').text($tp);
+		$boxes_totals = $boxes_totals;
 		return $boxes_totals;
 	}
 	/**
@@ -566,7 +565,7 @@
      */
 	function get_boxes_price(obj) {
 		$boxes_price=0;
-		$element = obj.parent('span').parent('li');
+		$element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
 		$key = $element.attr('data-key');
 		$('.wine_box').each(function () {
 			if($(this).attr('data-key')==$key){
@@ -581,13 +580,20 @@
 				});
 			}
 		});
-		if($boxes_price!=0){
+		if($boxes_price>0){
 			$('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元");
 		}else {
 			$('#wine_pic'+$key).find('small').hide();
 		}
+		$tp = <?php echo ($totals); ?>;
+		if($boxes_price>0){
+			$tp = parseFloat($tp)+$boxes_price;
+		}
+		//$('#totals_price').text($tp);
+
 		return $boxes_price;
 	}
+
 	/**
 	 * 点击image获取单价
 	 * @param obj
@@ -595,7 +601,8 @@
      */
 	function get_boxes_price_by_images(obj) {
 		$boxes_price=0;
-		$element = obj.parent('li');
+		// $element = obj.parent('li');
+		$element = obj.parent('li').parent('ul').parent('div.wine_box');
 		$key = $element.attr('data-key');
 		$('.wine_box').each(function () {
 			if($(this).attr('data-key')==$key){
@@ -613,7 +620,7 @@
 		if($boxes_price!=0){
 			$('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元");
 		}else {
-			$('#wine_pic'+$key).find('small').hide();
+			$('#wine_pic'+$key).find('small').empty().hide();
 		}
 		return $boxes_price;
 	}
