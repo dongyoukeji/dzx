@@ -1,0 +1,75 @@
+<include file="Common:header1" />
+<div class="main">
+    <div class="main_nav posfix">
+        <a href="{:U('product/index?oid=1')}" class="hairy_bg">
+            礼品盒
+        </a><a href="{:U('product/index?oid=2')}" class="coupon_bg">
+        礼品券
+    </a><a href="{:U('product/index?oid=5')}" class="wine_bg">
+        红酒
+    </a>
+    </div>
+    <div class="pro_list" style="margin-top:60px;">
+        <volist name="list" id="vo">
+            <!-- 商品 -->
+            <a href="{:U('product/details?id='.$vo['id'])}" class="pro_hairy">
+				<span class="hairy_left">
+					<img src="{$vo.image}">
+				</span>
+				<span class="hairy_right">
+					<h2><i></i><span>抢鲜价</span><font>￥{$vo.tprice}</font><em></em></h2>
+					<u>市场价：￥{$vo.price}</u>
+					<b>{$vo.title|sub_str=0,9}</b>
+					<u class="pro_guige">产品规格</u>
+					  {$vo.description|get_pro_details}
+				</span>
+            </a>
+        </volist>
+    </div>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+    var p = 1;//页数
+    var page_size = '{$pagination}';//每页条数
+    var p_type = 1;
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if($(document).height() - $(window).height() - 200 < $(document).scrollTop() && p_type == 1){
+                p_type = 0;
+                getScrollPage();
+            }
+        });
+    });
+
+    //分页
+    function getScrollPage(){
+        p++;
+        var json_data = {
+            p			:	p,
+            oid		:	'{$Think.get.oid}'
+        };
+        $.post("__URL__/get_lists", json_data, function(result){
+            if(result == '0'){
+                $('.wap_cp_th_m').hide();
+                $(window).unbind('scroll');
+            }else{
+                $('.pro_list').append(result);
+            }
+        },"html");
+    }
+
+    //判断是否还有分页
+    function IsPage(){
+        var list_num = $('#p'+p+'_num').val();//当前条数
+        if(page_size != list_num){
+            $('.wap_cp_th_m').hide();
+            $(window).unbind('scroll');
+            p_type = 0;
+        }else{
+            $('.wap_cp_th_m').show();
+            p_type = 1;
+        }
+    }
+</script>
+<include file="Common:footer" />

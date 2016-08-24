@@ -1,0 +1,609 @@
+<include file="Common:header"/>
+<!-- 主体 -->
+<div class="main">
+    <div class="cart_title">
+        <h3>我的购物车</h3>
+        <a onclick="clearItem()">清空购物车</a>
+    </div>
+	<form action="{:U('oder/pay_for')}" method="post" autocomplete="off">
+		<!-- 购物列表 -->
+		<div class="cart_pro_list">
+			<!-- 购买的商品 -->
+			<volist name="list" id="vo">
+				<volist name="vo" id="vo1">
+					<div class="cart_product car_check" data-index="{$vo1.type}">
+						<span class="cart_pro_left">
+							<input type="checkbox"  onclick="inpCheck(this)" checked />
+							<!-- <label for="product2"></label> -->
+							<b><img src="{$vo1.image}"></b>
+							<strong>
+								<a>{$vo1.title}<eq name="vo1.type" value="2"><span class="orange_bg">红酒</span></eq><eq name="vo1.type" value="1"><span class="blue_bg">礼盒</span></eq><eq name="vo1.type" value="3"><span class="claret_red_bg">礼品券</span></eq> </a>
+								<i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+								<em>{$vo1.description|get_pro_left}<neq name="vo1.type" value="2"><font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>{$vo1.description|get_pro_right}</neq>
+								</em>
+								<eq name="vo1.type" value="2"><div class="wine_check">
+							<input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
+							<label for="bzhxz{$key}">
+								<span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}"><small>￥30.00元</small></u>
+							</label>
+						</div></eq><eq name="vo1.type" value="1"><div><img src="__IMAGES__/zhengpin.fw.png"></div></eq><eq name="vo1.type" value="3"></eq>
+							</strong>
+						</span>
+						<span class="cart_pro_right">
+							<strong>
+								<input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo1.tprice})">
+								<input type="text" name="num[{$vo1.tt}][]" value="{$vo1.get_num}" class="number" onkeyup="change_sum(this,{$vo1.tprice})">
+								<input type="button" name="plus" value="+" class="jiajian plus"  onclick="doPlus(this,{$vo1.tprice})">
+								<input type="hidden" name="mass[{$vo1.tt}][]" class="mass" value="{$vo1.mass}" data-fufei='<eq name="vo1.type" value="1">1</eq><eq name="vo1.type" value="2">0 </eq><eq name="vo1.type" value="3">0</eq>'>
+								<input type="hidden" name="price[{$vo1.tt}][]" value="{$vo1.tprice}">
+								<input type="hidden" name="id[{$vo1.tt}][]" value="{$vo1.id}">
+							</strong>
+							<h2>￥<i class="single_price">{$vo1.tprice}</i><span>元</span></h2>
+						</span>
+						<span class="cart_delect" onclick="delItem(this)"><i>×</i></span>
+						<eq name="vo1.type" value="2">
+							<div class="clear"></div>
+							<div class="wine_box" data-key="{$key}">
+								<ul >
+									<volist name="boxes" id="vo2" key="k">
+										<li data-key="{$key}">
+											<span>￥{$vo2.tprice}<input type="number" value="1" class="wine_box_num" data-price="{$vo2.tprice}" /></span>
+											<input type="checkbox" id="thbzh{$vo1.id}{$key}1" class="thbzh thbzh{$key}" data-key="{$key}" onclick="showBoxPic(this)" />
+											<label for="thbzh{$vo1.id}{$key}1"><img src="{$vo2.image}"></label>
+											<em>{$vo2.title}</em>
+										</li>
+									</volist>
+
+									<!--<li data-key="{$key}">-->
+										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
+										<!--<input type="checkbox" id="thbzh{$key}2" class="thbzh thbzh{$key}" data-key="{$key}"/>-->
+										<!--<label for="thbzh{$key}2"><img src="__IMAGES__/12332.jpg"></label>-->
+										<!--<em>土豪包装</em>-->
+									<!--</li>-->
+									<!--<li data-key="{$key}">-->
+										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
+										<!--<input type="checkbox" id="thbzh{$key}3" class="thbzh thbzh{$key}" data-key="{$key}"/>-->
+										<!--<label for="thbzh{$key}3"><img src="__IMAGES__/12332.jpg"></label>-->
+										<!--<em>土豪包装</em>-->
+									<!--</li>-->
+									<!--<li data-key="{$key}">-->
+										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
+										<!--<input type="checkbox" id="thbzh{$key}4" class="thbzh thbzh{$key}" data-key="{$key}"/>-->
+										<!--<label for="thbzh{$key}4"><img src="__IMAGES__/12332.jpg"></label>-->
+										<!--<em>土豪包装</em>-->
+									<!--</li>-->
+									<!--<li data-key="{$key}">-->
+										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
+										<!--<input type="checkbox" id="thbzh{$key}5" class="thbzh thbzh{$key}" data-key="{$key}"/>-->
+										<!--<label for="thbzh{$key}5"><img src="__IMAGES__/12332.jpg"></label>-->
+										<!--<em>土豪包装</em>-->
+									<!--</li>-->
+									<!--<li data-key="{$key}">-->
+										<!--<span>￥30.00<input type="number" value="1" class="wine_box_num" data-price="30"/></span>-->
+										<!--<input type="checkbox" id="thbzh{$key}6" class="thbzh thbzh{$key}" data-key="{$key}"/>-->
+										<!--<label for="thbzh{$key}6"><img src="__IMAGES__/12332.jpg"></label>-->
+										<!--<em>土豪包装</em>-->
+									<!--</li>-->
+								</ul>
+							</div>
+						</eq>
+					</div>
+				</volist>
+			</volist>
+		</div>
+		<!-- 用户信息 -->
+		<div class="user_info">
+			<span class="details_info user_left">
+				<i></i>
+				<h5>购买人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="suser" id="suser"/>
+				</span>
+				<span>
+					<em>手机号</em><input type="text" name="sphone" id="sphone" />
+				</span>
+			</span>
+			<span class="details_info user_right">
+				<h5>收货人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="huser" id="huser" />
+				</span>
+				<span class="width width1">
+					<em>省份/市区</em><input type="text" name="city" id="city" readonly="readonly" value="江苏省-苏州市-姑苏区" />
+				</span>
+				<span>
+					<em>手机号</em><input type="text" name="hphone" id="hphone"/>
+				</span>
+				<span class="width width2">
+					<em>收货地址</em><input type="text" name="street" id="street" />
+				</span>
+			</span>
+		</div>
+		<div class="clear"></div>
+
+		<label id="express_price" style="display:none;">20</label>
+		<label id="express_overweight" style="display:none;">2</label>
+		<label id="express_kg" style="display:none;">{$kg}</label>
+
+		<!-- 支付信息 -->
+		<div class="cart_pay">
+			<strong>顺丰/<font id="shunfeng">￥{$mass_totals}</font>元<label><input type="checkbox"  onclick="plushEMS(this)" value="1" name="shunfeng_ems" class="shunfeng_ems">到付</label></strong>
+			<!--<div>-->
+				<!--顺丰快递礼盒附加费用: <span id="mass_totals">￥{$mass_totals}</span>-->
+			<!--</div>-->
+			<span>
+				<strong>
+					<em>共 <font id="pro_sum">{$nums}</font> 件商品</em>
+					<i>￥<i id="totals_price">{$totals}</i><font>元</font></i>
+					<input type="hidden" name="totals_price" value="{$totals}" id="totals_price1">
+				</strong>
+				<div class="clear"></div>
+				<span>
+					支付成功后，您将收到订单编号，可随时登录官方查看物流信息
+					<input type="submit" id="qrzf" value="确认支付">
+				</span>
+				<div class="clear"></div>
+				<i>如未收到短信息请联系客服</i>
+			</span>
+		</div>
+	</form>
+    <div class="clear"></div>
+</div>
+<!-- 选中地区 开始 -->
+<link rel="stylesheet" type="text/css" href="__JS__/city/city.css">
+<script src="__JS__/city/Popt.js"></script>
+<script src="__JS__/city/cityJson.js"></script>
+<script src="__JS__/city/citySet.js"></script>
+<!-- 选中地区 结束 -->
+<script type="text/javascript">
+	$(function(){
+
+		$('.wine_box_num').change(function () {
+			get_boxes_totals();
+			get_boxes_price($(this));
+		});
+		$('.thbzh').click(function () {
+			get_boxes_totals();
+			get_boxes_price_by_images($(this));
+		});
+		// 选中地区
+		$("#city").click(function (e) {
+			SelCity(this,e);
+		});
+		// 送礼收礼
+		$('#suser').keyup(function(event) {
+			/* Act on the event */
+			$('#huser').val($(this).val());
+		});
+		$('#sphone').keyup(function(){
+			$('#hphone').val($(this).val());
+		});
+		// 提交
+		$('#qrzf').click(function(e){
+			e.preventDefault();
+			// 姓名
+			if($('#suser').val() == ""){
+				$('#suser').parent().addClass("error");
+				return false;
+			}else{
+				$('#suser').parent().removeClass("error");
+			}
+			// 手机号
+			if($('#sphone').val() == "" || !phoneReg.test($('#sphone').val())){
+				$('#sphone').parent().addClass("error");
+				return false;
+			}else{
+				$('#sphone').parent().removeClass("error");
+			}
+			// 手机号
+			if($('#hphone').val() == "" || !phoneReg.test($('#hphone').val())){
+				$('#hphone').parent().addClass("error");
+				return false;
+			}else{
+				$('#hphone').parent().removeClass("error");
+			}
+			// 省份
+			if($('#city').val() == ""){
+				$('#city').parent().addClass("error");
+				return false;
+			}else{
+				$('#city').parent().removeClass("error");
+			}
+			// 街道
+			if($('#street').val() == ""){
+				$('#street').parent().addClass("error");
+				return false;
+			}else{
+				$('#street').parent().removeClass("error");
+			}
+
+			$form = $('form');
+//			layer.load(2, {
+//				shade: [0.3,'#000'] //0.1透明度的白色背景
+//			});
+
+			var json = $form.serialize();
+
+
+
+			$.post($form.attr('action'),$form.serialize(),function (data) {
+				if(data.status==1){
+					layer.closeAll('loading');
+					clearCookie();
+					//询问框
+					layer.confirm(data.msg, {
+						btn: ['我选好了现在支付','不买了我没有想好'] //按钮
+					}, function(){
+						layer.closeAll();
+						layer.open({
+							type: 2,
+							area: ['1024px', '850px'],
+							fix: false, //不固定
+							maxmin: true,
+							content: data.redirect
+						});
+					}, function(){
+						$.post('{:U("oder/cancel")}',{id:data.order_id},function (data) {
+							if(data.status==1){
+								window.location.href=data.redirect;
+							}else {
+								layer.alert(data.msg,{icon:2});
+							}
+						});
+					});
+				}
+			});
+		});
+		$('input[type="text"]').focus(function(){
+			$(this).parent().removeClass('error');
+		});
+
+		// 显示红酒包装盒价格
+		// $('.thbzh').click(function(){
+		// 	var key = $(this).attr('data-key');
+		// 	var size = $('.thbzh'+key+':checked').length;
+		// 	if($('.thbzh'+key).is(':checked')){
+		// 		// $('#wine_pic'+key).html('<small>￥<font>30.00</font>元</small>');
+		// 		$('#wine_pic'+key +' small').show();
+		// 	}else{
+		// 		if(size==0){
+		// 			$('#wine_pic'+key+' small').hide();
+		// 		}
+		// 	}
+		// });
+
+		// 红酒包装盒数量至少为1
+		$('.wine_box_num').change(function(){
+			if($(this).val() < 1){
+				$(this).val(1) ;
+			}
+		});
+	});
+	// 购物车商品选中状态
+	function inpCheck(obj){
+		$obj =$(obj);
+		if($obj.is(':checked')){
+			$obj.parent().parent().attr('class','cart_product car_check');
+		}else{
+			$obj.parent().parent().attr('class','cart_product car_uncheck');
+		}
+		$('#totals_price').text(get_all_price());
+	}
+
+	$price = $('.single_price').text();
+	// 商品数量的加减
+	function doMinus(obj,p){
+		$obj = $(obj);
+
+		var num = $obj.next().val();
+		--num;
+		if(num < 1){
+			$obj.removeAttr('onclick');
+			num=1;
+		}
+		$obj.next().val(num);
+		//$tt = get_orther_price($obj,num);
+		//alert($tt);
+		$('#totals_price').text(get_all_price());
+		//$('#totals_price1').val($tt);
+		//get_ems_price();
+		//$('#pro_sum').text(num);
+	}
+	function doPlus(obj,p){
+		$obj = $(obj);
+		var num = $obj.prev().val();
+		if(num==1){
+			$('.minus').live('click',function(){
+				doMinus(this);
+			});
+		}
+		++num;
+		if(num < 0)
+			num = 1;
+		$obj.prev().val(num);
+		//$tt = get_orther_price($obj,num);
+		$('#totals_price').text(get_all_price());
+
+		//get_ems_price();
+		//$('#pro_sum').text(num);
+	}
+
+	var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
+	// 手机验证
+	function checkPhone(obj){
+		$obj = $(obj);
+		var val = $obj.val();
+		if(!phoneReg.test(val)){
+			$obj.parent().addClass("error");
+		}else{
+			$obj.parent().removeClass("error");
+		}
+	}
+	function change_sum(obj,p) {
+		$obj = $(obj);
+		$sum = $obj.val();
+		if($sum==''){
+			$sum=1;
+		}
+		$tt= get_all_price($obj);
+		$('#totals_price').text($tt);
+		//$('#pro_sum').text($sum);
+	}
+	/**
+	 * 获取除去自己外其他的价格
+	 * @param obj
+	 * @returns {number}
+     */
+	function get_orther_price(obj,num) {
+		$prices =0;
+		$sf =0;
+		$p = obj.parent().parent().parent();
+		$('.cart_product').each(function () {
+			if($(this).index()!=$p.attr('data-index')){
+				if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
+					$price = $(this).children('span.cart_pro_right').children('h2').children('i.single_price').text();
+					$sum = $(this).children('span.cart_pro_right').children('strong').children('input[type="text"]').val();
+					$sf += parseInt($sum);
+					$prices += parseInt($price)*parseInt($sum);
+				}
+			}
+		});
+		$sm = get_ems_price();
+
+		if($('.shunfeng_ems').is(':checked')){
+			$sm=0;
+		}
+		$('#pro_sum').text($sf);
+		$('#totals_price1').val($prices + $sm);
+		return $prices + $sm;
+	}
+	/**
+	 * 获取所有的价格
+	 * @returns {number}
+	 */
+	function get_all_price() {
+		$prices =0;
+		$sf=0;
+		$('.cart_product').each(function () {
+			if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
+				$price = $(this).children('span.cart_pro_right').children('h2').children('i.single_price').text();
+				$sum = $(this).children('span.cart_pro_right').children('strong').children('input[type="text"]').val();
+				$ll =parseInt($price)*parseInt($sum);
+				$prices +=$ll;
+				$sf += parseInt($sum);
+			}
+		});
+		$('#pro_sum').text($sf);
+		if($sf=='0'){
+			return 0;
+		}
+
+
+		$tt= get_ems_price();
+		if($('.shunfeng_ems').is(':checked')){
+			$tt=0;
+		}
+		$('#totals_price1').val($prices + $tt);
+		return $prices+$tt;
+	}
+	/**
+	 * 删除项
+	 * @param obj
+     */
+	function delItem(obj) {
+		$obj = $(obj).parent();
+		layer.confirm('您确定要删除吗？删除后您将不能找回商品', {
+			btn: ['确定','取消'] //按钮
+		}, function(){
+			clearCookie();
+			$.post('__URL__/delItem',{i:$obj.attr('data-index')},function (data) {
+				if(data.status=1){
+					layer.closeAll();
+					$obj.remove();
+					$('#totals_price').text(get_all_price());
+					window.location.reload();
+				}
+			});
+		});
+
+	}
+	function clearItem() {
+		layer.confirm('您确定要清除购物车吗？清除后您将不能找回商品', {
+			btn: ['确定','取消'] //按钮
+		}, function(){
+			clearCookie();
+			$.get('__URL__/delItems',function (data) {
+				if(data.status==1){
+					layer.closeAll();
+					$('.cart_pro_list').empty();
+					$('#totals_price').text(get_all_price());
+					window.location.reload();
+				}
+			});
+		});
+	}
+
+	function plushEMS(obj) {
+		$('#totals_price').text(get_all_price());
+	}
+
+	function get_ems_price() {
+		$mass=0;
+		$tal=0;
+		$kg = 0;
+		$('.cart_product').each(function () {
+			if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
+				$number = $(this).children('span.cart_pro_right').children('strong').children('input.number').val();
+				$input = $(this).children('span.cart_pro_right').children('strong').children('input.mass');
+				if($input.attr('data-fufei')==1){
+					if($input.val()!=''){
+						$mass = parseFloat($input.val());
+						$kg +=$mass*$number;
+					}
+				}
+			}
+		});
+		if($kg>0){
+			$price = $('#express_price').text();
+			$overweight = $('#express_overweight').text();
+			$tal = overweight1(parseFloat($price),parseFloat($overweight),parseFloat($kg));
+		}
+		if($tal!=NaN){
+			$('#shunfeng').text("￥"+$tal);
+			return parseFloat($tal);
+		}else {
+			return 0;
+		}
+	}
+
+	function overweight1(p,p1,h) {
+		if(h<=1){
+			return p;
+		}else{
+			return p+(h-1)*p1;
+		}
+	}
+
+	// 显示红酒包装盒
+	function showBox(obj){
+		$obj = $(obj);
+		var key = $obj.attr('data-key');
+		if($obj.is(':checked')){
+			if($('.thbzh'+key).is(':checked')){
+				$obj.next().children('u').children('small').show();
+			}
+			$obj.parent().parent().parent().siblings('div.wine_box').show();
+		}else{
+			$obj.next().children('u').children('small').hide();
+			$obj.parent().parent().parent().siblings('div.wine_box').hide();
+		}
+	}
+
+	// 显示红酒包装盒价格
+	function showBoxPic(obj) {
+		$obj = $(obj);
+		var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('span.cart_pro_left').children('strong').children('div.wine_check').children('label').children('u').children('small');
+		if ($obj.is(":checked")) {
+			sPosition.show();
+		}else{
+			if(($obj+':checked').length==0)
+				sPosition.hide();
+		}
+	}
+
+
+	/**
+	 * 获取价格
+	 * @returns {number}
+     */
+	function get_boxes_totals() {
+		$boxes_totals=0;
+		$boxes_price=0;
+		$('.cart_product ').each(function () {
+			$is = $(this).attr('data-index');
+			if($is==2){
+				//是否选择包装盒
+				$ckeckbox = $(this).children('span.cart_pro_left').find('input.bzhxz');
+				if($ckeckbox.is(':checked')){
+					//选中包装盒以及数量，并计算价格
+					$('.wine_box ul li').each(function () {
+						if($(this).find('input[type="checkbox"]').is(':checked')){	//选中盒子
+							$element=$(this).find('input.wine_box_num');
+							$num = $element.val();
+							$num = ($num<=0)?1:$num;
+							$price = $element.attr('data-price');
+							$boxes_totals +=$num*$price;
+						}
+					});
+				}
+			}
+		});
+		$tp = {$totals};
+		if($boxes_totals!=0){
+			$tp = parseFloat($tp)+$boxes_totals;
+		}
+		$('#totals_price').text($tp);
+		return $boxes_totals;
+	}
+	/**
+	 * 获取单条总数
+	 * @param obj
+	 * @returns {number}
+     */
+	function get_boxes_price(obj) {
+		$boxes_price=0;
+		$element = obj.parent('span').parent('li');
+		$key = $element.attr('data-key');
+		$('.wine_box').each(function () {
+			if($(this).attr('data-key')==$key){
+				$(this).find('ul>li').each(function () {
+					if($(this).find('input[type="checkbox"]').is(':checked')){	//选中盒子
+						$element=$(this).find('input.wine_box_num');
+						$num = $element.val();
+						$num = ($num<=0)?1:$num;
+						$price = $element.attr('data-price');
+						$boxes_price +=$num*$price;
+					}
+				});
+			}
+		});
+		if($boxes_price!=0){
+			$('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元");
+		}else {
+			$('#wine_pic'+$key).find('small').hide();
+		}
+		alert($boxes_price);
+		return $boxes_price;
+	}
+	/**
+	 * 点击image获取单价
+	 * @param obj
+	 * @returns {number}
+     */
+	function get_boxes_price_by_images(obj) {
+		$boxes_price=0;
+		// $element = obj.parent('li');
+		$element = obj.parent('li').parent('ul').parent('div.wine_box');
+		$key = $element.attr('data-key');
+		$('.wine_box').each(function () {
+			if($(this).attr('data-key')==$key){
+				$(this).find('ul>li').each(function () {
+					if($(this).find('input[type="checkbox"]').is(':checked')){	//选中盒子
+						$element=$(this).find('input.wine_box_num');
+						$num = $element.val();
+						$num = ($num<=0)?1:$num;
+						$price = $element.attr('data-price');
+						$boxes_price +=$num*$price;
+					}
+				});
+			}
+		});
+		if($boxes_price!=0){
+			$('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元");
+		}else {
+			$('#wine_pic'+$key).find('small').hide();
+		}
+		return $boxes_price;
+	}
+</script>
+<include file="Common:footer"/>

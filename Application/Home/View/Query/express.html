@@ -1,0 +1,118 @@
+<include file="Common:header"/>
+<!-- 主体 -->
+<div class="main" style="margin-top: 50px;">
+    <div class="main_left" style="border:none;">
+        <div class="ticket">
+				<span class="ticket_top">
+					<a href="javascript:void(0);" class="current" id="current">领取礼盒</a><a href="javascript:void(0);" id="logistics">
+                    查询订单状态</a>
+                    <!-- <b class="xtips1"><font></font><i>礼品券换礼盒</i></b> -->
+				</span>
+            <!-- 礼品券 -->
+				<span id="ticket_edit" class="ticket_edit ticket1">
+					<input type="text" name="ticket_code" class="ticket_code" placeholder="请输入礼品券编号" />
+					<input type="button" name="fetch" class="fetch" value="领取" />
+				</span>
+        </div>
+    </div>
+    <div class="main_right">
+        <div class="shopping_area widthone">
+            <a href="{:U('Coupon/index')}" class="shopping_check blue_bg">
+                <i>GIFT COUPONS</i>
+                <b>礼品券<font>购买</font></b>
+            </a><a href="{:U('product/list_dzx')}" class="shopping_check claret_red_bg">
+            <i>BOX SECTION</i>
+            <b>礼盒专区<font>购买</font></b>
+        </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+            <i>HOT SELL</i>
+            <b>红酒专区<font>购买</font></b>
+        </a>
+        </div>
+    </div>
+    <div class="cart_title">
+        <h3>我的订单<font>{$vo.ordid}</font></h3>
+        <a>下单日期<font>{$vo.ordtime|date='Y-m-d h:s',###}</font></a>
+    </div>
+    <!-- 购物列表 -->
+    <div class="cart_pro_list">
+        <!-- 购买的商品 -->
+        <volist name="vo.pro" id="vo1">
+            <div class="cart_product car_uncheck">
+				<span class="cart_pro_left">
+					<b><img src="{$vo1.image}"></b>
+					<strong>
+                        <a>{$vo1.title}<span class="orange_bg">礼盒</span></a>
+                        <i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+                        <em>4只公蟹2.5-3两<font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>4只母蟹2.0-2.5两
+                        </em>
+                        <img src="__IMAGES__/zhengpin.fw.png">
+                    </strong>
+				</span>
+				<span class="cart_pro_right">
+					<strong>
+                        <input type="button" name="minus" value="-" class="jiajian minus" disabled>
+                        <input type="text" name="num" value="{$vo1.count}" class="number" disabled>
+                        <input type="button" name="plus" value="+" class="jiajian plus" disabled>
+                    </strong>
+					<h2>{$vo1.totals}<span>元</span></h2>
+				</span>
+            </div>
+        </volist>
+    </div>
+    <!-- 用户信息 -->
+    <div class="user_info">
+			<span class="details_info user_left">
+				<i></i>
+				<h5>购买人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="username" value="{$vo.post_userinfo|get_info_right}"  disabled/>
+				</span>
+				<span>
+					<em>手机号</em><input type="tel" value="{$vo.post_userinfo|get_info_left}" name="phone" disabled/>
+				</span>
+			</span>
+			<span class="details_info user_right">
+				<h5>收货人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="username" value="{$vo.post_userinfo|get_info_left}" disabled/>
+				</span>
+				<span class="width width1">
+					<em>省份/市区</em><input type="text" name="phone" id="city" value="{$vo.post_address|get_address_left}" disabled/>
+				</span>
+				<span>
+					<em>手机号</em><input type="tel" name="phone" value="{$vo.post_userinfo|get_info_right}" disabled/>
+				</span>
+				<span class="width width2">
+					<em>收货地址</em><input type="text" name="phone" value="{$vo.post_address|get_address_right}" disabled/>
+				</span>
+			</span>
+    </div>
+    <!-- 物流信息 -->
+    <div class="logistics_info">
+        <h4>因红酒无法空运，我们将双向发货！请注意查收您购买的商品，如有任何问题请联系在线客服</h4>
+        <div class="logistics_info_list">
+				<span>
+					<strong class="logistics_info_title1">
+                        <b>物流信息</b>
+                        <i class="claret_red_bg">商品</i>
+                    </strong>
+					<strong class="logistics_pay logistics_info_title2">顺丰单号/<font>{$vo.post_goods_express}</font><label><input type="checkbox" <eq name="vo.shun_feng" value="0">checked</eq> disabled> <eq name="vo.shun_feng" value="1">到付<else />已付</eq></label></strong>
+				</span>
+            <div class="clear"></div>
+            <div class="logistics_addr"></div>
+        </div><div class="logistics_info_list">
+				<span>
+					<strong class="logistics_info_title1">
+                        <b>物流信息</b>
+                        <i class="orange_bg">红酒</i>
+                    </strong>
+					<strong class="logistics_pay logistics_info_title2">顺丰单号/<font>{$vo.post_wine_express}</font><label><input type="checkbox" checked disabled>已付</label></strong>
+				</span>
+        <div class="clear"></div>
+        <div class="logistics_addr"></div>
+    </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<include file="Common:footer"/>
+

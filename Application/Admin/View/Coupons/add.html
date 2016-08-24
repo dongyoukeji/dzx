@@ -1,0 +1,167 @@
+<include file="Common:header"/>
+<!-- JS上传 -->
+<link rel="stylesheet" href="__PLUG__/chosen-master/public/chosen.css" />
+<link rel="stylesheet" href="__PLUG__/Uploadify/uploadify.css" />
+<script type="text/javascript" src="__PLUG__/chosen-master/public/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="__PLUG__/Uploadify/jquery.uploadify.min.js"></script>
+<style>
+    .imageDiv{float: left; margin-right: 12px;}
+    .imageDiv>img{float: left;}
+    .imageDiv>.removeImage{margin: 4px 0px 0px -4px; cursor: pointer;}
+</style>
+<!-- JS上传end -->
+<script src="__PLUG__/kindeditor-4.1.10/kindeditor-all-min.js"></script>
+<div class="admin_r_all" style="height: 555px;">
+    <div class="admin_bg_t">
+        <a href="__URL__/index">返回列表</a>
+        <a href="__SELF__" id="admin_bg_t_x">文档添加</a>
+    </div>
+    <form action="__URL__/addhd" method="post">
+        <div class="admin_bg_fb">
+             <span>
+                 <em>礼券名称</em>
+                 <input name="coupons_title" type="text" value="" class="required">
+            </span>
+            <span style="display:none;" id="coupons_pre">
+                 <em>礼券前缀</em>
+                 <input name="coupons_pre" type="text" value="" class="required">
+            </span>
+            <span>
+                <em>礼券类型</em>
+                <select name="coupons_type" id="coupons_type">
+                    <option value="-1">--请选择类型--</option>
+                    <option value="0">实物</option>
+                    <option value="1">折扣</option>
+                    <option value="2">现金</option>
+                </select>
+            </span>
+            <span>
+                <em>礼券面值</em>
+                <span id="coupons_val_type"><input name="coupons_val" type="text"  class=""></span>
+            </span>
+            <span style="display:none;" id="coupons_val_cls">
+                <em>对应商品</em>
+            </span>
+            <span>
+                <em>生成数量</em>
+                <input name="coupons_sum" type="text" id="coupons_sum" value=""  class="required">
+            </span>
+            <span>
+                <em>礼券介绍</em>
+                <textarea id="coupon_content" name="coupon_content"></textarea>
+            </span>
+            <div class="admin_bg_b2 admin_bg_b3">
+                <input name="" type="submit" value="确认添加">
+            </div>
+        </div>
+    </form>
+</div>
+<script  type="text/javascript">
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="coupon_content"]', {
+            allowFileManager : true,//是否显示图片空间:true是; false否;
+            //resizeType: 0,//输入框拖拽大小:0不可拖拽; 1只改变高度; 2改变宽度和高度;
+            width : "780px",
+            height : "450px",
+            uploadJson:"{:U('Uploadify/KindEditorUploadImage')}",
+            afterBlur: function(){this.sync();}
+        });
+    });
+   $(function () {
+       $('form').validate();
+       $('form').submit(function (e) {
+           e.preventDefault();
+           if($('form').valid()){
+               if($('#coupons_type').val()==-1){
+                   layer.msg('请选择礼券类型',{icon:2});
+                   return false;
+               }
+               if($('#coupons_sum').val() == 0 ){
+                   layer.msg('请选择生成实物券栏目',{icon:2});
+                   return false;
+               }
+               if($('#coupons_val').val()<=0){
+                   layer.msg('请选择生成实物券数目',{icon:2});
+                   return false;
+               }
+//               if(editor.text()==''){
+//                   layer.msg('请选择生成实物券数目',{icon:2});
+//                   return false;
+//               }
+               $(this).ajaxSubmit({
+                   success:function (data) {
+                       if(data.status==0){
+                           layer.msg(data.msg,{icon:2});
+                       }else{
+                           redirect(data.redirect,data.msg,2);
+                       }
+                   }
+               })
+           }
+       });
+
+       $('#coupons_type').change(function () {
+           var val = $(this).val();
+           switch (val){
+               case "0":
+                   $('#coupons_val_type').siblings('em').text('对应栏目');
+                   $('#coupons_pre').hide();
+                   $.post('__URL__/get_columns',function (data) {
+                       if(data.status==1){
+                           $('#coupons_val_type').empty().html(data.result);
+                       }else{
+                           layer.msg(data.msg,{icon:2});
+                       }
+                   });
+                   break;
+               case "1":
+               case "2":
+                   $('#coupons_val_type').siblings('em').text('礼券面值');
+                   $('#coupons_val_type').empty().append('<input name="coupons_val" type="text" class="required">');
+                   $('#coupons_pre').show();
+                   $('#coupons_val_cls').hide();
+                   break;
+           }
+       });
+   });
+   /**
+    * 获取目标数量
+    * @param obj
+    */
+    function changeVal(obj) {
+        var o = $(obj);
+        var val =o.val();
+        if(val==-1){
+            layer.msg('请选择生成实物券的栏目',{icon:2});
+        }
+        $.post('__URL__/get_article_list',{cid:val},function (data) {
+            if(data.status==1){
+                $('#coupons_val_cls').empty().append("<em>对应商品</em>"+data.result);
+                $('#coupons_val_cls').show();
+                //$('#coupons_sum').val(data.result);
+            }else{
+                layer.msg(data.msg,{icon:2});
+                $('#coupons_val_cls').empty().append("<em>对应商品</em>");
+                $('#coupons_sum').val(0);
+            }
+        });
+    }
+
+    function changeVals(obj) {
+        var o = $(obj);
+        var val =o.val();
+        if(val==-1){
+            layer.msg('请选择产品',{icon:2});
+        }
+        $.post('__URL__/get_article_count',{cid:val},function (data) {
+            if(data.status==1){
+                $('#coupons_sum').val(data.result);
+            }else{
+                layer.msg(data.msg,{icon:2});
+                $('#coupons_sum').val(0);
+            }
+        });
+    }
+</script>
+<include file="Common:footer"/>

@@ -1,0 +1,806 @@
+[ 2016-08-15T13:45:48+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002987s ]
+
+[ 2016-08-15T13:45:49+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008417s ]
+
+[ 2016-08-15T13:45:50+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.027805s ]
+
+[ 2016-08-15T13:45:50+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.029006s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038694s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021657s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035448s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046064s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016460s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013325s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010116s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007022s ]
+
+[ 2016-08-15T13:45:51+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006759s ]
+
+[ 2016-08-15T13:45:52+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006818s ]
+
+[ 2016-08-15T13:47:38+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006087s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011883s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006847s ]
+
+[ 2016-08-15T13:48:32+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003009s ]
+
+[ 2016-08-15T13:48:32+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003038s ]
+
+[ 2016-08-15T13:50:06+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003649s ]
+
+[ 2016-08-15T14:06:24+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007718s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014620s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006394s ]
+
+[ 2016-08-15T14:06:25+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004234s ]
+
+[ 2016-08-15T14:06:28+08:00 ] 192.168.188.184 /index/get_article_list/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006159s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012340s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` IN ('','1') LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007096s ]
+
+[ 2016-08-15T14:06:30+08:00 ] 192.168.188.184 /index/get_article_list/cid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006539s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015243s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` IN ('','1') LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005617s ]
+
+[ 2016-08-15T14:06:36+08:00 ] 192.168.188.184 /index/get_article_list/cid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006328s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012500s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` IN ('','2') LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005623s ]
+
+[ 2016-08-15T14:41:41+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006628s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012646s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064417s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005930s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005971s ]
+
+[ 2016-08-15T14:41:47+08:00 ] 192.168.188.184 /product/details/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006285s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012306s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_kefu` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_kefu` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` = 1 ORDER BY 10  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+NOTIC: [2] Missing argument 3 for sub_str(), called in /mnt/share/dzx.com/Application/Runtime/Cache/Home/c0e5e04525859b98127e0609ff818963.php on line 59 and defined /mnt/share/dzx.com/Application/Common/Common/function.php 第 393 行.
+NOTIC: [8] Undefined variable: length /mnt/share/dzx.com/Application/Common/Common/function.php 第 397 行.
+SQL: SELECT * FROM `think_article` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.152247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.152279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007570s ]
+
+[ 2016-08-15T14:58:17+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007400s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013812s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006591s ]
+
+[ 2016-08-15T14:58:18+08:00 ] 192.168.188.184 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003090s ]
+
+[ 2016-08-15T14:58:21+08:00 ] 192.168.188.184 /Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006586s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013053s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_coupons` GROUP BY coupon_cid LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_coupons` GROUP BY coupon_cid LIMIT 0,9   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php 第 46 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php 第 47 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php 第 48 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006391s ]
+
+[ 2016-08-15T14:58:22+08:00 ] 192.168.188.184 /Coupon/details/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006533s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013220s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` = 1 ORDER BY 10  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005918s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006670s ]
+
+[ 2016-08-15T17:56:48+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002897s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006059s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014910s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006034s ]
+
+[ 2016-08-15T17:57:26+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006422s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012224s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: coupons_status /mnt/share/dzx.com/Application/Home/Controller/GetgoodsController.class.php 第 24 行.
+
+[ 2016-08-15T17:57:33+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006063s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012075s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_status /mnt/share/dzx.com/Application/Home/Controller/GetgoodsController.class.php 第 24 行.
+
+[ 2016-08-15T17:57:47+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006097s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011860s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_status /mnt/share/dzx.com/Application/Home/Controller/GetgoodsController.class.php 第 24 行.
+
+[ 2016-08-15T17:59:10+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006909s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014962s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_status /mnt/share/dzx.com/Application/Home/Controller/GetgoodsController.class.php 第 25 行.
+
+[ 2016-08-15T17:59:51+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008096s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018651s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-15T18:00:43+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013155s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.009196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022468s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007550s ]
+
+[ 2016-08-15T18:00:54+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006120s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011919s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupons_status AS coupons_status,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-08-15T18:01:26+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006966s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013586s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006769s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006274s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006318s ]
+
+[ 2016-08-15T18:01:39+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006898s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013561s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupons_status AS coupons_status,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Undefined variable: key /mnt/share/dzx.com/Application/Runtime/Cache/Home/a7a4c583fec9f63bca267aebd4ffb8d5.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006973s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006561s ]
+
+[ 2016-08-15T18:03:24+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007274s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013779s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-08-15T18:04:40+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008163s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015170s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006798s ]
+
+[ 2016-08-15T18:04:47+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006324s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012631s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupons_status AS coupons_status,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Undefined variable: key /mnt/share/dzx.com/Application/Runtime/Cache/Home/a7a4c583fec9f63bca267aebd4ffb8d5.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006704s ]
+
+[ 2016-08-15T18:05:01+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006215s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012272s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: shunfeng_ems /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-15T18:06:02+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006754s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013711s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: shunfeng_ems /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-15T18:07:42+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013099s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.012558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025839s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: shunfeng_ems /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-15T18:08:39+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006155s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012147s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: shunfeng_ems /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-15T18:14:28+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007591s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016126s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007126s ]
+
+[ 2016-08-15T18:14:54+08:00 ] 192.168.188.184 /Getgoods/details.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002857s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007007s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013700s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT Coupons.id AS coupons_id,Coupons.coupons_title AS coupons_title,Coupons.coupons_no AS coupons_no,Coupons.coupons_type AS coupons_type,Coupons.coupons_status AS coupons_status,Coupons.coupon_content AS coupon_content,Coupons.coupon_cid AS coupon_cid,Article.title AS title,Article.description AS description,Article.image AS image,Article.content AS content,Article.price AS price,Article.mass AS mass,Article.tprice AS tprice,Article.sum AS sum FROM think_coupons Coupons  JOIN think_article Article ON Coupons.coupon_cid=Article.id WHERE Coupons.coupons_no = 'NO.0000000001' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: key /mnt/share/dzx.com/Application/Runtime/Cache/Home/a7a4c583fec9f63bca267aebd4ffb8d5.php 第 17 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007529s ]
+
+[ 2016-08-15T18:15:05+08:00 ] 192.168.188.184 /oder/get_goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006120s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012683s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: shunfeng_ems /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_order` WHERE `ordcode` LIKE '%1%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `think_order` SET `ordcode`='' WHERE `id` = 1 [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: username /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 40 行.
+NOTIC: [8] Undefined index: phone /mnt/share/dzx.com/Application/Home/Controller/OderController.class.php 第 40 行.
+SQL: UPDATE `think_coupons` SET `coupons_status`='2',`coupons_use_date`='1471256105',`coupons_use_user`='|',`coupons_use_order`='2016081510098579' WHERE `id` = 1 [ RunTime:0.0059s ]
+SQL: INSERT INTO `think_coupons` () VALUES () [ RunTime:0.0067s ]
+
+[ 2016-08-15T18:15:07+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007170s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013123s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000448s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005920s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005956s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006892s ]
+
+[ 2016-08-15T18:15:48+08:00 ] 192.168.188.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006793s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013194s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` <> 5 LIMIT 5   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078293s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006440s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007634s ]
+

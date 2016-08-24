@@ -1,0 +1,62 @@
+<include file="Common:header"/>
+<div class="admin_r_all" style="height: 477px;">
+    <div class="admin_bg_all">
+        <div class="admin_bg_t">
+            <a href="#" id="admin_bg_t_x">订单列表</a>
+            <!--<a href="__URL__/add">客服添加</a>-->
+            <div class="admin_bg_t_ss">
+                <form action="">
+                    <span>
+                        <input name="coupons_title" type="text" value="{$search.title}" placeholder="订单编号">
+                        <input  type="submit" value="搜索">
+                        <input  type="button" onclick="javascript:window.location.href='{:U('index')}'" value="全部">
+                    </span>
+                    <strong>
+                        <select name="coupons_type">
+                            <option value="-1">筛选</option>
+                            <option value="0" <eq name="search.status" value="0">selected</eq>>未支付订单</option>
+                            <option value="1" <eq name="search.status" value="1">selected</eq>>支付订单</option>
+                            <option value="2" <eq name="search.status" value="2">selected</eq>>兑换订单</option>
+                        </select>
+                    </strong>
+                </form>
+            </div>
+        </div>
+        <div class="admin_bg_b">
+            <ul class="admin_bg_b_t">
+                <li class="admin_bg4">订单编号</li>
+                <li class="admin_bg4">用户(手机)</li>
+                <!--<li class="admin_bg4">货物类型</li>-->
+                <li class="admin_bg4">接收信息</li>
+                <li class="admin_bg4">快递信息</li>
+                <li class="admin_bg4">订单状态</li>
+                <li class="admin_bg4">操作</li>
+            </ul>
+            <notempty name="list">
+                <volist name="list" id="vo">
+                    <ul>
+                        <li class="admin_bg4">{$vo.ordid}</li>
+                        <li class="admin_bg4">{$vo.phone}</li>
+                        <li class="admin_bg4" title="{$vo.post_address} {$vo.post_userinfo}">{$vo.post_address} {$vo.post_userinfo}</li>
+                        <li class="admin_bg4">
+                            <notempty name="vo.post_goods_express">产品单号：{$vo.post_goods_express}</notempty><notempty name="vo.post_wine_express">酒水单号：{$vo.post_wine_express}</notempty>
+                            <if condition="$vo.post_goods_express eq '' and $vo.post_wine_express eq ''">
+                                /
+                            </if>
+                        </li>
+                        <li class="admin_bg4"><eq name="vo.isused" value="2">兑换订单<else /><eq name="vo.ordstatus" value="0">未支付</eq><eq name="vo.ordstatus" value="1">已支付</eq><eq name="vo.ordstatus" value="2">取消订单</eq></eq> </li>
+                        <li class="admin_bg4">
+                            <a href="__URL__/see?id={$vo.id}">查看</a>
+                            <!--<a href="__URL__/add?id={$vo.id}">编辑</a>-->
+                            <a href="__URL__/del?id={$vo.id}" class="confirm" data-role="您确定要删除吗？删除后数据将不能恢复！">删除</a>
+                        </li>
+                    </ul>
+                </volist>
+                <div class="admin_null">{$page}</div>
+                <else />
+                <div class="admin_null">暂无数据</div>
+            </notempty>
+        </div>
+    </div>
+</div>
+<include file="Common:footer"/>

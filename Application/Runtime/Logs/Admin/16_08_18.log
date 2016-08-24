@@ -1,0 +1,1886 @@
+[ 2016-08-18T10:18:11+08:00 ] 192.168.188.184 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012042s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023159s ]
+
+[ 2016-08-18T10:18:12+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009064s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016856s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.128700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011296s ]
+
+[ 2016-08-18T10:18:25+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006938s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012808s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'dzx_goods' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1471486705',`last_ip`='192.168.188.184' WHERE `id` = 3 [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: logintime /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-18T10:18:26+08:00 ] 192.168.188.184 /Admin/Column/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009937s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020355s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138524s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010410s ]
+
+[ 2016-08-18T10:18:31+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015780s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.013214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029138s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.155482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.155556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012864s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012521s ]
+
+[ 2016-08-18T10:19:12+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010131s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020450s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010351s ]
+
+[ 2016-08-18T10:19:21+08:00 ] 192.168.188.184 /Admin/Goods/add?id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009411s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017522s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.344543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.344619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010752s ]
+
+[ 2016-08-18T10:19:46+08:00 ] 192.168.188.184 /Admin/Goods/addhd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010891s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021895s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0007s ]
+SQL: UPDATE `think_order` SET `post_address`='江苏省-苏州市-虎丘区 景山路旭辉御府',`post_goods_express`='03365566222',`post_userinfo`='张勇|15371829847',`post_goods_time`='1471486765' WHERE `id` = 15 [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant ENCRYPT_KEY - assumed 'ENCRYPT_KEY' /mnt/share/dzx.com/Application/Common/Common/function.php 第 68 行.
+
+[ 2016-08-18T10:19:49+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013548s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.009656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023358s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007222s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007282s ]
+
+[ 2016-08-18T10:32:47+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006261s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013256s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006441s ]
+
+[ 2016-08-18T10:33:53+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006600s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013036s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006969s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007014s ]
+
+[ 2016-08-18T10:33:58+08:00 ] 192.168.188.184 /Admin/Goods/add?id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007221s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014194s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007029s ]
+
+[ 2016-08-18T10:34:02+08:00 ] 192.168.188.184 /Admin/Goods/addhd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006509s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014436s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0007s ]
+SQL: UPDATE `think_order` SET `post_address`='江苏省-苏州市-虎丘区 景山路旭辉御府',`post_goods_express`='03365566222',`post_userinfo`='张勇|15371829847',`post_goods_time`='1471487640' WHERE `id` = 15 [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant ENCRYPT_KEY - assumed 'ENCRYPT_KEY' /mnt/share/dzx.com/Application/Common/Common/function.php 第 68 行.
+
+[ 2016-08-18T10:34:05+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007326s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015216s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006591s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006464s ]
+
+[ 2016-08-18T13:03:55+08:00 ] 192.168.188.184 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008581s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015560s ]
+
+[ 2016-08-18T13:03:56+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007011s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014704s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006138s ]
+
+[ 2016-08-18T13:04:03+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006582s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015348s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'dzx_goods' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1471496643',`last_ip`='192.168.188.184' WHERE `id` = 3 [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: logintime /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-18T13:04:03+08:00 ] 192.168.188.184 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006449s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012502s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `column_id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `column_id` = 3 ORDER BY date desc,id desc LIMIT 0,1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` WHERE ( fid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-08-18T13:04:04+08:00 ] 192.168.188.184 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007115s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013983s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: status /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.237646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.237703s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006973s ]
+
+[ 2016-08-18T13:04:06+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006689s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013146s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006683s ]
+
+[ 2016-08-18T13:04:16+08:00 ] 192.168.188.184 /Admin/Goods/add?id=13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007511s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014189s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007558s ]
+
+[ 2016-08-18T13:04:25+08:00 ] 192.168.188.184 /Admin/Goods/addhd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006332s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013163s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: UPDATE `think_order` SET `post_address`='江苏省-苏州市-姑苏区 苏锦一村百合苑',`post_goods_express`='2222233444444',`post_userinfo`='魏巍|13584866592',`post_goods_time`='1471496664' WHERE `id` = 13 [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant ENCRYPT_KEY - assumed 'ENCRYPT_KEY' /mnt/share/dzx.com/Application/Common/Common/function.php 第 68 行.
+
+[ 2016-08-18T13:04:27+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006875s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013487s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 131 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008432s ]
+
+[ 2016-08-18T13:23:27+08:00 ] 192.168.188.184 /Admin/Goods/add?id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007292s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013671s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007733s ]
+
+[ 2016-08-18T13:28:06+08:00 ] 192.168.188.184 /Admin/Goods/add?id=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017664s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007948s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008422s ]
+
+[ 2016-08-18T13:28:11+08:00 ] 192.168.188.184 /Admin/Goods/addhd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008560s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.009163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017842s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: UPDATE `think_order` SET `post_address`='江苏省-苏州市-虎丘区 景山路旭辉御府',`post_goods_express`='0111233300',`post_userinfo`='张勇|15371829847',`post_goods_time`='1471498087',`post_status`='1' WHERE `id` = 16 [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant ENCRYPT_KEY - assumed 'ENCRYPT_KEY' /mnt/share/dzx.com/Application/Common/Common/function.php 第 68 行.
+
+[ 2016-08-18T13:28:13+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008019s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016270s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008007s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008951s ]
+
+[ 2016-08-18T13:28:29+08:00 ] 192.168.188.184 /Admin/Goods/add?id=13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007882s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015875s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`username`,`ordid`,`sums`,`post_address`,`post_userinfo`,`post_goods_express`,`isused` FROM `think_order` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupon_cid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007765s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008170s ]
+
+[ 2016-08-18T13:28:31+08:00 ] 192.168.188.184 /Admin/Goods/addhd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004934s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010866s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019176s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: UPDATE `think_order` SET `post_address`='江苏省-苏州市-姑苏区 苏锦一村百合苑',`post_goods_express`='2222233444444',`post_userinfo`='魏巍|13584866592',`post_goods_time`='1471498110',`post_status`='1' WHERE `id` = 13 [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant ENCRYPT_KEY - assumed 'ENCRYPT_KEY' /mnt/share/dzx.com/Application/Common/Common/function.php 第 68 行.
+
+[ 2016-08-18T13:28:33+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008385s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016063s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008738s ]
+
+[ 2016-08-18T13:29:35+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006650s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014988s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008715s ]
+
+[ 2016-08-18T13:29:45+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=&coupons_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007932s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015861s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008728s ]
+
+[ 2016-08-18T13:30:25+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=&coupons_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007863s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015768s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008372s ]
+
+[ 2016-08-18T13:30:51+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009924s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017961s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008103s ]
+
+[ 2016-08-18T13:30:55+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=&coupons_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007522s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015681s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008446s ]
+
+[ 2016-08-18T13:31:23+08:00 ] 192.168.188.184 /Admin/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008149s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015884s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056080s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006787s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006834s ]
+
+[ 2016-08-18T13:31:27+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=&coupons_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007835s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015940s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `post_status` = 0 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007792s ]
+
+[ 2016-08-18T13:32:03+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=&coupons_type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008327s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016655s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `post_status` = 1 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_order` WHERE `post_status` = 1 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009100s ]
+
+[ 2016-08-18T13:32:17+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=2016081648511015&coupons_type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008107s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016227s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `username` LIKE '%2016081648511015%' AND `post_status` = 1 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_order` WHERE `username` LIKE '%2016081648511015%' AND `post_status` = 1 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008025s ]
+
+[ 2016-08-18T13:32:34+08:00 ] 192.168.188.184 /Admin/Goods?coupons_title=2016081648511015&coupons_type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008177s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016407s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordid` LIKE '%2016081648511015%' AND `post_status` = 1 AND `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_order` WHERE `ordid` LIKE '%2016081648511015%' AND `post_status` = 1 AND `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007983s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007678s ]
+
+[ 2016-08-18T13:32:38+08:00 ] 192.168.188.184 /Admin/Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007819s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015461s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 and id in(11) )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/GoodsController.class.php 第 132 行.
+SQL: SHOW COLUMNS FROM `think_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_order` WHERE `ordstatus` <> 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_order` WHERE `ordstatus` <> 2 ORDER BY ordtime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007854s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008532s ]
+
+[ 2016-08-18T14:18:49+08:00 ] 192.168.188.184 /Admin/public/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006920s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012950s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.137847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006320s ]
+
+[ 2016-08-18T14:18:55+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006527s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006187s ]
+
+[ 2016-08-18T14:19:00+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006460s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014652s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-08-18T14:19:06+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006883s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013319s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1471501146',`last_ip`='192.168.188.184' WHERE `id` = 1 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: logintime /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-18T14:19:07+08:00 ] 192.168.188.184 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006972s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013907s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `column_id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `column_id` = 3 ORDER BY date desc,id desc LIMIT 0,1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` WHERE ( fid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-08-18T14:19:07+08:00 ] 192.168.188.184 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006916s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013159s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: status /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005918s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005947s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006242s ]
+
+[ 2016-08-18T14:19:13+08:00 ] 192.168.188.184 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006862s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013777s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007589s ]
+
+[ 2016-08-18T14:19:33+08:00 ] 192.168.188.184 /Admin/Article/add?aid=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006898s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013083s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006248s ]
+
+[ 2016-08-18T14:19:35+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006420s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012694s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006786s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006820s ]
+
+[ 2016-08-18T14:19:51+08:00 ] 192.168.188.184 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007094s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013943s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006615s ]
+
+[ 2016-08-18T14:19:54+08:00 ] 192.168.188.184 /Admin/Article/add?aid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006397s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012868s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005940s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005962s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006496s ]
+
+[ 2016-08-18T14:19:55+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002973s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007250s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013620s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005852s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007130s ]
+
+[ 2016-08-18T14:20:33+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002920s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007061s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014140s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: UPDATE `think_article` SET `title`='百利甜酒 爱尔兰甜酒 750ML 原装进口',`column_id`='5',`keywords`='百利甜酒 爱尔兰甜酒 750ML 原装进口',`description`='百利甜酒 爱尔兰甜酒 750ML 原装进口',`price`='69.00',`tprice`='65.00',`sum`='100',`mass`='0.5',`content`='&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot; style=&quot;color:#333333;font-family:&amp;quot;font-size:14px;&quot; class=&quot;ke-zeroborder&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td width=&quot;50%&quot; style=&quot;vertical-align:top;&quot;&gt;
+				&lt;ul class=&quot;ull&quot;&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品名称】：BAILEYS百利 甜酒（配制酒）
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【原产国家】：爱尔兰
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品规格】：750mL/瓶
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品配料】：奶油、白砂糖、食用酒精、麦芽糊精、牛奶蛋白、可可味食用香料、威士忌、着色剂、乳化剂、酸度调节剂
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【酒精浓度】：17%vol
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【保质期限】：两年
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【贮藏方法】：0℃-25℃
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【过敏信息】：本品含有牛奶
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;text&quot; style=&quot;color:#333333;font-family:&amp;quot;font-size:14px;&quot;&gt;
+	1.BAILEYS百利 甜酒（配制酒），甜蜜满溢心底。&lt;br /&gt;
+2.BAILEYS百利 甜酒（配制酒），爱尔兰奶油与威士忌的融合。
+&lt;/div&gt;',`sort`='100',`status`='0',`image`='/Uploads/Images/2016-08-17/57b3f8d403cd7.jpg',`com`='0',`new`='0',`head`='0',`top`='0',`img`='0',`hot`='0',`file`='',`time`='1471501233' WHERE `id` = 5 [ RunTime:0.0003s ]
+
+[ 2016-08-18T14:20:36+08:00 ] 192.168.188.184 /Admin/Article/index/cid/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011172s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022099s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006487s ]
+
+[ 2016-08-18T14:20:49+08:00 ] 192.168.188.184 /Admin/Article/add?aid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006729s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013099s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006814s ]
+
+[ 2016-08-18T14:20:49+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006079s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012288s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006694s ]
+
+[ 2016-08-18T14:20:53+08:00 ] 192.168.188.184 /Admin/Article/add?aid=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006819s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013639s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007237s ]
+
+[ 2016-08-18T14:20:54+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007575s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015046s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006523s ]
+
+[ 2016-08-18T14:21:15+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006886s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014570s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0008s ]
+SQL: UPDATE `think_article` SET `title`='加州乐事 红葡萄酒750ml 美国原装进口',`column_id`='5',`keywords`='加州乐事 红葡萄酒750ml 美国原装进口',`description`='加州乐事 红葡萄酒750ml 美国原装进口',`price`='40.00',`tprice`='39.00',`sum`='98',`mass`='0.5',`content`='&lt;p&gt;
+	规格参数&lt;a id=&quot;medica_record&quot; class=&quot;medica_record&quot; href=&quot;http://item.yhd.com/item/106376?tc=3.0.5.106376.3&amp;amp;tp=52.22968.108.3.1.LQMzwM1-10-CjLsf&amp;amp;ti=T7BDa3&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;产地：美国品牌：&lt;a href=&quot;http://www.yhd.com/brand/1917/8644&quot;&gt;加州乐事&lt;/a&gt;储存方式：卧放或倒放产区：其他产区瓶塞：木塞类型：半干红酿造工艺：混合葡萄品种葡萄品种：其它（红葡萄酒）葡萄品种：其它（红葡萄酒）净含量(ml)：750ml
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class=&quot;text&quot; style=&quot;color:#333333;font-family:&amp;quot;font-size:14px;&quot;&gt;
+	&amp;nbsp;
+&lt;/div&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;color:#333333;font-family:&amp;quot;font-size:14px;&quot; class=&quot;ke-zeroborder&quot;&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td width=&quot;50%&quot;&gt;
+				&lt;img src=&quot;http://d6.yihaodianimg.com/N08/M07/0F/BB/ChEi1VWx3liAKTJ8AABGzV8HtAo579.webp&quot; alt=&quot;&quot; style=&quot;width:350px;height:350px;&quot; /&gt; 
+			&lt;/td&gt;
+			&lt;td width=&quot;50%&quot; style=&quot;vertical-align:top;&quot;&gt;
+				&lt;ul class=&quot;ull&quot;&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品名称】：Carlo Rossi加州乐事 红葡萄酒
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【原产国家】：美国
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品规格】：750mL
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【商品配料】：葡萄汁、食品添加剂（山梨酸、二氧化硫）
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【酒精浓度】：11.5%vol
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【产品类型】：半干红
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【保质期限】：10年
+					&lt;/li&gt;
+					&lt;li style=&quot;font-size:16px;font-family:微软雅黑;&quot;&gt;
+						【贮藏方法】：常温、避光、卧放
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;text&quot; style=&quot;color:#333333;font-family:&amp;quot;font-size:14px;&quot;&gt;
+	1.Carlo Rossi加州乐事 红葡萄酒，美国原装进口，精选葡萄，手工采摘。&lt;br /&gt;
+2.Carlo Rossi加州乐事 红葡萄酒，犒赏自己，放松地享受此柔顺而多面貌的葡萄酒。
+&lt;/div&gt;
+&lt;p&gt;
+	&lt;br /&gt;
+&lt;/p&gt;',`sort`='100',`status`='0',`image`='/Uploads/Images/2016-08-17/57b3f7f4ce0d3.jpg',`com`='0',`new`='0',`head`='0',`top`='0',`img`='0',`hot`='0',`file`='',`time`='1471501275' WHERE `id` = 4 [ RunTime:0.0004s ]
+
+[ 2016-08-18T14:21:18+08:00 ] 192.168.188.184 /Admin/Article/index/cid/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009809s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.011963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022004s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006391s ]
+

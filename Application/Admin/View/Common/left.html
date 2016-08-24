@@ -1,0 +1,31 @@
+<div class="admin_l">
+    <a></a>
+    <span>
+        <i>1024</i>
+        <strong>506</strong>
+        <i>30</i>
+    </span>
+    <div>
+        <i>BASIC DATA</i>
+        <volist name="nav" id="vo">
+            <neq name="vo.contr_name" value="Admin">
+                <a href="__APP__{$vo.url}" <eq name="CONTROLLER_NAME" value="$vo.contr_name">id="admin_dhxz"</eq>>{$vo.name}</a>
+            </neq>
+        </volist>
+        <if condition="$gid neq 10">
+            <if condition=" $gid neq 11">
+                <i>ARTICLES DATA</i>
+                <volist name="nav_column" id="cl">
+                    <a href="/Admin/Article/index?cid={$cl.id}" <eq name="cl.id" value="$Think.get.cid">id="admin_dhxz"</eq> <eq name="inIt" value="$cl.id">id="admin_dhxz"</eq> >{$cl.title}</a>
+                </volist>
+            </if>
+        </if>
+        <i>EXECUTION DATA</i>
+        <volist name="nav" id="vo">
+            <eq name="vo.contr_name" value="Admin">
+                <a href="__APP__{$vo.url}" <eq name="CONTROLLER_NAME" value="$vo.contr_name">id="admin_dhxz"</eq>>{$vo.name}</a>
+            </eq>
+        </volist>
+        <!--<eq name="gid" value="-1"><a href="__MODULE__/Admin" <eq name="CONTROLLER_NAME" value="Admin">id="admin_dhxz"</eq>>账号管理</a></eq>-->
+    </div>
+</div>

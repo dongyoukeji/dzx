@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/wap.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="home"><img src="images/home.fw.png" /></a>
+	</div>
+	<div class="main">
+		<div class="main_product">
+			<div class="main_product_top">
+				<span>
+					<h2>8只大众蟹豪华礼盒</h2>
+					<p>4只公蟹2.5-3两&nbsp;｜&nbsp;4只母蟹2.0-2.5两</p>
+				</span><h2>￥199.00</h2>
+			</div>
+			<div class="product_img">
+				<img src="images/prduct1.fw.png">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="main_lxpz">
+			<span class="lxpz1">
+				<img src="images/point3.fw.png">
+			</span><span class="lxpz2">
+				<img src="images/point1.fw.png">
+			</span><span class="lxpz3">
+				<img src="images/point2.fw.png">
+			</span>
+		</div>
+		<div class="main_nav">
+			<a href="hairylist.html" class="hairy_bg">
+				礼品盒
+			</a><a href="couponlist.html" class="coupon_bg">
+				礼品券
+			</a><a href="winelist.html" class="wine_bg">
+				红酒
+			</a>
+		</div>
+		<!-- 商品介绍 -->
+		<div class="product_info">
+			<div class="groom_pro">
+				<span>产品详情</span>
+			</div>
+			<div class="edit_console">
+				<p>经常出差，小别胜新婚，每次回来，晚上都会把儿子送爷爷奶奶家，我和媳妇过个愉快的二人世界，吃过晚饭，我刚喊“儿子！”小家伙打开房门，背着书包，提着吃的，气鼓鼓的“知道了！不要催了，我自己走！哼╭(╯^╰)╮！” 我和媳妇哭笑不得！！！</p>
+				<p>真逗比，我追了八年无果的女神赵妹结婚，我字写得好就请我写请帖，请帖写好后交给赵妹，赵妹拿起一看紧接着杏眼一瞪:嗯？我和谁结婚？你没吃错药？说完就把一堆请帖往我头上一甩。我拿来一看傻眼了，我的名字和赵妹恭恭正正的并在一起。</p>
+				<p>现在是凌晨两点四十六分， 我有个疑问————为什么我tm一闭眼想睡觉脑子里就会响起刘欢的那句:哎呀，一诶呀，哎呀哎呀一诶呀。 这句歌词在我脑海里挥之不去。 越不想就唱的越响亮。这tm让人怎么睡觉啊啊啊啊啊啊!!! 谁来帮我下啊啊啊啊!!!</p>
+			</div>
+		</div> 
+		<div class="clear"></div>
+	</div>
+	<div class="footer"></div>
+	<!-- 底部导航栏 -->
+	<div class="mytools">
+		<a href="cart.html" class="my_cart pro_cart"><b>购物车</b></a>
+		<a href="javascript:void(0);" id="addcart" class="my_float_r addcart blue_bg">加入购物车</a>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		// 加入购物车
+		var sum = 0;
+		$('#addcart').click(function(event) {
+			sum++;
+			$('.my_cart').append('<i>'+ sum +'</i>')
+		});
+	});
+</script>
+</html>

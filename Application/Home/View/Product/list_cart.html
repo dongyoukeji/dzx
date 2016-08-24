@@ -1,0 +1,27 @@
+<volist name="list" id="vo">
+    <div class="cart_product car_check" data-index="{$key}">
+				<span class="cart_pro_left">
+					<input type="checkbox"  onclick="inpCheck(this)" checked />
+                    <!-- <label for="product2"></label> -->
+					<b><img src="{$vo.image}"></b>
+					<strong>
+                        <a>{$vo.title}<eq name="vo.type" value="2"><span class="orange_bg">红酒</span></eq><eq name="vo.type" value="3"><span class="blue_bg">礼盒</span></eq><eq name="vo.type" value="1"><span class="claret_red_bg">礼品券</span></eq> </a>
+                        <i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+                        <em>{$vo.description|get_pro_left}<font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>{$vo.description|get_pro_right}
+                        </em>
+                        <img src="__IMAGES__/zhengpin.fw.png">
+                    </strong>
+				</span>
+				<span class="cart_pro_right">
+					<strong>
+                        <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo.tprice})">
+                        <input type="text" name="num[{$key}]" value="{$vo.get_num}" class="number" onkeyup="change_sum(this,{$vo.tprice})">
+                        <input type="button" name="plus" value="+" class="jiajian plus"  onclick="doPlus(this,{$vo.tprice})">
+                        <input type="hidden" name="mass[{$key}]" class="mass" value="{$vo.mass}" data-fufei='<eq name="vo.type" value="2">1</eq><eq name="vo.type" value="3">1</eq><eq name="vo.type" value="1">0</eq>'>
+                        <input type="hidden" name="price[{$key}]" class="price" value="{$vo.tprice}">
+                    </strong>
+					<h2>￥<i class="single_price">{$vo.tprice}</i><span>元</span></h2>
+				</span>
+        <span class="cart_delect" onclick="delItem(this)"><i>×</i></span>
+    </div>
+</volist>

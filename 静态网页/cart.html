@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery.min-1.4.4.js"></script>
+	<script type="text/javascript" src="js/tool.js"></script>
+
+	<!-- 联系客服 开始 -->
+	<link href="css/lrtk.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/lrtk.js"></script>
+	<!-- 联系客服 结束 -->
+
+	<!-- 加入购物车 开始 -->
+	<style type="text/css">.u-flyer{display: block;width: 100px;height: 100px;border-radius: 50%;position: fixed;z-index: 9999;}</style>
+	<script type="text/javascript" src="js/fly/jquery.fly.min.js"></script>
+	<!-- 加入购物车 结束 -->
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+	<!-- 选中地区 开始 -->
+	<link rel="stylesheet" type="text/css" href="js/city/city.css">
+	<script src="js/city/Popt.js"></script>
+	<script src="js/city/cityJson.js"></script>
+	<script src="js/city/citySet.js"></script>
+	<!-- 选中地区 结束 -->
+</head>
+<body>
+	<!-- 站头 -->
+	<div class="header">
+		<div class="top">
+			<img src="images/logo1.fw.png" class="top_img img1">
+			<img src="images/logo2.fw.png" class="top_img img2">
+			<img src="images/logo3.fw.png" class="top_img img3">
+			<img src="images/logo4.fw.png" class="top_img img4">
+			<span class="tips1"></span>
+			<span class="tips2"></span>
+			<span class="tips3"></span>
+		</div>
+	</div>
+	<!-- 主体 -->
+	<div class="main">
+		<div class="cart_title">
+			<h3 class="cart_bg">我的购物车</h3>
+			<a>清空购物车</a>
+		</div>
+		<!-- 购物列表 -->
+		<div class="cart_pro_list">
+			<!-- 购买的商品 -->
+			<div class="cart_product car_uncheck">
+				<span class="cart_pro_left">
+					<input type="checkbox" name="product" onclick="inpCheck(this)" />
+					<b><img src="images/prduct1.fw.png"></b>
+					<strong>
+						<a>8只大众蟹豪华礼盒<span class="blue_bg">礼盒</span></a>
+						<i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+						<em>4只公蟹2.5-3两<font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>4只母蟹2.0-2.5两
+						</em>
+						<img src="images/zhengpin.fw.png">
+					</strong>
+				</span>
+				<span class="cart_pro_right">
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" onclick="minus(this)">
+						<input type="text" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" onclick="plus(this)">
+					</strong>
+					<h2>￥399.00<span>元</span></h2>
+				</span>
+				<span class="cart_delect"><i>×</i></span>
+			</div>
+			<!-- 购买的商品 -->
+			<div class="cart_product car_uncheck">
+				<span class="cart_pro_left">
+					<input type="checkbox" name="product" onclick="inpCheck(this)" />
+					<!-- <label for="product1"></label> -->
+					<b><img src="images/prduct1.fw.png"></b>
+					<strong>
+						<a>8只大众蟹豪华礼盒<span class="claret_red_bg">礼品券</span></a>
+						<i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+						<em>4只公蟹2.5-3两<font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>4只母蟹2.0-2.5两
+						</em>
+						<img src="images/zhengpin.fw.png">
+					</strong>
+				</span>
+				<span class="cart_pro_right">
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" onclick="minus(this)">
+						<input type="text" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" onclick="plus(this)">
+					</strong>
+					<h2>￥399.00<span>元</span></h2>
+				</span>
+				<span class="cart_delect"><i>×</i></span>
+			</div>
+			<!-- 购买的商品 -->
+			<div class="cart_product car_uncheck">
+				<span class="cart_pro_left">
+					<input type="checkbox" name="product" onclick="inpCheck(this)" />
+					<b><img src="images/prduct1.fw.png"></b>
+					<strong>
+						<a>8只大众蟹豪华礼盒<span class="orange_bg">红酒</span></a>
+						<i>优质阳澄湖大闸蟹不一样的螃蟹</i>
+						<em>4只公蟹2.5-3两<font>&nbsp;&nbsp;|&nbsp;&nbsp;</font>4只母蟹2.0-2.5两
+						</em>
+						<img src="images/zhengpin.fw.png">
+					</strong>
+				</span>
+				<span class="cart_pro_right">
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" onclick="minus(this)">
+						<input type="text" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" onclick="plus(this)">
+					</strong>
+					<h2>￥<font>399.00</font><span>元</span></h2>
+				</span>
+				<span class="cart_delect"><i>×</i></span>
+			</div>
+		</div>
+		<!-- 用户信息 -->
+		<div class="user_info">
+			<span class="details_info user_left">
+				<i></i>
+				<h5>购买人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="username" id="suser" />
+				</span>
+				<span>
+					<em>手机号</em><input type="text" name="phone" id="sphone" onchange="checkPhone(this)" />
+				</span>
+			</span>
+			<span class="details_info user_right">
+				<h5>收货人信息</h5>
+				<span>
+					<em>姓名</em><input type="text" name="username" id="huser" />
+				</span>
+				<span class="width width1">
+					<em>省份/市区</em><input type="text" name="" readonly="true" id="city" />
+				</span>
+				<span>
+					<em>手机号</em><input type="text" id="hphone" name="" onchange="checkPhone(this)" />
+				</span>
+				<span class="width width2">
+					<em>收货地址</em><input type="text" name="" id="street" />
+				</span>
+			</span>
+		</div>
+		<div class="clear"></div>
+		<!-- 支付信息 -->
+		<div class="cart_pay">
+			<strong class="logistics_pay">顺丰/<font>20.00</font>元<label><input type="checkbox">到付</label></strong>
+			<span>
+				<strong>
+					<em>共 <font>3</font> 件商品</em>
+					<i>￥399.00<font>元</font></i>
+				</strong>
+				<div class="clear"></div>
+				<span>
+					支付成功后，您将收到订单编号，可随时登录官方查看物流信息
+					<input type="submit" name="" id="qrzf" value="确认支付">
+				</span>
+				<div class="clear"></div>
+				<i>如未收到短信息请联系客服</i>
+			</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 站尾 -->
+	<div class="footer">
+		<address>Copyright©2005-2015,Suxiege Co.,Ltd. All right reserved. 所有内容均由阳澄湖大闸蟹制作，未经许可不得转载</address>
+		<i>经营许可证编号: 沪ICP备15028124号</i>
+		<b>味道鲜美正是食蟹的大好时节</b>
+		<img src="images/logo.fw.png">
+	</div>
+	<!-- 联系客服 -->
+	<div id="top">
+		<div id="izl_rmenu" class="izl-rmenu">
+			<a id="end" class="btn btn-gwc"></a>
+			<a href="tencent://Message/?Uin=123456789&websiteName=www.lanrentuku.com=&Menu=yes" class="btn btn-qq"></a>
+			<div class="btn btn-wx">
+				<img class="pic" src="images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
+			</div>
+			<div class="btn btn-phone">
+				<div class="phone">
+					15371829847
+				</div>
+			</div>
+			<div class="btn btn-top">
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+	$(function(){
+		// 选中地区
+		$("#city").click(function (e) {
+			SelCity(this,e);
+		});
+
+		// 送礼收礼
+		$('#suser').keyup(function(event) {
+			/* Act on the event */
+			$('#huser').val($(this).val());
+		});
+		$('#sphone').keyup(function(){
+			$('#hphone').val($(this).val());
+		});
+
+		// 提交
+		$('#qrzf').click(function(){
+			// 姓名
+			if($('#suser').val() == ""){
+				$('#suser').parent().addClass("error");
+				return false;
+			}else{
+				$('#suser').parent().removeClass("error");
+			}
+			// 手机号
+			if($('#sphone').val() == "" || !phoneReg.test($('#sphone').val())){
+				$('#sphone').parent().addClass("error");
+				return false;
+			}else{
+				$('#sphone').parent().removeClass("error");
+			}
+			// 省份
+			if($('#city').val() == ""){
+				$('#city').parent().addClass("error");
+				return false;
+			}else{
+				$('#city').parent().removeClass("error");
+			}
+			// 街道
+			if($('#street').val() == ""){
+				$('#street').parent().addClass("error");
+				return false;
+			}else{
+				$('#street').parent().removeClass("error");
+			}
+		});
+		$('input[type="text"]').focus(function(){
+			$(this).parent().removeClass('error');
+		});
+	});
+
+	// 购物车商品选中状态
+	function inpCheck(obj){
+		$obj =$(obj);
+		if($obj.is(':checked')){
+			$obj.parent().parent().attr('class','cart_product car_check');
+		}else{
+			$obj.parent().parent().attr('class','cart_product car_uncheck');
+		}
+	}
+
+	// 商品数量的加减
+	function minus(obj){
+		$obj = $(obj);
+		var num = $obj.next().val();
+		--num;
+		if(num < 0){
+			$obj.removeAttr('onclick');
+			num=0;
+		}
+		$obj.next().val(num);
+	}
+	function plus(obj){
+		$obj = $(obj);
+		var num = $obj.prev().val();
+		if(num==0){
+			$('.minus').live('click',function(){
+				minus(this);
+			});
+		}
+		++num;
+		if(num < 0)
+			num = 1;
+		$obj.prev().val(num);
+	}
+
+	var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
+	// 手机验证
+	function checkPhone(obj){
+		$obj = $(obj);
+		var val = $obj.val();
+		if(!phoneReg.test(val)){
+			$obj.parent().addClass("error");
+		}else{
+			$obj.parent().removeClass("error");
+		}
+	}
+</script>
+
+</html>

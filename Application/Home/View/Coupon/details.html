@@ -1,0 +1,53 @@
+<include file="Common:header"/>
+<div class="main">
+    <!-- 主体左边 -->
+    <div class="main_left" style="border-right: 0;">
+        <div class="left_title" style="float: left;padding-top: 3px;">
+            <b class="gift_token1">礼品券</b>
+            <i class="gift_token2">GIFT COUPONS</i>
+        </div>
+        <div class="gift_token">
+            <b class="wihe1 yhq_bg gift_token_bg1"><img src="__IMAGES__/yhq_bg1.fw.png" /></b>
+            <em class="wihe2 yhq_bg gift_token_bg2"><img src="__IMAGES__/yhq_bg2.fw.png" /></em>
+				<span class="gift_token_left">
+					<h2>{$vo.coupons_title}</h2>
+					<strong>
+                        {$vo['coupons_product']['description']|get_pro_details1}
+                    </strong>
+				</span>
+				<span class="gift_token_right">
+					<h2>礼品券</h2>
+					<h3>￥{$vo['coupons_product']['tprice']}</h3>
+					<a href="javascript:void(0);" class="raisecar addcar couponcar" style="margin: 53px 0 0 0;" data-id="{$vo.coupon_cid}" data-sum="0" data-type="coupon">加入购物车</a>
+				</span>
+        </div>
+    </div>
+    <!-- 主体右边 -->
+    <div class="main_right">
+        <div class="right_top">
+            <div class="shopping_area widthone">
+                <a href="{:U('Coupon/index')}" class="shopping_check blue_bg">
+                    <i>GIFT COUPONS</i>
+                    <b>礼品券<font>购买</font></b>
+                </a><a href="{:U('product/list_dzx')}" class="shopping_check claret_red_bg">
+                <i>BOX SECTION</i>
+                <b>礼盒专区<font>购买</font></b>
+            </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+                <i>HOT SELL</i>
+                <b>红酒专区<font>购买</font></b>
+            </a>
+            </div>
+        </div>
+        <!-- 数据 -->
+        <include file="Common:get_order"/>
+    </div>
+    <div class="clear"></div>
+    <!-- 编辑器 -->
+    <div class="main_edit">
+        <h3>商品介绍</h3>
+        <div class="edit_info">
+            {$vo.coupon_content|htmlspecialchars_decode}
+        </div>
+    </div>
+</div>
+<include file="Common:footer"/>

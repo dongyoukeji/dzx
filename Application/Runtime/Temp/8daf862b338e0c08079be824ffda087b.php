@@ -1,0 +1,3 @@
+<?php
+//000000000060a:1:{i:0;a:14:{s:2:"id";s:2:"21";s:10:"coupons_no";s:13:"NO.0000000021";s:13:"coupons_title";s:18:"外贸蟹礼品券";s:12:"coupons_name";s:4:"best";s:12:"coupons_type";s:1:"0";s:11:"coupons_val";s:16:"6|best|外贸蟹";s:10:"coupon_cid";s:1:"2";s:14:"coupon_content";s:18:"外贸蟹礼品券";s:14:"coupons_status";s:1:"0";s:12:"coupons_date";s:10:"1471599221";s:11:"coupon_send";s:1:"0";s:16:"coupons_use_date";s:1:"0";s:16:"coupons_use_user";s:0:"";s:17:"coupons_use_order";s:0:"";}}
+?>

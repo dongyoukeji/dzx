@@ -1,0 +1,24 @@
+<div class="right_gmr">
+    <h4>&gt;&gt; 已有 <span>{$count}</span> 位用户，购买了礼品券</h4>
+    <div class="gmr_list" id="marquee">
+        <ul>
+        <volist name="get_order" id="od">
+            <li>
+                <i>{$od.username|substr_cut}</i>
+                <b>已成功购买了《8只豪华装礼盒》</b>
+                <em class="dd_right">{$od.finishtime|date="Y-m-d h:i",###}</em>
+            </li>
+        </volist>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<script src="__JS__/scroll.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#marquee").myScroll({
+            speed:80, //数值越大，速度越慢
+            rowHeight:40 //li的高度
+        });
+    });
+</script>

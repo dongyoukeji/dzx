@@ -1,0 +1,51 @@
+<include file="Common:header"/>
+<div class="main">
+    <div class="main_top">
+        <div class="main_top_left">
+            <div class="left_title" style="float: left; padding-top: 3px;">
+                <b class="gift_token1">礼品券</b>
+                <i class="gift_token2">GIFT COUPONS</i>
+            </div>
+            <div class="top_left_nav hairycrab">
+                <a href="{:U('Coupon/index')}" class="gray_bg3 gray_col2" <empty name="Think.get.cid">id="allcheck"</empty> >全部</a><a href="{:U('Coupon/index?cid=4')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="4"> id="allcheck"</eq>>大众蟹券</a><a href="{:U('Coupon/index?cid=2')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="2"> id="allcheck"</eq>>外贸蟹券</a><a href="{:U('Coupon/index?cid=1')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="1"> id="allcheck"</eq>>移民蟹券</a>
+            </div>
+            <div class="shopping_area" style="float: right;">
+                <a href="{:U('product/list_dzx')}" class="shopping_check claret_red_bg">
+                    <i>BOX SECTION</i>
+                    <b>礼盒专区<font>购买</font></b>
+                </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+                <i>HOT SELL</i>
+                <b>红酒专区<font>购买</font></b>
+            </a>
+            </div>
+        </div>
+        <div class="main_top_right"></div>
+    </div>
+    <div class="proudct_list small_product_list">
+        <volist name="list" id="vo">
+            <a href="{:U('Coupon/details?id='.$vo['id'])}">
+                <div class="gift_token gift_token_list">
+                    <b class="wihe1 yhq_bg gift_token_bg1"><img src="__IMAGES__/yhq_bg1.fw.png" /></b>
+                    <em class="wihe2 yhq_bg gift_token_bg2"><img src="__IMAGES__/yhq_bg2.fw.png" /></em>
+				<span class="gift_token_left">
+					<h2>{$vo.coupons_title}</h2>
+					<strong>
+                        <!--<h2>4只公蟹2.5-3两</h2>-->
+                        <!--<h2>4只母蟹2.0-2.5两</h2>-->
+                        {$vo['coupons_product']['description']|get_pro_details1}
+                    </strong>
+				</span>
+				<span class="gift_token_right">
+					<h2>礼品券</h2>
+					<h3>￥{$vo['coupons_product']['tprice']}</h3>
+				</span>
+                </div>
+            </a>
+        </volist>
+    </div>
+    <div class="clear"></div>
+    <!--<div class="page" style="margin-top:20px;">-->
+        <!--{$page}-->
+    <!--</div>-->
+</div>
+<include file="Common:footer"/>

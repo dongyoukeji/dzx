@@ -1,0 +1,23 @@
+<volist name="list" id="vo">
+    <!-- 商品 -->
+    <a href="{:U('product/details?id='.$vo['id'].'&t=c')}" class="pro_coupon">
+        <span class="coupon_left">
+            <strong>
+                <h4>{$vo.coupons_title}</h4>
+                <p class="yellow_col">{$vo['pro']['description']|get_pro_left}</p>
+                <p class="yellow_col">{$vo['pro']['description']|get_pro_right}</p>
+            </strong>
+        </span>
+        <span class="coupon_rigt">
+            <strong>
+                <h4 class="white_col">礼品券</h4>
+                <b class="yellow_col">￥{$vo['pro']['tprice']}</b>
+            </strong>
+        </span>
+    </a>
+</volist>
+<div class="clear"></div>
+<input type="hidden" id="p{$p}_num" value="{$pagination}">
+<script type="text/javascript">
+    IsPage();
+</script>

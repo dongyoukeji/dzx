@@ -1,0 +1,187 @@
+body{background: #f4f4f6; font-family: "微软雅黑"; font-size: 1em; position: relative;}
+
+.header{background: #f0f0f0 url(../images/logo.fw.png) left 10% center no-repeat; background-size: 55%; position: fixed; z-index: 9; top: 0; width: 100%; height: 70px; border-bottom: 1px solid #ddd;}
+.home{position: absolute; z-index: 2; right: 4%; top: 21px;}
+.main{margin-top: 70px;}
+div.padd{padding: 0 4%; width: 92%;}
+.main_top{width: 100%; height: 153px; overflow: hidden; position: relative;}
+.main_top img{width: 100%; min-height: 153px;}
+.main_top span{width: 30%; position: absolute; z-index: 2; top: 8px; right: 11px;}
+.main_top span a{display: block; width: 100%; line-height: 36px; text-align: center; color: #444; background: rgba(255,255,255,0.5); border-radius: 8px; margin-top: 8px;}
+.main_lxpz{width: 94%; border-top: 1px solid #ddd; height: 70px; padding: 0 3%;}
+.main_lxpz span{display: inline-block; height: 100%; overflow: hidden; margin-right: 3%;}
+.main_lxpz span img{width: 100%;}
+.lxpz1{width: 24%;}
+.lxpz1 img{margin-top: 19px;}
+.lxpz2{width: 38%;}
+.lxpz2 img{margin-top: 27px;}
+.main_lxpz span.lxpz3{width: 32%; margin-right: 0;}
+.lxpz3 img{margin-top: 26px;}
+.main_nav{width: 100%; height: 50px;}
+.main_nav a{display: inline-block; width: 33.33%; height: 100%; line-height: 50px; font-size: 1.2em; text-align: center; color: #fff;}
+
+.pro_list{width: 94%; float: left; margin-top: 40px; padding: 0 3%;}
+.groom_pro{width: 100%; border-bottom: 1px solid #ddd; position: relative; margin-bottom: 20px;}
+.groom_pro span{padding: 5px 20px; background: #f4f4f6; color: #545454; position: absolute; z-index: 2; top: -17px; left: 50%; margin-left: -53px; font-weight: bold;}
+
+.pro_hairy{display: block; float: left; width: 100%; height: 200px; background: #fff; border:1px solid #FAF9F5; margin: 8px 0 6px 0;}
+.pro_hairy>span{display: block; height: 100%;}
+.hairy_left{float: left; width: 60%; overflow: hidden;}
+.hairy_left img{width: 100%; min-height: 200px;}
+.hairy_right{float: right; width: 40%; background: #EBE9DE url(../images/lxh.fw.png) center bottom 10px no-repeat;}
+span.bgimg_none{background: #EBE9DE;}
+.hairy_right h2{font-size: 1.2em; background: #E43A3D; line-height: 35px; margin-top: 10px; color: #fff; width: 97%; float: right; margin-right:-3px; position: relative;}
+.hairy_right h2 i{width: 0; height: 0; border-top: 18px solid transparent; border-right: 18px solid #E43A3D; border-bottom: 19px solid transparent; position: absolute; z-index: 2; left: -18px; top: 0px;}
+.hairy_right h2 em{width: 0; height: 0; border-top: 3px solid #E43A3D; border-right: 3px solid transparent; position: absolute; z-index: 2; bottom: -3px; right: 0px;}
+.hairy_right h2 span{font-size: 0.8em;}
+.hairy_right h2 font{float: right; margin-right: 5px;}
+.hairy_right u{display: block; width: 94%; float: left; margin-top: 5px; text-align: right; font-size: 0.8em; color: #E43A3D;text-decoration:line-through;}
+.hairy_right u.pro_guige{text-decoration: none; margin-top: 10px;}
+.hairy_right b{display: block; color: #444; text-align: right; width: 94%;}
+.hairy_right p{width: 94%; text-align: right; font-size: 0.8em; color: #444;}
+
+.main_product{width: 100%; float: left; background: #fff; border-top: 1px solid #ddd;}
+.main_product_top{width: 90%; float: left; padding: 15px 5% 10px 5%; border-bottom: 1px solid #ddd;}
+.main_product_top span{display: block; float: left; line-height: 1.3em;}
+.main_product_top span h2{font-size: 1em;}
+.main_product_top span p{font-size: 0.8em; color: #888;}
+.main_product_top>h2{float: right; color: #F03139; font-weight: bold;}
+.product_img{width: 100%; height: 240px; float: left; text-align: center;}
+.product_img img{max-height: 90%; margin-top: 3%;}
+
+.product_info{margin-top: 40px; width: 94%; padding: 0 3%;}
+.edit_console{width: 100%; min-height: 200px;}
+.edit_console img{max-width: 100%;}
+
+
+.cart_title{width: 100%; margin-top: 20px; float: left;}
+.cart_title b{float: left;}
+.cart_title a{float: right;}
+
+.cart_pro_list{width: 100%; float: left; margin-top: 5px;}
+.cart_product{width: 94%; padding: 10px 3%; float: left; background: #fff; border: 2px solid #ddd; position: relative; margin-top: 15px;}
+.cart_product label{float: left; width: 33%; text-align: left;}
+.cart_product label input{float: left;}
+.cart_product label b{display: block; width: 85%; height: 100px; overflow: hidden; float: left;}
+.cart_product label img{width: 100%; min-height: 90%; margin-top:3%;}
+.cart_product span{float: left; width: 65%; display: block; margin-left: 2%;}
+.cart_product span p{font-size: 0.9em;}
+.cart_product span h3{margin-bottom: 5px;}
+.cart_product span p{line-height: 1.3em;}
+.cart_product span strong{float: left; margin-top: 8px; width: 51%;}
+.cart_product span strong input{width: 37%; height: 30px; background: #fff; border:1px solid #ddd; text-align: center; float: left; font-size: 1.2em;}
+.cart_product span strong input.jiajian{height: 32px; width: 30%; line-height: 1px; font-size: 1.6em;}
+.cart_product span strong input.minus{border-right: 0; border-radius:4px 0 0 4px;}
+.cart_product span strong input.plus{border-left: 0; border-radius: 0 4px 4px 0;}
+.cart_product span h2{float: right; margin-top: 7px; font-size: 1.3em;}
+.delect{width: 0; height: 0; border-top: 40px solid #EFEFEF; border-left: 40px solid transparent; position: absolute; z-index: 2; right: 0; top: 0;}
+.delect i{position: absolute; z-index: 3; top: -42px; left: -16px; font-size: 1.6em;}
+
+div.cart_check{border: 2px solid red;}
+div.cart_check>strong{border-top: 40px solid red; border-left: 40px solid transparent; position: absolute;}
+div.cart_check>strong i{color: #fff;}
+
+.user_info{margin-top: 20px;}
+.sl_user{margin-bottom: 10px;}
+.sl_user h3{margin-bottom: 5px; text-align: center;}
+.sl_user input,.sl_user textarea{width: 100%; border: 1px solid #ddd; text-indent: 0.5em; font-size: 1.2em;}
+.sl_user input{line-height: 50px; margin-bottom: 10px;}
+.sl_user textarea{min-height: 80px; padding: 7px 0;}
+
+.sl_user input.enter_error{border: 1px solid red; color: #F62C39; box-shadow: 0 0 5px red;}
+
+.kd_info{padding: 0 5%; text-align: center; font-size: 1.2em;}
+.kd_info label{padding: 3px 8px; background: #e1e1e1; margin-left: 5px; color: #999;}
+.kd_info input:checked+label{background: #00A3D9; color: #fff;}
+
+.prompt{border: 1px solid #FFBF00; padding: 10px 5%; background: #fff; text-align: center; margin-top: 20px;}
+.prompt h3,.prompt i{color: #FFBF00;}
+
+
+.pro_coupon{display: block; width: 100%; float: left; height: 150px; background: #007ECA url(../images/yhq_bg1.fw.png) left top no-repeat; background-size: 25%; margin-top: 15px;}
+.pro_coupon span{display: block; height: 100%;}
+.coupon_left{background: url(../images/yhq_logo.fw.png) right 20% top 30px no-repeat; float: left; width: 70%; background-size: 70%; border-right: 1px dotted #fff;}
+.coupon_left strong{float: right; margin-top: 50px; margin-right: 5%; width: 80%; text-align: right;}
+.coupon_left strong h4{color: #fff; border-bottom: 1px solid #00A1E9; line-height: 1.8em; margin-bottom: 8px;}
+.coupon_left strong p{font-size: 0.9em; line-height: 1.4em;}
+
+.coupon_rigt{width: 29%; float: right; background: url(../images/yhq_bg2.fw.png) right top no-repeat; background-size: 60%;}
+.coupon_rigt strong{float: left; margin: 80px 0 0 10%;}
+.coupon_rigt strong b{}
+
+div.small_coupon{width: 90%; margin: 40px 0 0 5%;}
+
+.query_title{margin-top: 30px; float: left;width: 100%;}
+.query_enter{}
+.query_enter_top{width: 100%; height: 30px;}
+.query_enter_top b{line-height: 34px; padding: 0 10px; display: inline-block; height: 100%; color: #fff; margin-left: 3%;}
+.query_enter_down{}
+.query_enter_down input{float: left; line-height: 50px;}
+.query_enter_down input.enter1{width: 80%; border: 1px solid #E43A3D; box-sizing: border-box; font-size: 1.2em; text-indent: 0.5em;}
+.query_enter_down input.draw1{width: 20%; border:none; color: #fff; float: right; border:1px solid #E43A3D; box-sizing: border-box; font-size: 1.4em;}
+.query_enter_down input.enter2{width: 80%; border: 1px solid #C1B899; box-sizing: border-box; font-size: 1.2em; text-indent: 0.5em;}
+.query_enter_down input.draw2{width: 20%; border:none; color: #fff; float: right; border:1px solid #C1B899; box-sizing: border-box; font-size: 1.4em;}
+
+.query_info_title{float: left; width: 100%; margin-top: 20px;}
+.query_info_title h4{line-height: 1.3em; line-height: 1.4em;}
+.query_info_title h4 span{font-size: 0.8em; color: #fff; padding: 2px 5px 1px 5px; margin-left: 5px;}
+.query_info_title h4 label{padding: 2px 5px 1px 5px; font-size: 0.8em; background: #ccc; margin-left: 5px;}
+.query_info_title h4 input{display: none;}
+.query_info_title h4 input:checked+label{background: #00A3D9; color: #fff;}
+.logistics_info{width: 100%; min-height: 200px; background: #fff; float: left; margin-top: 8px;}
+
+.wine_progream{padding: 8px 3%; border: 1px dotted #FF4000; margin-top: 20px; float: left; font-size: 0.8em; color: #FF4000; text-align: center;}
+
+.dzx_nav{width: 100%; height: 50px;}
+.dzx_nav a{display: block; float: left; height: 100%; line-height: 53px; color: #fff; width: 33.33%; text-align: center; background: #C1B899; border-right: 1px solid #fff; box-sizing: border-box; font-size: 1.2em;}
+#active{background: #A09367;}
+.dzx_dis_fun{padding: 0 4%; margin-top:15px;}
+.dzx_dis_fun p{line-height: 1.6em; text-indent: 2em;}
+.dzx_dis_fun span{margin-top: 20px; float: left; text-align: center;}
+.dzx_dis_fun span em{display: inline-block; width: 150px; margin: 10px 5%;}
+.dzx_dis_fun span em b{display: block; width: 100%; height: 150px; border-radius: 50%; overflow: hidden; margin-bottom: 5px;}
+.dzx_dis_fun span em i{font-size: 1.2em;}
+.dzx_dis_fun span em b img{width: 100%; min-height: 150px;}
+.dzx_dis_fun>img{width: 100%; margin: 5px 0;}
+.dzx_dis_fun ol li{line-height: 1.4em; margin-top: 12px;}
+
+/*背景色*/
+.hairy_bg{background: #51D3FF;}
+.coupon_bg{background: #EC6F75;}
+.wine_bg{background: #FFB366;}
+.blue_bg{background: #00A3D9;}
+.orange_bg{background: #FFBF00;}
+.red_bg{background: #E43A3D;}
+.gray_bg{background: #C1B899;}
+
+/*字体颜色*/
+.red_col{color: #F62C39;}
+.gray_col{color: #bbb;}
+.gray_col2{color: #555;}
+.yellow_col{color: #FEF107;}
+.white_col{color: #fff;}
+
+.posfix{position: fixed; z-index: 9;}
+
+
+.mytools{width: 92%; padding: 0 4%; position: fixed; z-index: 9; bottom: 0; left: 0; height: 64px; line-height: 64px; background: #eee;}
+.mytools a{font-size: 1.2em; color: #666;}
+.my_float_l{float: left; margin-left: 10px;}
+.my_float_r{float: right; margin-right: 10px;}
+.my_cart{width: 85px; text-align: center; height: 85px; border-radius: 50%; display: block; position: absolute; z-index: 2; top: -15px; left: 50%; margin-left: -42px; background: #00A3D9 url(../images/cart.fw.png) left 26px top 12px no-repeat;}
+.pro_cart{top: -15px; left: 18%;}
+a.addcart{display: inline-block; width: 45%; text-align: center; font-size: 1.4em; height: 100%; color: #fff; margin-right: -5%;}
+.mytools a b{color: #fff; line-height: 120px; font-size: 0.9em;}
+.mytools a i{display: block; position: absolute; z-index: 2; top: 0; right: 9px; width: 20px; height: 20px; line-height: 22px; text-align: center; color: #fff; background: red; border-radius: 50%; font-size: 0.7em;}
+.mytools span{font-size: 1.2em;}
+.mytools span i,.mytools span font{color: #F62C39;}
+.mytools span i{font-size: 1.4em;}
+
+
+.submit{line-height: 50px; text-align: center; width: 100%; color: #fff; font-size: 1.4em; background: orange; border: 0; border-radius: 5px;}
+.nothing{width: 100%; line-height: 140px; text-align: center;}
+
+.footer{width: 100%; height: 120px; background: url(../images/logo.fw.png) center no-repeat; background-size: 50%; margin-bottom: 70px;}
+
+
+

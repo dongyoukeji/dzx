@@ -1,0 +1,44 @@
+<include file="Common:header1" />
+<div class="main">
+    <div class="main_product">
+        <div class="main_product_top">
+				<span>
+					<h2>{$vo.title}</h2>
+					<p>{$vo.description}</p>
+				</span><h2>￥{$vo.tprice}</h2>
+        </div>
+        <div class="product_img">
+            <img src="{$vo.image}">
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="main_lxpz">
+			<span class="lxpz1">
+				<img src="__IMAGES__/point3.fw.png">
+			</span><span class="lxpz2">
+				<img src="__IMAGES__/point1.fw.png">
+			</span><span class="lxpz3">
+				<img src="__IMAGES__/point2.fw.png">
+			</span>
+    </div>
+    <div class="main_nav">
+        <a href="{:U('product/index?oid=1')}" class="hairy_bg">
+            礼品盒
+        </a><a href="{:U('product/index?oid=2')}" class="coupon_bg">
+        礼品券
+    </a><a href="{:U('product/index?oid=5')}" class="wine_bg">
+        红酒
+    </a>
+    </div>
+    <!-- 商品介绍 -->
+    <div class="product_info">
+        <div class="groom_pro">
+            <span>产品详情</span>
+        </div>
+        <div class="edit_console">
+            {$vo.content|htmlspecialchars_decode}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<include file="Common:footer1"/>

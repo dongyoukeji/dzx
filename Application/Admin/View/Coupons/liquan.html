@@ -1,0 +1,12 @@
+<select name="coupons_list_val" id="coupons_val" onchange="changeVal(this)">
+    <option value="-1">--请选择对用栏目--</option>
+    <volist name="list" id="vo">
+        <empty name="vo.child">
+            <option value="{$vo.id}">{$vo.title}</option>
+            <else />
+            <volist name="vo.child" id="ch">
+                <option value="{$ch.id}">{$ch.title}({$vo.title})</option>
+            </volist>
+        </empty>
+    </volist>
+</select>

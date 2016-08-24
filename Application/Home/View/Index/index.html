@@ -1,0 +1,233 @@
+<include file="Common:header"/>
+<link rel="stylesheet" href="__CSS__/baguettebox.min.css">
+<script src="__JS__/baguettebox.min.js"></script>
+<!-- 主体 -->
+<div class="main">
+    <!-- 主体左边 -->
+    <div class="main_left">
+        <!-- 左边上面 -->
+        <div class="main_left_top">
+				<span class="background_gradient">
+					<strong>
+                        <b></b>
+                        <p>快速送达</p>
+                    </strong>
+				</span>
+				<span class="background_gradient">
+					<strong>
+                        <b></b>
+                        <p>假一赔十</p>
+                    </strong>
+				</span>
+				<span class="background_gradient">
+					<strong>
+                        <b></b>
+                        <p>用心做，诚心做</p>
+                    </strong>
+				</span>
+        </div>
+        <!-- 产品 -->
+        <div class="main_left_product">
+            <!-- 产品导航 -->
+            <div class="product_nav">
+                <b>推荐礼盒<font class="triangle-right"></font></b>
+                <ul class="get_com_list">
+                    <li><a href="__SELF__" class="fontcolor" data-role="1">全部</a></li>
+                    <volist name="columns" id="cols">
+                        <li><a href="{:U('index/get_article_list?cid='.$cols['id'])}">{$cols.title}</a></li>
+                    </volist>
+                    <!--<li><a href="{:U('index/get_article_list?cid=3')}">小众蟹</a></li>-->
+                    <!--<li><a href="{:U('index/get_article_list?cid=4')}">大众蟹</a></li>-->
+                    <!--<li><a href="{:U('index/get_article_list?cid=3')}">外贸蟹</a></li>-->
+                    <!--<li><a href="{:U('index/get_article_list?cid=1')}">移民蟹</a></li>-->
+                </ul>
+                <a href="{:U('product/list_dzx')}">更多</a>
+            </div>
+            <!-- 产品列表 -->
+            <div class="proudct_list">
+                <!-- 产品 -->
+                <volist name="com_list" id="vo">
+                    <div class="product_info">
+                        <strong class="product_img"><img src="{$vo.image}"></strong>
+                        <div class="product_price">
+                            <strong>
+                                <em class="triangle-left"></em>
+                                <i>抢鲜价</i>
+                                <b><font>￥{$vo.tprice}</font>元</b>
+                                <small class="triangle-topleft"></small>
+                            </strong>
+							<span>
+								<i>市场价：{$vo.price}元</i>
+								<b>{$vo.title}</b>
+								<u>产品规格</u>
+                                {$vo.description|get_pro_details}
+								<!--<p>4只公蟹2.5-3两</p>-->
+								<!--<p>4只母蟹2.0-2.5两</p>-->
+							</span>
+
+                            <img src="__IMAGES__/zhengpin.fw.png">
+                            <a href="{:U('product/details?id='.$vo['id'])}" class="raisecar">查看详情</a>
+                        </div>
+                    </div>
+                </volist>
+            </div>
+        </div>
+    </div>
+    <!-- 主体右边 -->
+    <div class="main_right">
+        <!-- 输入优惠券号 -->
+        <div class="right_top">
+            <div class="ticket">
+					<span class="ticket_top">
+						<a href="javascript:void(0);" class="current" id="current">领取礼盒</a><a href="javascript:void(0);" id="logistics">
+                        查询订单状态</a>
+                        <!-- <b class="xtips1"><font></font><i>礼品券换礼盒</i></b> -->
+					</span>
+                <!-- 礼品券 -->
+					<span id="ticket_edit" class="ticket_edit ticket1">
+						<input type="text" name="ticket_code" class="ticket_code" placeholder="请输入礼品券编号" />
+						<input type="button" name="fetch" class="fetch" value="领取" />
+					</span>
+            </div>
+            <div class="shopping_area widthone">
+                <a href="{:U('Coupon/index')}" class="shopping_check blue_bg">
+                    <i>GIFT COUPONS</i>
+                    <b>礼品券<font>购买</font></b>
+                </a><a href="{:U('product/list_dzx')}" class="shopping_check claret_red_bg">
+                <i>BOX SECTION</i>
+                <b>礼盒专区<font>购买</font></b>
+            </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+                <i>HOT SELL</i>
+                <b>红酒专区<font>购买</font></b>
+            </a>
+            </div>
+        </div>
+        <!-- 红酒专区 -->
+        <div class="red_wine">
+            <div class="wine_top">
+                <b>这个季节螃蟹跟红酒更配哦！</b>
+                <a href="{:U('redwine/index')}">红酒专区</a>
+            </div>
+            <!-- 红酒列表 -->
+            <div class="wine_list">
+                <volist name="get_redwine_list" id="rw">
+                    <a href="{:U('product/details?id='.$rw['id'])}" title="{$rw.title}">
+                        <img src="{$rw.image}">
+                        <strong>
+                            <b></b>
+                            <em>￥{$rw.tprice}</em>
+                        </strong>
+                    </a>
+                </volist>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- 辨别大闸蟹 -->
+        <div class="right_check">
+            <b class="check1">大闸蟹辨别</b>
+            <div class="check_content">
+                <p>阳澄湖大闸蟹近年来越来越少，不光是国内要吃、香港台湾要吃，海外的华人更是要买
+                    来解解馋嘴。好多团购网站都打着好低好低的折扣，举着阳澄湖大闸蟹的牌子，那么，
+                    您买到的，到底是很划算的抄底价阳澄湖大闸蟹还是去洗了个澡的洗澡蟹呢？</p>
+					<span>
+						<b>最简单最传统的方法就是看外形辨别阳澄湖大闸蟹的真伪</b>
+						<strong>
+                            <em>
+                                <a><img src="__IMAGES__/chek1.fw.png"></a>
+                                <i>青背</i>
+                            </em><em>
+                            <a><img src="__IMAGES__/chek2.fw.png"></a>
+                            <i>白肚</i>
+                        </em><em>
+                            <a><img src="__IMAGES__/chek3.fw.png"></a>
+                            <i>黄毛</i>
+                        </em><em style="margin-right:0;">
+                            <a><img src="__IMAGES__/chek4.fw.png"></a>
+                            <i>金爪</i>
+                        </em>
+                        </strong>
+					</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- 大闸蟹做法 -->
+        <div class="right_check">
+            <b class="check2">大闸蟹做法</b>
+            <div class="check_content">
+                <a><img src="__IMAGES__/dpx.jpg"></a>
+                <p class="cdzx">每当到了金秋十月，就是吃螃蟹的好季节，这个季节
+                    的螃蟹肉肥膏多，正是味道鲜美的时候，那么很多人
+                    想吃螃蟹，尤其是比较出名的阳澄湖大闸蟹，但是却
+                    不知道该怎么吃？更不知道吃螃蟹的一些技巧和禁忌
+                    今天向上君就为大家带来清蒸大闸蟹的做法，希望能
+                    够帮助到您。</p>
+                <div class="dzx_cdff">
+                    <ol>
+                        <strong>
+                            <li>把买来的大闸蟹放到水里面约1个小时，可以让螃蟹吐出身体里的脏东西</li>
+                        </strong>
+                        <strong>
+                            <li>取蒸锅，开火，锅中放入适量的凉水，然后把螃蟹放于锅内，最好是把
+                                螃蟹肚子朝上放置，这样膏就不会流走</li>
+                        </strong>
+                        <strong>
+                            <li>然后在螃蟹的身上撒上生姜和大蒜，或者可以用紫薯，都能够去腥杀毒</li>
+                        </strong>
+                        <strong>
+                            <li>放好大蒜生姜后，就开火烧水，把盖子盖上</li>
+                        </strong>
+                        <strong>
+                            <li>螃蟹要蒸大约15到20分钟，建议蒸够20分钟，这样吃起来肉好吃更健康</li>
+                        </strong>
+                        <strong>
+                            <li>把螃蟹从锅里取出，然后就可以开始享受美味了</li>
+                        </strong>
+                        <strong>
+                            <li>吃螃蟹要配上陈醋和大蒜生姜，在大蒜生姜沫里加入陈醋，形成调料</li>
+                        </strong>
+                    </ol>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- 养殖基地 -->
+        <div class="right_check">
+            <b class="check3">我们的养殖基地</b>
+            <div class="baguetteBoxOne gallery yzjd_pic">
+                <a href="__IMAGES__/yzjd1.jpg" data-caption="Golden Gate Bridge"><img src="__IMAGES__/yzjd1_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd2.jpg" title="Midnight City"><img src="__IMAGES__/yzjd2_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd3.jpg"><img src="__IMAGES__/yzjd3_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd4.jpg"><img src="__IMAGES__/yzjd4_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd5.jpg"><img src="__IMAGES__/yzjd5_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd6.jpg"><img src="__IMAGES__/yzjd6_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd7.jpg"><img src="__IMAGES__/yzjd7_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd8.jpg"><img src="__IMAGES__/yzjd8_s.jpg" /></a>
+                <a href="__IMAGES__/yzjd9.jpg"><img src="__IMAGES__/yzjd9_s.jpg" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        // 查看图片
+        baguetteBox.run('.baguetteBoxOne', {
+            animation: 'fadeIn'
+        });
+        $('.get_com_list>li>a').click(function (e) {
+            e.preventDefault();
+            if($(this).attr('data-role')==1){
+                window.location.reload();
+            }
+            $(this).addClass('fontcolor');
+            $(this).parent().siblings().find('a').removeClass('fontcolor');
+            $url = $(this).attr('href');
+            $.get($url,function (data) {
+                if(data.status==1){
+                    $('.proudct_list').empty().html(data.list);
+                }
+            });
+        });
+    });
+</script>
+<include file="Common:footer"/>

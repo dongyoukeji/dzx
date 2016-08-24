@@ -1,0 +1,53 @@
+<include file="Common:header"/>
+<div class="admin_r_all" style="height: 477px;">
+    <div class="admin_bg_all">
+        <div class="admin_bg_t">
+            <notempty name="child">
+                <if condition="count($child) gt 1">
+                    <volist name="child" id="ch">
+                        <a href="/Admin/Article/index?cid={$ch.id}" <eq name="ch.id" value="Think.get.cid">id="admin_bg_t_x"</eq> <eq name="inIt" value="$ch.id">id="admin_bg_t_x"</eq> >{$ch.title}列表</a>
+                    </volist>
+                    <else />
+                    <a href="/Admin/Article/index?cid={$child[0]['id']}" id="admin_bg_t_x">{$child[0]['title']}列表</a>
+                    <a href="__URL__/add?cid={$child[0]['id']}">文档添加</a>
+                </if>
+                <else />
+                <a href="#" id="admin_bg_t_x">{$column.title}列表</a>
+                <a href="__URL__/add?cid={$Think.get.cid}">文档添加</a>
+            </notempty>
+            <!--<a href="__URL__/add">客服添加</a>-->
+        </div>
+        <div class="admin_bg_b">
+            <ul class="admin_bg_b_t">
+                <li class="admin_bg4">编号(ID)</li>
+                <li class="admin_bg4">标题(title)</li>
+                <li class="admin_bg4">关键词(keywords)</li>
+                <li class="admin_bg4">简介(description)</li>
+                <li class="admin_bg4">状态</li>
+                <li class="admin_bg4">添加时间</li>
+                <li class="admin_bg4">操作</li>
+            </ul>
+            <notempty name="list">
+                <volist name="list" id="vo">
+                    <ul>
+                        <li class="admin_bg4">{$vo.id}</li>
+                        <li class="admin_bg4">{$vo.title}</li>
+                        <li class="admin_bg4">{$vo.keywords}</li>
+                        <li class="admin_bg4">{$vo.description}</li>
+                        <li class="admin_bg4"><eq name="vo.status" value="0"><span class="green" style="border:none;">正常</span></eq><eq name="vo.status" value="1"><span class="red" style="border:none;">禁用</span></eq></li>
+                        <li class="admin_bg4">{$vo.date|date="Y-m-d",###}</li>
+                        <li class="admin_bg4">
+                            <a href="__URL__/add?aid={$vo.id}">编辑</a>
+                            <eq name="vo.status" value="0"><a href="__URL__/status?id={$vo.id}&t=1&ct={$vo.column_id}" class="check-status">禁用</a><else /><a href="__URL__/status?id={$vo.id}&t=0&ct={$vo.column_id}" class="check-status">正常</a></eq>
+                            <a href="__URL__/del?id={$vo.id}" class="confirm" data-role="您确定要删除吗？删除后数据将不能恢复！">删除</a>
+                        </li>
+                    </ul>
+                </volist>
+                <div class="admin_null">{$page}</div>
+                <else />
+                <div class="admin_null">暂无数据</div>
+            </notempty>
+        </div>
+    </div>
+</div>
+<include file="Common:footer"/>

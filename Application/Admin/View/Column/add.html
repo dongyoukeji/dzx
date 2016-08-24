@@ -1,0 +1,145 @@
+<include file="Common:header"/>
+<div class="admin_r_all" style="height: 555px;">
+    <div class="admin_bg_t">
+        <a href="__URL__/index">返回列表</a>
+        <a href="__SELF__" id="admin_bg_t_x">文档添加</a>
+    </div>
+    <form action="__URL__/addhandler" method="post">
+        <div class="admin_bg_fb">
+             <span>
+                 <em>栏目名称</em>
+                 <input name="title" type="text"  value="{$column.title}" id="title" class="required">
+                 <input type="hidden" name="id" value="{$column.id}">
+            </span>
+            <span>
+                 <em>英文名称</em>
+                 <input name="name" type="text"  value="{$column.name}" id="name" class="required">
+            </span>
+            <span>
+                <em>父栏目</em>
+                 <select class="span4 m-wrap" name="fid">
+                     <option value="0">顶级栏目</option>
+                     <volist name="column_list" id="cate">
+                         <option value="{$cate.id}" <eq name="cate.id" value="$column.fid">selected='selected'</eq>>{$cate.html}{$cate.title}</option>
+                     </volist>
+                 </select>
+            </span>
+            <span>
+                <em>关键词</em>
+                <textarea name="keywords">{$column.keywords}</textarea>
+            </span>
+            <span>
+                <em>描述</em>
+                <textarea name="description">{$column.description}</textarea>
+            </span>
+            <span>
+                <em>栏目类型</em>
+                <label>
+                    <input type="radio" name="type" value="1"   <eq name="column.type" value="1">checked</eq> <empty name="column.type">checked</empty>>列表页
+                </label>
+                <label>
+                    <input type="radio" name="type"   value="2"  <eq name="column.type" value="2">checked</eq>>下载页
+                </label>
+                <label>
+                    <input type="radio" name="type"  value="3"  <eq name="column.type" value="3">checked</eq>>单页面
+                </label>
+                <label>
+                    <input type="radio" name="type"   value="4"  <eq name="column.type" value="4">checked</eq>>封面页
+                </label>
+                <label>
+                    <input type="radio" name="type"  value="5"  <eq name="column.type" value="5">checked</eq>>表单
+                </label>
+                <label>
+                    <input type="radio" name="type"   value="6"  <eq name="column.type" value="6">checked</eq>>跳转页
+                </label>
+                <label for="cover" class="<neq name='column.cover' value='6'>hide</neq> data-cover"><input type="text" placeholder="请输入封面地址" id="cover" value="{$column.tpl}" name="tpl"/></label>
+                <label for="uri" class="<neq name='column.cover' value='6'>hide</neq> data-redirect"><input type="text" placeholder="请输入跳转地址" id="uri" value="{$column.uri}"  name="uri"/></label>
+            </span>
+            <span>
+                <em>栏目位置</em>
+                <label>
+                    <input type="radio" name="position"  value="1" <eq name="column.position" value="1">checked</eq> <empty name="column.position">checked</empty>>顶部
+                </label>
+                <label>
+                    <input type="radio" name="position" value="2" <eq name="column.position" value="2">checked</eq>>居中
+                </label>
+                <label>
+                    <input type="radio" name="position"  value="3" <eq name="column.position" value="3">checked</eq>>居左
+                </label>
+                <label>
+                    <input type="radio" name="position"  value="4" <eq name="column.position" value="4">checked</eq>>居右
+                </label>
+                <label>
+                    <input type="radio" name="position" value="5" <eq name="column.position" value="5">checked</eq>>底部
+                </label>
+            </span>
+            <span>
+                <em>扩展参数</em>
+                <input name="attach" type="text" value="{$column.attach}">
+                <div class="tip" style="display:block;float:left;padding-right:6px;">*附加信息使用","和"|"隔开,如:"price,10|coupon,1"</div>
+            </span>
+            <span>
+                <em>排序</em>
+                <input name="sort" type="text" <notempty name="arc.sort">value="{$column.sort}"<else />value="100"</notempty> style="">
+                <div class="tip" style="display:block;float:left;padding-right:6px;">*越小越靠前</div>
+            </span>
+             <span>
+                <em>状态</em>
+                <label>
+                    <input name="status" type="radio" value="0" <eq name="column.status" value="0">checked</eq> <empty name="arc.status">checked</empty>>正常
+                </label>
+                <label>
+                    <input name="status" type="radio" value="1"  <eq name="column.status" value="1">checked</eq>>锁定
+                </label>
+            </span>
+            <div class="admin_bg_b2 admin_bg_b3">
+                <empty name="column">
+                    <input name="" type="submit" value="确认添加">
+                    <else />
+                    <input name="" type="submit" value="确认修改">
+                </empty>
+            </div>
+        </div>
+    </form>
+</div>
+<script  type="text/javascript">
+    $(function () {
+        $('form').validate();
+        $('form').submit(function (e) {
+            e.preventDefault();
+            if($('form').valid()){
+                $(this).ajaxSubmit({
+                    success:function (data) {
+                        if(data.status==0){
+                            layer.msg(data.msg,{icon:2});
+                        }else{
+                            redirect(data.redirect,data.msg,2);
+                        }
+                    }
+                })
+            }
+        });
+
+        $('.reset-radio').click(function(){
+            $val=$(this).val();
+            if($val==6 || $val==4){
+                if($val==6){
+                    $('.data-redirect').show();
+                    $('#cover').val('');
+                    $('.data-cover').hide();
+                }
+                if($val==4){
+                    $('.data-cover').show();
+                    $('#uri').val('');
+                    $('.data-redirect').hide();
+                }
+            }else{
+                $('.data-redirect').hide();
+                $('.data-cover').hide();
+                $('#uri').val('');
+                $('#cover').val('');
+            }
+        });
+    });
+</script>
+<include file="Common:footer"/>

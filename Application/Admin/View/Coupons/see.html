@@ -1,0 +1,35 @@
+<include file="Common:header"/>
+<div class="admin_r_all" style="height: 555px;">
+    <form action="__URL__/addhd" method="post">
+        <div class="admin_bg_fb">
+            <span>
+                 <em>礼券编号</em>
+                 <lable>{$arc.coupons_no}</lable>
+            </span>
+             <span>
+                 <em>礼券名称</em>
+                 <lable>{$arc.coupons_title}</lable>
+            </span>
+            <span>
+                <em>礼券类型</em>
+                 <lable>{$arc.coupons_type|get_coupons_type}</lable>
+            </span>
+            <span>
+                <em>礼券面值</em>
+                <gt name="arc.coupons_type" value="0">{$arc.coupons_val}<else />实物券</gt>
+            </span>
+            <span>
+                <em>生成时间</em>
+               <label>{$arc.coupons_date|date="Y-m-d h:i",###}</label>
+            </span>
+            <span>
+                <em>使用信息</em>
+               <label>{$arc.id|get_coupons_used}</label>
+            </span>
+            <div class="admin_bg_b2 admin_bg_b3">
+                <input name="" type="button" value="返回" onclick="javascript:history.go(-1);">
+            </div>
+        </div>
+    </form>
+</div>
+<include file="Common:footer"/>

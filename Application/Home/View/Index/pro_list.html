@@ -1,0 +1,23 @@
+<volist name="list" id="vo">
+    <div class="product_info">
+        <strong class="product_img"><img src="{$vo.image}"></strong>
+        <div class="product_price">
+            <strong>
+                <em class="triangle-left"></em>
+                <i>抢鲜价</i>
+                <b><font>￥{$vo.tprice}</font>元</b>
+                <small class="triangle-topleft"></small>
+            </strong>
+            <span>
+                <i>市场价：{$vo.price}元</i>
+                <b>{$vo.title}</b>
+                <u>产品规格</u>
+                {$vo.description|get_pro_details}
+                <!--<p>4只公蟹2.5-3两</p>-->
+                <!--<p>4只母蟹2.0-2.5两</p>-->
+            </span>
+            <img src="__IMAGES__/zhengpin.fw.png">
+            <a href="{:U('product/details?id='.$vo['id'])}" class="raisecar">查看详情</a>
+        </div>
+    </div>
+</volist>

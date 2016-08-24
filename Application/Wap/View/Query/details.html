@@ -1,0 +1,89 @@
+<include file="Common:header1"/>
+<div class="main padd">
+    <div class="query_title">
+        <div class="query_enter">
+            <div class="query_enter_top">
+                <b class="red_bg" id="current">领取礼盒</b><b class="gray_bg" id="logistics">查询订单状态</b>
+            </div>
+            <div class="query_enter_down">
+                <input type="text" placeholder="请输入订单号" class="enter2" />
+                <input type="button" value="查询" class="draw2 gray_bg" />
+            </div>
+        </div>
+    </div>
+    <empty name="vo">
+        <!-- 无物流信息 -->
+        <div class="nothing">
+            暂无物流信息
+        </div>
+        <!-- 有物流信息 -->
+        <div class="wine_progream">因红酒无法空运，我们将双向发货！请注意查收您购买的商品，如有任何问题请联系在线客服</div>
+        <else />
+        <!-- 商品列表 -->
+        <div class="cart_pro_list">
+                <!-- 商品 -->
+                <volist name="vo.pro" id="vo1">
+                    <div class="cart_product">
+                        <label>
+                            <b><img src="{$vo1.image}"></b>
+                        </label>
+                        <span>
+                            <h3>{$vo1.title}</h3>
+                            <p class="gray_col2">4只公蟹2.5-3两</p>
+                            <p class="gray_col2">4只母蟹2.0-2.5两</p>
+                            <strong>
+                                <input type="button" name="minus" value="-" class="jiajian minus" disabled/>
+                                <input type="number" name="num" value="{$vo1.count}" class="number" disabled/>
+                                <input type="button" name="plus" value="+" class="jiajian plus" disabled/>
+                            </strong>
+                            <h2 class="red_col">￥{$vo1.totals}</h2>
+                        </span>
+                    </div>
+                </volist>
+            </div>
+            <div class="clear"></div>
+            <!-- 用户信息 -->
+            <div class="user_info">
+                <!-- 购买人 -->
+                <div class="sl_user">
+                    <h3>购买人信息</h3>
+                    <input type="text" name="suser" placeholder="姓名" value="{$vo.post_userinfo|get_info_left}" disabled>
+                    <input type="tel" name="sphone" placeholder="联系电话" value="{$vo.post_userinfo|get_info_right}" disabled>
+                </div>
+                <!-- 收货人 -->
+                <div class="sl_user">
+                    <h3>收货人信息</h3>
+                    <input type="text" name="suser" placeholder="姓名" value="{$vo.post_userinfo|get_info_left}" disabled>
+                    <input type="tel" name="sphone" placeholder="联系电话" value="{$vo.post_userinfo|get_info_right}" disabled>
+                    <style type="text/css">
+                        ._citys{width: 97%;}
+                    </style>
+                    <input type="text" name="city" readonly="true" id="city" placeholder="选择省市" value="{$vo.post_address|get_address_left}" disabled>
+                    <textarea placeholder="街道信息" disabled>{$vo.post_address|get_address_right}</textarea>
+                </div>
+            </div>
+            <div class="query_info">
+                <div class="query_info_title">
+                    <h4>物流信息<span class="coupon_bg">产品</span></h4>
+                    <h4>
+                        顺丰单号/<font class="red_col">{$vo.post_goods_express}</font>
+                        <input type="checkbox" <eq name="vo.shun_feng" value="0">checked</eq> id="logistics" disabled/>
+                        <label for="logistics"> <eq name="vo.shun_feng" value="1">到付<else />已付</eq></label>
+                    </h4>
+                </div>
+                <div class="logistics_info"></div>
+            </div>
+            <div class="query_info">
+                <div class="query_info_title">
+                    <h4 style="font-size: 1.2em;">物流信息<span class="wine_bg">红酒</span></h4>
+                    <h4 class="gray_col2">
+                        顺丰单号/<font class="red_col">{$vo.post_goods_express}</font>
+                        <input type="checkbox" checked="checked" id="logistics" disabled />
+                        <label for="logistics">已付</label>
+                    </h4>
+                </div>
+                <div class="logistics_info"></div>
+            </div>
+            <div class="clear"></div>
+    </empty>
+<include file="Common:footer"/>

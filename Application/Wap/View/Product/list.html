@@ -1,0 +1,20 @@
+<volist name="list" id="vo">
+    <!-- 商品 -->
+    <a href="{:U('product/details?id='.$vo['id'])}" class="pro_hairy">
+        <span class="hairy_left">
+            <img src="{$vo.image}">
+        </span>
+        <span class="hairy_right">
+            <h2><i></i><span>抢鲜价</span><font>￥{$vo.tprice}</font><em></em></h2>
+            <u>市场价：￥{$vo.price}</u>
+            <b>{$vo.title|sub_str=0,9}</b>
+            <u class="pro_guige">产品规格</u>
+              {$vo.description|get_pro_details}
+        </span>
+    </a>
+</volist>
+<div class="clear"></div>
+<input type="hidden" id="p{$p}_num" value="{$pagination}">
+<script type="text/javascript">
+    IsPage();
+</script>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/wap.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- 选中地区 开始 -->
+	<link rel="stylesheet" type="text/css" href="js/city/city.css">
+	<script src="js/city/Popt.js"></script>
+	<script src="js/city/cityJson.js"></script>
+	<script src="js/city/citySet.js"></script>
+	<!-- 选中地区 结束 -->
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="home"><img src="images/home.fw.png" /></a>
+	</div>
+	<div class="main padd">
+		<div class="query_title">
+			<div class="query_enter">
+				<div class="query_enter_top">
+					<b class="red_bg" id="current">领取礼盒</b><b class="gray_bg" id="logistics">查询订单状态</b>
+				</div>
+				<div class="query_enter_down">
+					<input type="text" placeholder="请输入订单号" class="enter2" />
+					<input type="button" value="查询" class="draw2 gray_bg" />
+				</div>
+			</div>
+			<!-- 无物流信息 -->
+			<div class="nothing">
+				暂无物流信息
+			</div>
+			<!-- 有物流信息 -->
+			<div class="wine_progream">因红酒无法空运，我们将双向发货！请注意查收您购买的商品，如有任何问题请联系在线客服</div>
+		</div>
+		<!-- 商品列表 -->
+		<div class="cart_pro_list">
+			<!-- 商品 -->
+			<div class="cart_product">
+				<label>
+					<b><img src="images/prduct1.fw.png"></b>
+				</label>
+				<span>
+					<h3>8只大众蟹豪华礼盒</h3>
+					<p class="gray_col2">4只公蟹2.5-3两</p>
+					<p class="gray_col2">4只母蟹2.0-2.5两</p>
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" />
+						<input type="number" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" />
+					</strong>
+					<h2 class="red_col">￥999.00</h2>
+				</span>
+			</div>
+			<!-- 商品 -->
+			<div class="cart_product">
+				<label>
+					<b><img src="images/prduct1.fw.png"></b>
+				</label>
+				<span>
+					<h3>8只大众蟹豪华礼盒</h3>
+					<p class="gray_col2">4只公蟹2.5-3两</p>
+					<p class="gray_col2">4只母蟹2.0-2.5两</p>
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" />
+						<input type="number" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" />
+					</strong>
+					<h2 class="red_col">￥999.00</h2>
+				</span>
+			</div>
+			<!-- 商品 -->
+			<div class="cart_product">
+				<label>
+					<b><img src="images/prduct1.fw.png"></b>
+				</label>
+				<span>
+					<h3>8只大众蟹豪华礼盒</h3>
+					<p class="gray_col2">4只公蟹2.5-3两</p>
+					<p class="gray_col2">4只母蟹2.0-2.5两</p>
+					<strong>
+						<input type="button" name="minus" value="-" class="jiajian minus" />
+						<input type="number" name="num" value="1" class="number">
+						<input type="button" name="plus" value="+" class="jiajian plus" />
+					</strong>
+					<h2 class="red_col">￥999.00</h2>
+				</span>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- 用户信息 -->
+		<div class="user_info">
+			<!-- 购买人 -->
+			<div class="sl_user">
+				<h3>购买人信息</h3>
+				<input type="text" name="suser" placeholder="姓名">
+				<input type="tel" name="sphone" placeholder="联系电话">
+			</div>
+			<!-- 收货人 -->
+			<div class="sl_user">
+				<h3>收货人信息</h3>
+				<input type="text" name="suser" placeholder="姓名">
+				<input type="tel" name="sphone" placeholder="联系电话">
+				<style type="text/css">
+					._citys{width: 97%;}
+				</style>
+				<input type="text" name="city" readonly="true" id="city" placeholder="选择省市">
+				<textarea placeholder="街道信息"></textarea>
+			</div>
+		</div>
+		<div class="query_info">
+			<div class="query_info_title">
+				<h4>物流信息<span class="coupon_bg">礼品券</span></h4>
+				<h4>
+					顺丰单号/<font class="red_col">K6544165412345</font>
+					<input type="checkbox" checked="checked" id="logistics" />
+					<label for="logistics">到付</label>
+				</h4>
+			</div>
+			<div class="logistics_info"></div>
+		</div>
+		<div class="query_info">
+			<div class="query_info_title">
+				<h4 style="font-size: 1.2em;">物流信息<span class="wine_bg">红酒</span></h4>
+				<h4 class="gray_col2">
+					顺丰单号/<font class="red_col">K6544165412345</font>
+					<input type="checkbox" checked="checked" id="logistics" />
+					<label for="logistics">到付</label>
+				</h4>
+			</div>
+			<div class="logistics_info"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer"></div>
+	<!-- 底部导航栏 -->
+	<div class="mytools">
+		<a href="query2.html" class="my_float_l">礼品券兑换</a>
+		<a href="cart.html" class="my_cart"><b>购物车</b></a>
+		<a href="query.html" class="my_float_r">订单查询</a>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(function(){
+		// 礼券
+		$('#current').click(function(){
+			var content = '<input type="text" placeholder="请输入礼品券号码" class="enter1" /><input type="button" value="领取" class="draw1 red_bg" />';
+			$('.query_enter_down').html(content);
+		});
+		// 订单
+		$('#logistics').click(function(){
+			var content = '<input type="text" placeholder="请输入订单号" class="enter2" /><input type="button" value="查询" class="draw2 gray_bg" />';
+			$('.query_enter_down').html(content);
+		});
+
+		// 选中地区
+		$("#city").click(function (e) {
+			SelCity(this,e);
+		});
+	});
+</script>
+</html>

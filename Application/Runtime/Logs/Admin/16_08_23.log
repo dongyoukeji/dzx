@@ -1,0 +1,1654 @@
+[ 2016-08-23T10:55:38+08:00 ] 192.168.188.184 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007648s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013893s ]
+
+[ 2016-08-23T10:55:38+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008321s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016195s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006111s ]
+
+[ 2016-08-23T10:55:45+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007947s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007089s ]
+
+[ 2016-08-23T10:55:50+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005985s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011792s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-23T10:55:53+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007348s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013642s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1471920953',`last_ip`='192.168.188.184' WHERE `id` = 1 [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: logintime /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-23T10:55:54+08:00 ] 192.168.188.184 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006009s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012215s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `column_id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `column_id` = 3 ORDER BY date desc,id desc LIMIT 0,1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` WHERE ( fid=0 ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-23T10:55:54+08:00 ] 192.168.188.184 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006722s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013533s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: status /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099549s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006801s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007050s ]
+
+[ 2016-08-23T10:55:57+08:00 ] 192.168.188.184 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006327s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014762s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: status /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007021s ]
+
+[ 2016-08-23T10:55:59+08:00 ] 192.168.188.184 /Admin/Article/index?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006600s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012736s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006068s ]
+
+[ 2016-08-23T10:56:06+08:00 ] 192.168.188.184 /Admin/Column
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006728s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013539s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/90b12976a70ff28c3142c03a9c9c55ca.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006279s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006321s ]
+
+[ 2016-08-23T10:56:10+08:00 ] 192.168.188.184 /Admin/Column/add?gid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006622s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013317s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/ColumnController.class.php 第 22 行.
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 29 行.
+NOTIC: [8] Undefined index: cover /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 92 行.
+NOTIC: [8] Undefined index: tpl /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 92 行.
+NOTIC: [8] Undefined index: cover /mnt/share/dzx.com/Application/Runtime/Cache/Admin/23e64621e2c31cfbea8044c1e832e89d.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007865s ]
+
+[ 2016-08-23T10:56:27+08:00 ] 192.168.188.184 /Admin/Article/index?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006717s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014125s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006932s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006975s ]
+
+[ 2016-08-23T10:56:29+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006445s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012620s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006370s ]
+
+[ 2016-08-23T10:59:04+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006234s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012553s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006587s ]
+
+[ 2016-08-23T10:59:06+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006694s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013691s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006043s ]
+
+[ 2016-08-23T10:59:14+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006623s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013536s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007230s ]
+
+[ 2016-08-23T10:59:14+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007401s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013933s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062208s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006769s ]
+
+[ 2016-08-23T10:59:58+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010134s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017271s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:00:43+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007317s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014105s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒1瓶','10','1盒1瓶','1盒1瓶','10','9','100','','1盒1瓶','100','0','/Uploads/Images/2016-08-23/57bbbc2de2248.jpg','0','0','0','0','0','0','0','','1471921243') [ RunTime:0.0003s ]
+
+[ 2016-08-23T11:00:46+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007270s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013765s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007177s ]
+
+[ 2016-08-23T11:00:47+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006574s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012766s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007032s ]
+
+[ 2016-08-23T11:00:48+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006408s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013107s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006722s ]
+
+[ 2016-08-23T11:00:57+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006744s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013811s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:01:14+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006468s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013751s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒2瓶','10','1盒2瓶','1盒2瓶','18','15','100','','1盒2瓶','100','0','/Uploads/Images/2016-08-23/57bbbc691b370.jpg','0','0','0','0','0','0','0','','1471921274') [ RunTime:0.0002s ]
+
+[ 2016-08-23T11:01:16+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006423s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012564s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007121s ]
+
+[ 2016-08-23T11:01:18+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007214s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014005s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006214s ]
+
+[ 2016-08-23T11:01:18+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007315s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013997s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006965s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009390s ]
+
+[ 2016-08-23T11:01:29+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006356s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012655s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:01:47+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008803s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016840s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒3瓶','10','1盒3瓶','1盒3瓶','20','19','100','','1盒3瓶','100','0','/Uploads/Images/2016-08-23/57bbbc8956ed0.jpg','0','0','0','0','0','0','0','','1471921307') [ RunTime:0.0002s ]
+
+[ 2016-08-23T11:01:49+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006392s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012282s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006710s ]
+
+[ 2016-08-23T11:01:51+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006697s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012814s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061348s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006689s ]
+
+[ 2016-08-23T11:01:51+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006806s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013073s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007540s ]
+
+[ 2016-08-23T11:01:59+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007349s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013753s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:02:18+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007593s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014115s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒4瓶','10','1盒4瓶','1盒4瓶','28','25','100','','1盒4瓶','100','0','/Uploads/Images/2016-08-23/57bbbca77f070.jpg','0','0','0','0','0','0','0','','1471921338') [ RunTime:0.0002s ]
+
+[ 2016-08-23T11:02:20+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006769s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013929s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006097s ]
+
+[ 2016-08-23T11:02:22+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006231s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012529s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065484s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007208s ]
+
+[ 2016-08-23T11:02:23+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007600s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014053s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007056s ]
+
+[ 2016-08-23T11:02:45+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006244s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012145s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:02:47+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008731s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015915s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒5瓶','10','1盒5瓶','1盒5瓶','30','29','100','','1盒5瓶','100','0','/Uploads/Images/2016-08-23/57bbbcd59eb10.jpg','0','0','0','0','0','0','0','','1471921367') [ RunTime:0.0002s ]
+
+[ 2016-08-23T11:02:50+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006090s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011985s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006416s ]
+
+[ 2016-08-23T11:03:05+08:00 ] 192.168.188.184 /Admin/Article/add?cid=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006565s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012699s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_column`  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_column` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 56 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 63 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 69 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 76 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 77 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 82 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 87 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 108 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 112 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 116 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 120 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 139 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 152 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 156 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 161 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 162 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 163 行.
+NOTIC: [8] Undefined variable: info /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e16cf278f1c326e72baf6415dbd5ab87.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006259s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006296s ]
+
+[ 2016-08-23T11:03:06+08:00 ] 192.168.188.184 /Admin/Article/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006324s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013533s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 0 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 0 AND `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 1 LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/e5a9ae2f1e083f359798491bd896097f.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007492s ]
+
+[ 2016-08-23T11:03:14+08:00 ] 192.168.188.184 /Admin/Uploadify/uploadImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006018s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012934s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /mnt/share/dzx.com/ThinkPHP/Library/Think/Upload.class.php 第 176 行.
+
+[ 2016-08-23T11:03:31+08:00 ] 192.168.188.184 /Admin/Article/addhandler
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006113s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013491s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: attr /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 86 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Admin/Controller/BaseController.class.php 第 378 行.
+NOTIC: [8] Use of undefined constant htmlspecialchars - assumed 'htmlspecialchars' /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 87 行.
+NOTIC: [8] Undefined index: file /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: INSERT INTO `think_article` (`title`,`column_id`,`keywords`,`description`,`price`,`tprice`,`sum`,`mass`,`content`,`sort`,`status`,`image`,`id`,`com`,`new`,`head`,`top`,`img`,`hot`,`file`,`date`) VALUES ('1盒6瓶','10','1盒6瓶','1盒6瓶','40','35','100','','1盒6瓶','100','0','/Uploads/Images/2016-08-23/57bbbcf2e0297.jpg','0','0','0','0','0','0','0','','1471921411') [ RunTime:0.0002s ]
+
+[ 2016-08-23T11:03:34+08:00 ] 192.168.188.184 /Admin/Article/index/cid/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007097s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013611s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /mnt/share/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 10 AND `status` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 10 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /mnt/share/dzx.com/Application/Tool/Category.class.php on line 114 and defined /mnt/share/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /mnt/share/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 10 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060046s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006449s ]
+

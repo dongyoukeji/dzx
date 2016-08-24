@@ -1,0 +1,55 @@
+<include file="Common:header"/>
+<div class="main">
+    <div class="main_top">
+        <div class="main_top_left">
+            <div class="left_title" style="float: left; padding-top: 3px;">
+                <b class="box_section1">礼盒专区</b>
+                <i class="box_section2">BOX SECTION</i>
+            </div>
+            <div class="top_left_nav hairycrab">
+                <a href="{:U('Product/list_dzx')}" class="gray_bg3 gray_col2"  <empty name="Think.get.cid">id="allcheck"</empty>>全部</a><a href="{:U('Product/list_dzx?cid=4')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="4"> id="allcheck"</eq>>大众蟹</a><a href="{:U('Product/list_dzx?cid=2')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="2"> id="allcheck"</eq>>外贸蟹</a><a href="{:U('Product/list_dzx?cid=1')}" class="gray_bg3 gray_col2" <eq name="Think.get.cid" value="1"> id="allcheck"</eq>>移民蟹</a>
+            </div>
+            <div class="shopping_area" style="float: right;">
+                <a href="{:U('Coupon/index')}" class="shopping_check blue_bg">
+                    <i>GIFT COUPONS</i>
+                    <b>礼品券<font>购买</font></b>
+                </a>
+                </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+                <i>HOT SELL</i>
+                <b>红酒专区<font>购买</font></b>
+            </a>
+            </div>
+        </div>
+        <div class="main_top_right"></div>
+    </div>
+    <div class="proudct_list small_product_list">
+        <!-- 产品 -->
+        <volist name="list" id="vo">
+            <div class="product_info small_product">
+                <strong class="product_img"><img src="{$vo.image}"></strong>
+                <div class="product_price">
+                    <strong>
+                        <em class="triangle-left"></em>
+                        <i>抢鲜价</i>
+                        <b><font>￥{$vo.tprice}</font>元</b>
+                        <small class="triangle-topleft"></small>
+                    </strong>
+                    <span>
+                        <i>市场价：{$vo.price}元</i>
+                        <b>{$vo.title}</b>
+                        <u>产品规格</u>
+                        {$vo.description|get_pro_details}
+                    </span>
+                    <img src="__IMAGES__/zhengpin.fw.png">
+                    <a href="{:U('product/details?id='.$vo['id'])}" class="raisecar raisecar_pos">查看详情</a>
+                </div>
+            </div>
+        </volist>
+        <div class="clear"></div>
+        <div class="page">
+            {$page}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<include file="Common:footer"/>

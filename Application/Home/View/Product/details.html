@@ -1,0 +1,59 @@
+<include file="Common:header"/>
+<script>
+    var pid = '{$vo.id}';
+</script>
+<!-- 主体 -->
+<div class="main">
+    <!-- 主体左边 -->
+    <div class="main_left" style="border-right: 0;">
+        <div class="left_title" style="float: left; padding-top: 3px;">
+            <b class="box_section1">礼盒专区</b>
+            <i class="box_section2">BOX SECTION</i>
+        </div>
+        <div class="product_info" style="margin-top:20px;">
+            <strong class="product_img"><img src="{$vo.image}"></strong>
+            <div class="product_price" title="{$vo.title}">
+                <strong>
+                    <em class="triangle-left"></em>
+                    <i>抢鲜价</i>
+                    <b><font>￥{$vo.tprice}</font>元</b>
+                    <small class="triangle-topleft"></small>
+                </strong>
+					<span>
+						<i>市场价：{$vo.price}元</i>
+						<b>{$vo.title|sub_str=9}</b>
+						<u>产品规格</u>
+                        {$vo.description|get_pro_details}
+					</span>
+                <img src="__IMAGES__/zhengpin.fw.png">
+                <a href="javascript:void(0);" class="addcar raisecar raisecar_pos"  data-id="{$vo.id}" data-sum="0" data-type="<eq name='vo.column_id' value='5'>wine<else />goods</eq>">加入购物车</a>
+            </div>
+        </div>
+    </div>
+    <!-- 主体右边 -->
+    <div class="main_right">
+        <div class="shopping_area widthone">
+            <a href="{:U('Coupon/index')}" class="shopping_check blue_bg">
+                <i>GIFT COUPONS</i>
+                <b>礼品券<font>购买</font></b>
+            </a><a href="{:U('product/list_dzx')}" class="shopping_check claret_red_bg">
+            <i>BOX SECTION</i>
+            <b>礼盒专区<font>购买</font></b>
+        </a><a href="{:U('redwine/index')}" class="shopping_check orange_bg">
+            <i>HOT SELL</i>
+            <b>红酒专区<font>购买</font></b>
+        </a>
+        </div>
+        <!-- 数据 -->
+        <include file="Common:get_order"/>
+    </div>
+    <div class="clear"></div>
+    <!-- 编辑器 -->
+    <div class="main_edit">
+        <h3>商品介绍</h3>
+        <div class="edit_info">
+            {$vo.content|htmlspecialchars_decode}
+        </div>
+    </div>
+</div>
+<include file="Common:footer"/>

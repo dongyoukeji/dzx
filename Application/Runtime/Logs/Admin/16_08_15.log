@@ -1,0 +1,205 @@
+[ 2016-08-15T16:17:24+08:00 ] 192.168.188.184 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006641s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013399s ]
+
+[ 2016-08-15T16:17:25+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007208s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013617s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013548s ]
+
+[ 2016-08-15T16:17:31+08:00 ] 192.168.188.184 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006626s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013257s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1471249051',`last_ip`='192.168.188.184' WHERE `id` = 1 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: logintime /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /mnt/share/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-15T16:17:31+08:00 ] 192.168.188.184 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007506s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015016s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 7 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `column_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_article` WHERE `column_id` = 3 ORDER BY date desc,id desc LIMIT 0,1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` WHERE ( fid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-08-15T16:17:31+08:00 ] 192.168.188.184 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006790s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013493s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 7 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: status /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /mnt/share/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007092s ]
+
+[ 2016-08-15T16:17:34+08:00 ] 192.168.188.184 /Admin/Coupons
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006846s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013774s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 7 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: coupons_type /mnt/share/dzx.com/Application/Admin/Controller/CouponsController.class.php 第 152 行.
+SQL: SHOW COLUMNS FROM `think_coupons` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_coupons` WHERE `coupons_status` <> 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_coupons` WHERE `coupons_status` <> 3 ORDER BY coupons_no asc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined index: cid /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 29 行.
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index:  /mnt/share/dzx.com/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php 第 90 行.
+SQL: SELECT * FROM `think_coupons` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006594s ]
+
+[ 2016-08-15T17:38:16+08:00 ] 192.168.188.184 /Admin/Coupons
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006978s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014330s ]
+
+[ 2016-08-15T17:38:17+08:00 ] 192.168.188.184 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006903s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042714s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007015s ]
+
