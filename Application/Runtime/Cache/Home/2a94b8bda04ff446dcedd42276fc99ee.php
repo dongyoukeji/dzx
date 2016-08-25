@@ -5,38 +5,38 @@
     <title><?php echo C('SiteConfig.title');?>|首页</title>
     <meta name="keyword" content="<?php echo C('SiteConfig.keyword');?>" >
     <meta name="description" content="<?php echo C('SiteConfig.description');?>" >
-    <link rel="stylesheet" type="text/css" href="/Public/Home/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/css/index.css">
-    <script type="text/javascript" src="/Public/Home/js/jquery.min-1.7.1.js"></script>
-    <script type="text/javascript" src="/Public/Home/js/tool.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Home/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Home/css/index.css">
+    <script type="text/javascript" src="/dzx/Public/Home/js/jquery.min-1.7.1.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/tool.js"></script>
 
     <!-- 联系客服 开始 -->
-    <link href="/Public/Home/css/lrtk.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Public/Home/js/lrtk.js"></script>
+    <link href="/dzx/Public/Home/css/lrtk.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/dzx/Public/Home/js/lrtk.js"></script>
     <!-- 联系客服 结束 -->
 
     <!-- 加入购物车 开始 -->
     <style type="text/css">.u-flyer{display: block;width: 100px;height: 100px;border-radius: 50%;position: fixed;z-index: 9999;}</style>
-    <script type="text/javascript" src="/Public/Home/js/fly/jquery.fly.min.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/fly/jquery.fly.min.js"></script>
     <!-- 加入购物车 结束 -->
-    <script type="text/javascript" src="/Public/Home/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/jquery.cookie.js"></script>
 </head>
 <body>
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
-        <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
-        <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
-        <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
+        <a href="<?php echo U('index/index');?>"><img src="/dzx/Public/Home/images/logo.fw.png" class="top_img img1"></a>
+        <img src="/dzx/Public/Home/images/logo2.fw.png" class="top_img img2">
+        <img src="/dzx/Public/Home/images/logo3.fw.png" class="top_img img3">
+        <img src="/dzx/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
         <a href="<?php echo U('index/index');?>" class="back_home">首页</a>
     </div>
 </div>
-<link rel="stylesheet" href="/Public/Home/css/baguettebox.min.css">
-<script src="/Public/Home/js/baguettebox.min.js"></script>
+<link rel="stylesheet" href="/dzx/Public/Home/css/baguettebox.min.css">
+<script src="/dzx/Public/Home/js/baguettebox.min.js"></script>
 <!-- 主体 -->
 <div class="main">
     <!-- 主体左边 -->
@@ -68,7 +68,11 @@
             <div class="product_nav">
                 <b>推荐礼盒<font class="triangle-right"></font></b>
                 <ul class="get_com_list">
+<<<<<<< HEAD
                     <li><a href="/" class="fontcolor" data-role="1">全部</a></li>
+=======
+                    <li><a href="/dzx/" class="fontcolor" data-role="1">全部</a></li>
+>>>>>>> 985dab854496a283bac1b5d5179ffd74507e0ef2
                     <?php if(is_array($columns)): $i = 0; $__LIST__ = $columns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cols): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('index/get_article_list?cid='.$cols['id']);?>"><?php echo ($cols["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                     <!--<li><a href="<?php echo U('index/get_article_list?cid=3');?>">小众蟹</a></li>-->
                     <!--<li><a href="<?php echo U('index/get_article_list?cid=4');?>">大众蟹</a></li>-->
@@ -98,7 +102,7 @@
 								<!--<p>4只母蟹2.0-2.5两</p>-->
 							</span>
 
-                            <img src="/Public/Home/images/zhengpin.fw.png">
+                            <img src="/dzx/Public/Home/images/zhengpin.fw.png">
                             <a href="<?php echo U('product/details?id='.$vo['id']);?>" class="raisecar">查看详情</a>
                         </div>
                     </div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -163,16 +167,16 @@
 						<b>最简单最传统的方法就是看外形辨别阳澄湖大闸蟹的真伪</b>
 						<strong>
                             <em>
-                                <a><img src="/Public/Home/images/chek1.fw.png"></a>
+                                <a><img src="/dzx/Public/Home/images/chek1.fw.png"></a>
                                 <i>青背</i>
                             </em><em>
-                            <a><img src="/Public/Home/images/chek2.fw.png"></a>
+                            <a><img src="/dzx/Public/Home/images/chek2.fw.png"></a>
                             <i>白肚</i>
                         </em><em>
-                            <a><img src="/Public/Home/images/chek3.fw.png"></a>
+                            <a><img src="/dzx/Public/Home/images/chek3.fw.png"></a>
                             <i>黄毛</i>
                         </em><em style="margin-right:0;">
-                            <a><img src="/Public/Home/images/chek4.fw.png"></a>
+                            <a><img src="/dzx/Public/Home/images/chek4.fw.png"></a>
                             <i>金爪</i>
                         </em>
                         </strong>
@@ -184,7 +188,7 @@
         <div class="right_check">
             <b class="check2">大闸蟹做法</b>
             <div class="check_content">
-                <a><img src="/Public/Home/images/dpx.jpg"></a>
+                <a><img src="/dzx/Public/Home/images/dpx.jpg"></a>
                 <p class="cdzx">每当到了金秋十月，就是吃螃蟹的好季节，这个季节
                     的螃蟹肉肥膏多，正是味道鲜美的时候，那么很多人
                     想吃螃蟹，尤其是比较出名的阳澄湖大闸蟹，但是却
@@ -224,15 +228,15 @@
         <div class="right_check">
             <b class="check3">我们的养殖基地</b>
             <div class="baguetteBoxOne gallery yzjd_pic">
-                <a href="/Public/Home/images/yzjd1.jpg" data-caption="Golden Gate Bridge"><img src="/Public/Home/images/yzjd1_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd2.jpg" title="Midnight City"><img src="/Public/Home/images/yzjd2_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd3.jpg"><img src="/Public/Home/images/yzjd3_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd4.jpg"><img src="/Public/Home/images/yzjd4_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd5.jpg"><img src="/Public/Home/images/yzjd5_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd6.jpg"><img src="/Public/Home/images/yzjd6_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd7.jpg"><img src="/Public/Home/images/yzjd7_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd8.jpg"><img src="/Public/Home/images/yzjd8_s.jpg" /></a>
-                <a href="/Public/Home/images/yzjd9.jpg"><img src="/Public/Home/images/yzjd9_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd1.jpg" data-caption="Golden Gate Bridge"><img src="/dzx/Public/Home/images/yzjd1_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd2.jpg" title="Midnight City"><img src="/dzx/Public/Home/images/yzjd2_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd3.jpg"><img src="/dzx/Public/Home/images/yzjd3_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd4.jpg"><img src="/dzx/Public/Home/images/yzjd4_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd5.jpg"><img src="/dzx/Public/Home/images/yzjd5_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd6.jpg"><img src="/dzx/Public/Home/images/yzjd6_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd7.jpg"><img src="/dzx/Public/Home/images/yzjd7_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd8.jpg"><img src="/dzx/Public/Home/images/yzjd8_s.jpg" /></a>
+                <a href="/dzx/Public/Home/images/yzjd9.jpg"><img src="/dzx/Public/Home/images/yzjd9_s.jpg" /></a>
             </div>
         </div>
     </div>
@@ -265,16 +269,16 @@
     <address>Copyright©2005-2015,Suxiege Co.,Ltd. All right reserved. 所有内容均由阳澄湖大闸蟹制作，未经许可不得转载</address>
     <i>经营许可证编号: 沪ICP备15028124号</i>
     <b>味道鲜美正是食蟹的大好时节</b>
-    <img src="/Public/Home/images/logo.fw.png">
+    <img src="/dzx/Public/Home/images/logo.fw.png">
 </div>
-<script type="text/javascript" src="/Public/Plug/layer-v2.2/layer/layer.min.js"></script>
+<script type="text/javascript" src="/dzx/Public/Plug/layer-v2.2/layer/layer.min.js"></script>
 <!-- 联系客服 -->
 <div id="top">
     <div id="izl_rmenu" class="izl-rmenu">
         <a href="#" id="end" class="btn btn-gwc"></a>
         <a href="tencent://Message/?Uin=123456789&websiteName=www.lanrentuku.com=&Menu=yes" class="btn btn-qq"></a>
         <div class="btn btn-wx">
-            <img class="pic" src="/Public/Home/images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
+            <img class="pic" src="/dzx/Public/Home/images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
         </div>
         <div class="btn btn-phone">
             <div class="phone">
@@ -285,8 +289,8 @@
         </div>
     </div>
 </div>
-<script src="/Public/Home/js/baguettebox.min.js" type="text/javascript"></script>
-<script src="/Public/Home/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/dzx/Public/Home/js/baguettebox.min.js" type="text/javascript"></script>
+<script src="/dzx/Public/Home/js/jquery.cookie.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function(){
         $('.btn-gwc').click(function (e) {
@@ -341,7 +345,7 @@
                 $image = $addcar.parent('div.product_price').siblings('strong.product_img');
                 var flyer = $('<img class="u-flyer" src="'+$image.find('img').attr('src')+'">');
             }else {
-                var flyer = $('<img class="u-flyer" src="/Public/Home/images/couponaddcar.jpg">');
+                var flyer = $('<img class="u-flyer" src="/dzx/Public/Home/images/couponaddcar.jpg">');
             }
             //购物车效果
             var top;

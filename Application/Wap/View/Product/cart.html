@@ -34,21 +34,43 @@
                             <input type="checkbox" checked/>
                             <b><img src="{$vo1.image}"></b>
                         </label>
-                    <span>
-                        <h3>{$vo1.title}</h3>
-                        <p class="gray_col2">{$vo1.description|get_pro_left}</p>
-                        <p class="gray_col2">{$vo1.description|get_pro_right}</p>
-                        <strong>
-                            <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo1.tprice})" />
-                            <input type="number" name="num[{$vo1.tt}][]" value="{$vo1.get_num}" class="number" onkeyup="change_sum(this,{$vo1.tprice})">
-                            <input type="button" name="plus" value="+" class="jiajian plus" onclick="doPlus(this,{$vo1.tprice})" />
-                            <input type="hidden" name="mass[{$vo1.tt}][]" class="mass" value="{$vo1.mass}" data-fufei='<eq name="vo1.type" value="2">1</eq><eq name="vo1.type" value="1">1</eq><eq name="vo1.type" value="3">0</eq>'>
-                            <input type="hidden" name="price[{$vo1.tt}][]" value="{$vo1.tprice}">
-                            <input type="hidden" name="id[{$vo1.tt}][]" value="{$vo1.id}">
-                        </strong>
-                        <h2 class="red_col">￥<font>{$vo1.tprice}</font></h2>
-                    </span>
+                        <span>
+                            <h3>{$vo1.title}</h3>
+                            <p class="gray_col2">{$vo1.description|get_pro_left}</p>
+                            <p class="gray_col2">{$vo1.description|get_pro_right}</p>
+                            <strong>
+                                <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo1.tprice})" />
+                                <input type="number" name="num[{$vo1.tt}][]" value="{$vo1.get_num}" class="number" onkeyup="change_sum(this,{$vo1.tprice})">
+                                <input type="button" name="plus" value="+" class="jiajian plus" onclick="doPlus(this,{$vo1.tprice})" />
+                                <input type="hidden" name="mass[{$vo1.tt}][]" class="mass" value="{$vo1.mass}" data-fufei='<eq name="vo1.type" value="2">1</eq><eq name="vo1.type" value="1">1</eq><eq name="vo1.type" value="3">0</eq>'>
+                                <input type="hidden" name="price[{$vo1.tt}][]" value="{$vo1.tprice}">
+                                <input type="hidden" name="id[{$vo1.tt}][]" value="{$vo1.id}">
+                            </strong>
+                            <h2 class="red_col">￥<font>{$vo1.tprice}</font></h2>
+                            <div class="wine_check">
+                                <input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
+                                <label for="bzhxz{$key}" class="showbzhq">
+                                    <span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}">
+                                    <small></small></u>
+                                </label>
+                            </div>
+                        </span>
                         <strong class="delect" onclick="delItem(this)"><i>×</i></strong>
+                        <eq name="vo1.type" value="2">
+                            <div class="clear"></div>
+                            <div class="wine_box" data-key="{$key}">
+                                <ul >
+                                    <volist name="boxes" id="vo2" key="k">
+                                        <li data-key="{$key}">
+                                            <span>￥{$vo2.tprice}<input type="number" name="box_num[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]" value="1" class="wine_box_num" data-price="{$vo2.tprice}" /></span>
+                                            <input type="checkbox" value="1" name="box_num_selected[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]"  id="thbzh{$vo1.id}{$key}1" class="thbzh thbzh{$key}" data-key="{$key}" onclick="showBoxPic(this)" />
+                                            <label for="thbzh{$vo1.id}{$key}1"><img src="{$vo2.image}"></label>
+                                            <em>{$vo2.title}</em>
+                                        </li>
+                                    </volist>
+                                </ul>
+                            </div>
+                        </eq>
                     </div>
                 </volist>
             </volist>
@@ -104,6 +126,16 @@
 <script type="text/javascript">
     var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
     $(function(){
+
+        $('.wine_box_num').change(function () {
+            get_boxes_price($(this));
+            get_all_price();
+        }); 
+        $('.thbzh').click(function () {
+            get_boxes_price_by_images($(this));
+            get_all_price();
+        });
+
         // 去除input样式
         $('.user_info input,.user_info textarea').focus(function() {
             $(this).removeClass('enter_error');
@@ -183,6 +215,12 @@
                     });
                 }
             });
+        });
+
+        $('.wine_box_num').change(function(){
+            if($(this).val() < 1){
+                $(this).val(1) ;
+            }
         });
     });
 
@@ -300,15 +338,19 @@
             }
         });
         $('#pro_sum').text($sf);
+
+        //盒子价格
+        $pp = get_boxes_totals();
+
+        // 邮费价格
         $tt= get_ems_price();
         if($('#sfkd').is(':checked')){
             $tt=0;
         }
-
-
-
-        $('#totals_price1').val($prices + $tt);
-        return $prices+$tt;
+        $pry = $prices + $tt + $pp;
+        $('#totals_price1').val($pry);
+        $('#totals_price').text($pry);
+        return $pry;
     }
 
     function plushEMS(obj) {
@@ -398,7 +440,7 @@
      * 清除购物车
      */
     function clearItem() {
-        layer.confirm('您确定要删除吗？删除后您将不能找回商品', {
+        layer.confirm('您确定要清空购物车吗？清空后后您将不能找回商品', {
             btn: ['确定','取消'] //按钮
         }, function(){
             clearCookie();
@@ -421,6 +463,141 @@
                }
             }
         }
+    }
+
+
+    // 显示红酒包装盒
+    function showBox(obj){
+        $obj = $(obj);
+        var key = $obj.attr('data-key');
+        if($obj.is(':checked')){
+            if($('.thbzh'+key).is(':checked')){
+                $obj.next('label').children('u').children('small').show();
+            }
+            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').show();
+        }else{
+            $obj.next().children('u').children('small').hide();
+            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').hide();
+        }
+    }
+
+    // 显示红酒包装盒价格
+    function showBoxPic(obj) {
+        $obj = $(obj);
+        var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('span').children('label').children('u').children('small');
+        if ($obj.is(":checked")) {
+            sPosition.show();
+        }else{
+            if(($obj+':checked').length==0)
+                sPosition.hide();
+        }
+    }
+
+    /**
+     * 获取价格
+     * @returns {number}
+     */
+    function get_boxes_totals() {
+        $boxes_totals=0;
+        $boxes_price=0;
+        
+        var reg = /[1-9][0-9]*/g;
+        
+        $('.wine_check').each(function(){
+            $ckeckbox = $(this).children('input.bzhxz');
+            // $ckeckbox1 = $(this).parent('strong').siblings('input[type="checkbox"]');
+            $ckeckbox1 = $(this).parent('span').siblings('label').children('input[type="checkbox"]');
+            var pric = $(this).children('label').children('u').find('small').text();
+            if($ckeckbox1.is(':checked')){
+                if($ckeckbox.is(':checked')){
+                    
+                    if(pric!=''){
+                        pric = pric.match(reg);
+                        $boxes_totals += parseFloat(pric);
+                    }
+                }   
+            }else{
+                $boxes_totals -= 0;
+                // if(pric!=''){
+                //  pric = pric.match(reg);
+                //  $boxes_totals1 += parseFloat(pric);
+                // }        
+            }
+        });
+        
+        // $tp = {$totals};     
+        
+        // if($boxes_totals!=0){
+        //  $tp = parseFloat($tp)+$boxes_totals;
+        // }
+        // $('#totals_price').text($tp);
+        $boxes_totals = $boxes_totals;
+        return $boxes_totals;
+    }
+    /**
+     * 获取单条总数
+     * @param obj
+     * @returns {number}
+     */
+    function get_boxes_price(obj) {
+        $boxes_price=0;
+        $element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
+        $key = $element.attr('data-key');
+        $('.wine_box').each(function () {
+            if($(this).attr('data-key')==$key){
+                $(this).find('ul>li').each(function () {
+                    if($(this).find('input[type="checkbox"]').is(':checked')){  //选中盒子
+                        $element=$(this).find('input.wine_box_num');
+                        $num = $element.val();
+                        $num = ($num<=0)?1:$num;
+                        $price = $element.attr('data-price');
+                        $boxes_price +=$num*$price;
+                    }
+                });
+            }
+        });
+        if($boxes_price>0){
+            $('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元");
+        }else {
+            $('#wine_pic'+$key).find('small').hide();
+        }
+        $tp = {$totals};
+        if($boxes_price>0){
+            $tp = parseFloat($tp)+$boxes_price;
+        }
+        //$('#totals_price').text($tp);
+        return $boxes_price;
+    }
+
+    /**
+     * 点击image获取单价
+     * @param obj
+     * @returns {number}
+     */
+    function get_boxes_price_by_images(obj) {
+        $boxes_price=0;
+        // $element = obj.parent('li');
+        $element = obj.parent('li').parent('ul').parent('div.wine_box');
+        $key = $element.attr('data-key');
+        $('.wine_box').each(function () {
+            if($(this).attr('data-key')==$key){
+                $(this).find('ul>li').each(function () {
+                    if($(this).find('input[type="checkbox"]').is(':checked')){  //选中盒子
+                        $element=$(this).find('input.wine_box_num');
+                        $num = $element.val();
+                        $num = ($num<=0)?1:$num;
+                        $price = $element.attr('data-price');
+                        $boxes_price +=$num*$price;
+                    }
+                });
+            }
+        });
+        if($boxes_price!=0){
+            $('#wine_pic'+$key).find('small').text('￥'+$boxes_price+"元").show();
+        }else {
+            $('#wine_pic'+$key).find('small').empty().hide();
+        }
+        return $boxes_price;
     }
 </script>
 </html>
