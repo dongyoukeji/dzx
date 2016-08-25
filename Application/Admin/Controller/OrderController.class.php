@@ -13,7 +13,7 @@ class OrderController extends BaseController {
 		//$this->kefu=C('Kefu');
 		$map=$this->_search();
 		$map['ordstatus']=array('neq',2);
-		$this->list = $list = $this->getlist(M('Order'),$map,'id asc');
+		$this->list = $list = $this->getlist(M('Order'),$map,'ordtime desc');
     	$this->display();
     }
 	public function add($id=0){
@@ -25,8 +25,8 @@ class OrderController extends BaseController {
 
 	public function see($id=0){
 		if($id){
-			$order = M('Order')->find($id);
-
+			$order = M('Order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time',true	)->find($id);
+			$box = $this->_get_box_info($order);
 			if($order['isused']==2){
 				$goods= M('article')->find($order['productid']);
 				$goods['count']=1;
@@ -35,11 +35,13 @@ class OrderController extends BaseController {
 				foreach (explode('|',$order['sums']) as $k=>$v){
 					$temp = explode('_',$v);
 					if(strstr($v,'wine')){
-						$wine= M('article')->find($temp[1]);
+						$wine= M('article')->field('id,title')->find($temp[1]);
 						$wine['count']=$temp[2];
-						$order['pro'][]=$wine;
+						$wine['box']=$box[$temp[1]];
+						$order['pro'][$k]=$wine;
+
 					}else if (strstr($v,'goods')){
-						$goods= M('article')->find($temp[1]);
+						$goods= M('article')->field('id,title')->find($temp[1]);
 						$goods['count']=$temp[2];
 						$order['pro'][]=$goods;
 					}else{
@@ -51,9 +53,27 @@ class OrderController extends BaseController {
 				}
 			}
 		}
+		
 		$this->vo1=$order;
 		$this->display();
 	}
+	/**
+	 * [_get_box_info 获取盒子信息]
+	 * @param  [type] $order [description]
+	 * @return [type]        [description]
+	 */
+	private function _get_box_info($order){
+		$boxes = $order['boxid'];
+		foreach (explode('|', $boxes) as $k => $v) {
+			$temp = explode('_', $v);
+			$arc = M('article')->field('id,title')->find($temp[2]);
+			$arc['sum']=$temp[3];
+			$arc['price']=$temp[4];
+			$tt[$temp[1]]=$arc;
+		}
+		return $tt;
+	}
+
 	public function addhd(){
 		if(!IS_POST){
 			$this->ajaxReturn(array('status'=>0,'msg'=>'错误的请求'));

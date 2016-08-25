@@ -17,7 +17,7 @@ class OderController extends BaseController {
 
         $id = I('post.id');
         $map['ordcode']=array('like','%'.$id.'%');
-        $order = M('order')->where($map)->find();
+        $order = M('order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time,payment_buyer_email',false)->where($map)->find();
 
         if(empty($order['ordcode']) || !strstr($order['ordcode'],$id)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'你已经领取了，不能重复领取'));
@@ -88,9 +88,12 @@ class OderController extends BaseController {
         $data['ordbuynum']=$list['muns'];
         $data['sums']=$list['details'];
         $data['ordtime']=time();
+        $data['wine']=$list['wine'];
         $data['productid']=$list['productid'];
         $data['ordid']=get_order_trade_no();
-
+        $data['boxid']=$list['boxid'];
+        $data['box_price']=$list['box_price'];
+        
         if(!$oid = M('order')->add($data)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
         }
@@ -162,6 +165,7 @@ class OderController extends BaseController {
         $details='';
         $sums=0;
         $productid ='';
+        $wines='';
         $update=array();
         foreach ($id as $k => $v){
             for ($i=0;$i<count($v);$i++){
@@ -189,7 +193,7 @@ class OderController extends BaseController {
                     $boxid ='';
                     foreach ($box as $j => $jj) {
                         $temp = explode('_',$jj);
-                        $boxid .= ",".$jj;
+                        $boxid .= "|".$jj;
                         if($temp[1]==$v[$i]){
                             $ff .= ",".$jj;
                         }
@@ -202,6 +206,7 @@ class OderController extends BaseController {
                         'price'=>$p,
                         'box'=>substr($ff,1)
                     );
+                    $wines .= "|".$k."_".$v[$i]."_".$n."_".$p;
                 }
                 //类型_ID_数量_价格
                 $details .= "|".$k."_".$v[$i]."_".$n."_".$p;
@@ -216,10 +221,11 @@ class OderController extends BaseController {
         $list['boxid']=substr($boxid,1);
         $list['muns']=$sums;
         $list['total']=$total;
+        $list['wine']=substr($wines, 1);
         $list['box_price']=$box_price;
         $list['totals']=$total+$list['mas']+$box_price;
         $list['update']=$update;
-        p($list);die;
+       
         return $list;
     }
     /**
@@ -231,6 +237,7 @@ class OderController extends BaseController {
         $isbox = I('post.box_num_selected');
 
         $_result=0;
+
         foreach ($isbox as $k => $v) {
 
             if($v[0]==1){

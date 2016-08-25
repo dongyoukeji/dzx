@@ -25,13 +25,14 @@
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <img src="/Public/Home/images/logo1.fw.png" class="top_img img1">
+        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
         <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
         <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
         <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
+        <a href="<?php echo U('index/index');?>" class="back_home">首页</a>
     </div>
 </div>
 <div class="main">
@@ -169,9 +170,19 @@
         }
 
         $(".addcar").click(function(event){
-            console.log($.cookie());
             $addcar = $(this);
             $type = $addcar.attr('data-type');
+
+            //写入购物车操作
+            $id = $addcar.attr('data-id');
+            $sum = $addcar.attr('data-sum');
+
+            $.post('<?php echo U("product/check_pro");?>',{t:$type,id:$id},function (data) {
+                if(data.status==0){
+                    layer.alert(data.msg,{icon:2});
+                }
+            });
+
             //飞入购物车效果
             if($type!='coupon'){
                 $image = $addcar.parent('div.product_price').siblings('strong.product_img');
@@ -206,9 +217,7 @@
                 }
             });
 
-            //写入购物车操作
-            $id = $addcar.attr('data-id');
-            $sum = $addcar.attr('data-sum');
+
             var sum1=1,sum2=1,sum3=1;
             if($type=='coupon'){
                 sum1 = $sum;

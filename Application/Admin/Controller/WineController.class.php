@@ -19,33 +19,45 @@ class WineController extends BaseController {
     }
 	public function add($id=0){
 		if($id){
-			$order = M('Order')->find($id);
+			$order = M('Order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time,payment_buyer_email',true	)->find($id);
+			$box = $this->_get_box_info($order);
+
+			
 			if($order['isused']==2){
-				$goods= M('article')->find($order['productid']);
+				$goods= M('article')->field('id,title')->find($order['productid']);
 				$goods['count']=1;
 				$order['pro'][]=$goods;
 			}else{
 				foreach (explode('|',$order['sums']) as $k=>$v){
 					$temp = explode('_',$v);
 					if(strstr($v,'wine')){
-						$wine= M('article')->find($temp[1]);
+						$wine= M('article')->field('id,title')->find($temp[1]);
 						$wine['count']=$temp[2];
-						$order['pro'][]=$wine;
-					}else if (strstr($v,'goods')){
-						$goods= M('article')->find($temp[1]);
-						$goods['count']=$temp[2];
-						$order['pro'][]=$goods;
-					}else{
-						$coupon= M('coupons')->where(array('coupon_cid'=>$temp[1]))->find();
-						$coupon['title']=$coupon['coupons_title'];
-						$coupon['count']=$temp[2];
-						$order['pro'][]=$coupon;
+						$wine['box']=$box[$temp[1]];
+						$order['pro'][$k]=$wine;
 					}
 				}
 			}
 		}
+	
 		$this->oder=$order;
 		$this->display();
+	}
+	/**
+	 * [_get_box_info 获取盒子信息]
+	 * @param  [type] $order [description]
+	 * @return [type]        [description]
+	 */
+	private function _get_box_info($order){
+		$boxes = $order['boxid'];
+		foreach (explode('|', $boxes) as $k => $v) {
+			$temp = explode('_', $v);
+			$arc = M('article')->field('id,title')->find($temp[2]);
+			$arc['sum']=$temp[3];
+			$arc['price']=$temp[4];
+			$tt[$temp[1]]=$arc;
+		}
+		return $tt;
 	}
 
 	public function see($id=0){
@@ -98,8 +110,9 @@ class WineController extends BaseController {
 			}
 		}
 		$m = I('post.phones');
-		$url = cn50r(C('SiteConfig.host')."/query/express/decode/0/no/".getEncyptStr(I('post.orderId'))); //结果: http://50r.cn/Y62jjZ
-		$sms_info1 ="尊敬的".I('post.usernames')."，你支付的订单".I('post.orderId')."，已发货。可到官方网站输入订单号查询订单物流状态。或点击该链接查询。".$url;
+		$url = cn50r(C('SiteConfig.host')."/query/express/decode/0/no/".getEncyptStr(I('post.orderId')));
+
+		$sms_info1 ="尊敬的".I('post.usernames')."，您购买的【葡萄酒】"."，你支付的订单".I('post.orderId')."，已发货。可到官方网站输入订单号查询订单物流状态。或点击该链接查询。".$url;
 
 		$_var = random(4,1);
 		session('var',$_var);

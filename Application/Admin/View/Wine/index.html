@@ -39,13 +39,13 @@
                         <li class="admin_bg5">{$vo.ordid}</li>
                         <li class="admin_bg5">{$vo.phone}</li>
                         <li class="admin_bg6" title="{$vo.post_address} {$vo.post_userinfo}">{$vo.post_address} {$vo.post_userinfo}</li>
-                        <li class="admin_bg5"><notempty name="vo.post_wine_express">{$vo.post_wine_express}<else />暂无</notempty></li>
+                        <li class="admin_bg5"><notempty name="vo.post_wine_express">{$vo.post_wine_express}<else />-</notempty></li>
                         <li class="admin_bg5"> <eq name="vo.shun_feng" value="1">到付<else />已付</eq> </li>
                         <li class="admin_bg5">
                             <notempty name="vo.post_wine_time">
                                 {$vo.post_wine_time|date='Y-m-d h:s',###}
                                 <else />
-                                /
+                                -
                             </notempty>
                         </li>
                         <li class="admin_bg4">

@@ -25,8 +25,8 @@
     <div>
         <i>BASIC DATA</i>
         <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if(($vo["contr_name"]) != "Admin"): ?><a href="<?php echo ($vo["url"]); ?>" <?php if((CONTROLLER_NAME) == $vo["contr_name"]): ?>id="admin_dhxz"<?php endif; ?>><?php echo ($vo["name"]); ?></a><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-        <i>ARTICLES DATA</i>
-        <?php if(is_array($nav_column)): $i = 0; $__LIST__ = $nav_column;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cl): $mod = ($i % 2 );++$i;?><a href="/Admin/Article/index?cid=<?php echo ($cl["id"]); ?>" <?php if(($cl["id"]) == $_GET['cid']): ?>id="admin_dhxz"<?php endif; ?> <?php if(($inIt) == $cl["id"]): ?>id="admin_dhxz"<?php endif; ?> ><?php echo ($cl["title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        <?php if($gid != 10): if( $gid != 11): ?><i>ARTICLES DATA</i>
+                <?php if(is_array($nav_column)): $i = 0; $__LIST__ = $nav_column;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cl): $mod = ($i % 2 );++$i;?><a href="/Admin/Article/index?cid=<?php echo ($cl["id"]); ?>" <?php if(($cl["id"]) == $_GET['cid']): ?>id="admin_dhxz"<?php endif; ?> <?php if(($inIt) == $cl["id"]): ?>id="admin_dhxz"<?php endif; ?> ><?php echo ($cl["title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; endif; endif; ?>
         <i>EXECUTION DATA</i>
         <?php if(is_array($nav)): $i = 0; $__LIST__ = $nav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if(($vo["contr_name"]) == "Admin"): ?><a href="<?php echo ($vo["url"]); ?>" <?php if((CONTROLLER_NAME) == $vo["contr_name"]): ?>id="admin_dhxz"<?php endif; ?>><?php echo ($vo["name"]); ?></a><?php endif; endforeach; endif; else: echo "" ;endif; ?>
         <!--<?php if(($gid) == "-1"): ?><a href="/Admin/Admin" <?php if((CONTROLLER_NAME) == "Admin"): ?>id="admin_dhxz"<?php endif; ?>>账号管理</a><?php endif; ?>-->
@@ -55,6 +55,7 @@
                         <em>收货人</em>
                         <input name='usernames' id="usernames" type="text" value="<?php echo (get_user_left($oder["post_userinfo"])); ?>" class="required" />
                         <input name='id' id="id" type="hidden" value="<?php echo ($oder["id"]); ?>" />
+                         <input name='orderId' type="hidden" value="<?php echo ($oder["ordid"]); ?>" />
                     </span>
                         <span>
                         <em>收货手机</em>
@@ -70,10 +71,12 @@
                     </span>
                     <span>
                         <em>产品信息</em>
-                        <?php if(is_array($oder["pro"])): $i = 0; $__LIST__ = $oder["pro"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pr): $mod = ($i % 2 );++$i; echo ($pr["title"]); ?>|<?php echo ($pr["count"]); ?><br/><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($oder["pro"])): $i = 0; $__LIST__ = $oder["pro"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pr): $mod = ($i % 2 );++$i; if(count($pr['box']) == 0): ?>商品：<?php echo ($pr["title"]); ?>|数量：<?php echo ($pr["count"]); ?><br/>
+                                <?php else: ?>
+                                商品：<?php echo ($pr["title"]); ?>|数量：<?php echo ($pr["count"]); ?> 商品：<?php echo ($pr['box']['title']); ?>|数量：<?php echo ($pr['box']['sum']); ?><br/><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                     </span>
                 <div class="admin_bg_b2 admin_bg_b3">
-                    <input type="submit" value="确认修改">
+                    <input type="submit" value="确认">
                     <input type="button" onclick="history.go(-1)" value="返回">
                 </div>
             </div>
@@ -86,13 +89,17 @@
         $('form').validate();
         $('form').submit(function (e) {
             e.preventDefault();
+            var index = layer.load(2, {
+                shade: [0.1,'#fff'] //0.1透明度的白色背景
+            });
             if($('form').valid()){
                 $(this).ajaxSubmit({
                     success:function (data) {
                         if(data.status==0){
-                            layer.msg(data.msg,{icon:2});
+                            //layer.msg(data.msg,{icon:2});
                         }else{
-                            redirect(data.redirect,data.msg,1);
+                            layer.close(index);
+                            //redirect(data.redirect,data.msg,1);
                         }
                     }
                 })

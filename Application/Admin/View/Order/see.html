@@ -30,7 +30,11 @@
                 <em>产品信息</em>
                 <volist name="vo1.pro" id="pr">
                     <div>
-                        {$pr.title}|{$pr.count}
+                        <if condition="count($pr['box']) eq 0">
+                            商品：{$pr.title}|数量：{$pr.count}
+                            <else />
+                            商品：{$pr.title}|数量：{$pr.count} 商品：{$pr['box']['title']}|数量：{$pr['box']['sum']}
+                        </if>
                     </div>
                 </volist>
             </span>

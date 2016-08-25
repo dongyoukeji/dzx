@@ -42,18 +42,20 @@ function is_mobile() {
  */
 function cn50r($url){
     $url = urlencode($url);
-    $api = 'http://50r.cn/urls/add.json?ak=57b66eb4d068a5a9049f7ff1&url='.$url;
-    $result = file_get_contents($api); //可以使用curl等代替
-    if($result){
-        $result = json_decode($result);
-        if($result->error){//出错了
-            die($result->error);
-        }else{
-            return $result->url;
-        }
-    }else{
-        return '出错';
-    }
+    $ch = curl_init();
+    $url = 'http://apis.baidu.com/3023/shorturl/shorten?url_long='.$url;
+    $header = array(
+        'apikey:9b13ec2447bfab76597116fcf12dc2c8',
+    );
+    // 添加apikey到header
+    curl_setopt($ch, CURLOPT_HTTPHEADER  , $header);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    // 执行HTTP请求
+    curl_setopt($ch , CURLOPT_URL , $url);
+    $res = curl_exec($ch);
+
+    $result =  json_decode($res,true);
+    return $result['urls'][0]['url_short'];
 }
 
 

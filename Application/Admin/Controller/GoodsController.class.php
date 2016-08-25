@@ -19,23 +19,23 @@ class GoodsController extends BaseController {
 	public function add($id=0){
 		if($id){
 			$order = M('Order')->field('id,username,ordid,sums,post_address,post_userinfo,post_goods_express,isused')->find($id);
+			
 			if($order['isused']==2){
 				$goods= M('article')->find($order['productid']);
 				$goods['count']=1;
 				$order['pro'][]=$goods;
 			}else{
-				foreach (explode('|',$order['sums']) as $k=>$v){
+				$sums = explode('|',$order['sums']);
+
+				foreach ($sums as $k=>$v){
 					$temp = explode('_',$v);
-					if(strstr($v,'wine')){
-						$wine= M('article')->find($temp[1]);
-						$wine['count']=$temp[2];
-						$order['pro'][]=$wine;
-					}else if (strstr($v,'goods')){
-						$goods= M('article')->find($temp[1]);
+					if (strstr($v,'goods')){
+						$goods= M('article')->field('id,title')->find($temp[1]);
 						$goods['count']=$temp[2];
 						$order['pro'][]=$goods;
-					}else{
-						$coupon= M('coupons')->where(array('coupon_cid'=>$temp[1]))->find();
+					}
+					if(strstr($v,'coupon')){
+						$coupon= M('coupons')->field('id,coupons_title')->where(array('coupon_cid'=>$temp[1]))->find();
 						$coupon['title']=$coupon['coupons_title'];
 						$coupon['count']=$temp[2];
 						$order['pro'][]=$coupon;
@@ -43,6 +43,7 @@ class GoodsController extends BaseController {
 				}
 			}
 		}
+	
 		$this->oder=$order;
 		$this->display();
 	}
@@ -98,10 +99,7 @@ class GoodsController extends BaseController {
 		}
 		$m = I('post.phones');
 		$url = cn50r(C('SiteConfig.host')."/query/express/decode/0/no/".getEncyptStr(I('post.orderId'))); //结果: http://50r.cn/Y62jjZ
-
-
-
-		$sms_info1 ="尊敬的".I('post.usernames')."，你支付的订单".I('post.orderId')."，已发货。可到官方网站输入订单号查询订单物流状态。或点击该链接查询。".$url;
+		$sms_info1 ="尊敬的".I('post.usernames')."，您购买的【大闸蟹】"."，你支付的订单".I('post.orderId')."，已发货。可到官方网站输入订单号查询订单物流状态。或点击该链接查询。".$url;
 
 		$_var = random(4,1);
 		session('var',$_var);

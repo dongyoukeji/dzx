@@ -71,7 +71,9 @@
                     </span>
                     <span>
                         <em>产品信息</em>
-                        <?php if(is_array($oder["pro"])): $i = 0; $__LIST__ = $oder["pro"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pr): $mod = ($i % 2 );++$i; echo ($pr["title"]); ?>|<?php echo ($pr["count"]); ?><br/><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($oder["pro"])): $i = 0; $__LIST__ = $oder["pro"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pr): $mod = ($i % 2 );++$i; if(count($pr['box']) == 0): ?>商品：<?php echo ($pr["title"]); ?>|数量：<?php echo ($pr["count"]); ?><br/>
+                                <?php else: ?>
+                                商品：<?php echo ($pr["title"]); ?>|数量：<?php echo ($pr["count"]); ?> 商品：<?php echo ($pr['box']['title']); ?>|数量：<?php echo ($pr['box']['sum']); ?><br/><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                     </span>
                     <div class="admin_bg_b2 admin_bg_b3">
                         <input type="submit" value="确认">

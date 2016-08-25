@@ -76,12 +76,12 @@
                         <li class="admin_bg5"><?php echo ($vo["ordid"]); ?></li>
                         <li class="admin_bg5"><?php echo ($vo["phone"]); ?></li>
                         <li class="admin_bg6" title="<?php echo ($vo["post_address"]); ?> <?php echo ($vo["post_userinfo"]); ?>"><?php echo ($vo["post_address"]); ?> <?php echo ($vo["post_userinfo"]); ?></li>
-                        <li class="admin_bg5"><?php if(!empty($vo["post_goods_express"])): echo ($vo["post_goods_express"]); else: ?>暂无<?php endif; ?></li>
+                        <li class="admin_bg5"><?php if(!empty($vo["post_goods_express"])): echo ($vo["post_goods_express"]); else: ?>-<?php endif; ?></li>
                         <li class="admin_bg5"> <?php if(($vo["shun_feng"]) == "1"): ?>到付<?php else: ?>已付<?php endif; ?> </li>
                         <li class="admin_bg5">
                             <?php if(!empty($vo["post_goods_time"])): echo (date('Y-m-d h:s',$vo["post_goods_time"])); ?>
                                 <?php else: ?>
-                                /<?php endif; ?>
+                                -<?php endif; ?>
                         </li>
                         <li class="admin_bg4">
                             <a href="/Admin/Goods/add?id=<?php echo ($vo["id"]); ?>">编辑</a>

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-08-24 01:58:08
--- 服务器版本： 5.5.48-log
--- PHP Version: 5.5.36
+-- Generation Time: Aug 25, 2016 at 10:48 AM
+-- Server version: 5.6.29-log
+-- PHP Version: 5.6.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_address`
+-- Table structure for table `think_address`
 --
 
 CREATE TABLE IF NOT EXISTS `think_address` (
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `think_address` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_admin`
+-- Table structure for table `think_admin`
 --
 
 CREATE TABLE IF NOT EXISTS `think_admin` (
@@ -60,18 +60,18 @@ CREATE TABLE IF NOT EXISTS `think_admin` (
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='管理员表';
 
 --
--- 转存表中的数据 `think_admin`
+-- Dumping data for table `think_admin`
 --
 
 INSERT INTO `think_admin` (`id`, `gid`, `username`, `password`, `hash`, `status`, `date`, `last_date`, `last_ip`) VALUES
-(1, '-1', 'admin', 'fcea920f7412b5da7be0cf42b8c93759', 'MTIzNDU2Nw==', 0, 0, 1471920953, '192.168.188.184'),
+(1, '-1', 'admin', 'fcea920f7412b5da7be0cf42b8c93759', 'MTIzNDU2Nw==', 0, 0, 1472015067, '127.0.0.1'),
 (2, '10', 'dzx_wine', 'e10adc3949ba59abbe56e057f20f883e', 'MTIzNDU2', 0, 0, 1471410192, '192.168.188.184'),
 (3, '11', 'dzx_goods', 'e10adc3949ba59abbe56e057f20f883e', 'MTIzNDU2', 0, 1471410373, 1471576312, '192.168.188.184');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_advert`
+-- Table structure for table `think_advert`
 --
 
 CREATE TABLE IF NOT EXISTS `think_advert` (
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `think_advert` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_article`
+-- Table structure for table `think_article`
 --
 
 CREATE TABLE IF NOT EXISTS `think_article` (
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `think_article` (
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='文章表';
 
 --
--- 转存表中的数据 `think_article`
+-- Dumping data for table `think_article`
 --
 
 INSERT INTO `think_article` (`id`, `column_id`, `tid`, `title`, `author`, `keywords`, `description`, `ico`, `image`, `file`, `content`, `mass`, `extend`, `price`, `tprice`, `sum`, `hits`, `com`, `hot`, `new`, `head`, `top`, `img`, `date`, `time`, `sort`, `status`) VALUES
@@ -141,7 +141,7 @@ INSERT INTO `think_article` (`id`, `column_id`, `tid`, `title`, `author`, `keywo
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_cart`
+-- Table structure for table `think_cart`
 --
 
 CREATE TABLE IF NOT EXISTS `think_cart` (
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `think_cart` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_column`
+-- Table structure for table `think_column`
 --
 
 CREATE TABLE IF NOT EXISTS `think_column` (
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `think_column` (
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='栏目表';
 
 --
--- 转存表中的数据 `think_column`
+-- Dumping data for table `think_column`
 --
 
 INSERT INTO `think_column` (`id`, `fid`, `title`, `name`, `keywords`, `description`, `banner`, `iamge`, `ico`, `position`, `date`, `type`, `uri`, `isnav`, `effective`, `sort`, `attach`, `status`, `dates`) VALUES
@@ -199,7 +199,7 @@ INSERT INTO `think_column` (`id`, `fid`, `title`, `name`, `keywords`, `descripti
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_coupons`
+-- Table structure for table `think_coupons`
 --
 
 CREATE TABLE IF NOT EXISTS `think_coupons` (
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `think_coupons` (
 ) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8mb4 COMMENT='礼券表';
 
 --
--- 转存表中的数据 `think_coupons`
+-- Dumping data for table `think_coupons`
 --
 
 INSERT INTO `think_coupons` (`id`, `coupons_no`, `coupons_title`, `coupons_name`, `coupons_type`, `coupons_val`, `coupon_cid`, `coupon_content`, `coupons_status`, `coupons_date`, `coupon_send`, `coupons_use_date`, `coupons_use_user`, `coupons_use_order`) VALUES
@@ -348,7 +348,7 @@ INSERT INTO `think_coupons` (`id`, `coupons_no`, `coupons_title`, `coupons_name`
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_express`
+-- Table structure for table `think_express`
 --
 
 CREATE TABLE IF NOT EXISTS `think_express` (
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `think_express` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='快递信息';
 
 --
--- 转存表中的数据 `think_express`
+-- Dumping data for table `think_express`
 --
 
 INSERT INTO `think_express` (`id`, `orderid`, `order_no`, `express_mall`, `express_geter`, `express_title`, `express_no`, `express_type`, `express_status`, `express_create`, `express_send`) VALUES
@@ -379,7 +379,7 @@ INSERT INTO `think_express` (`id`, `orderid`, `order_no`, `express_mall`, `expre
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_flink`
+-- Table structure for table `think_flink`
 --
 
 CREATE TABLE IF NOT EXISTS `think_flink` (
@@ -397,7 +397,7 @@ CREATE TABLE IF NOT EXISTS `think_flink` (
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='友情链接表';
 
 --
--- 转存表中的数据 `think_flink`
+-- Dumping data for table `think_flink`
 --
 
 INSERT INTO `think_flink` (`id`, `title`, `name`, `description`, `ico`, `uri`, `position`, `date`, `effective`, `sort`, `status`) VALUES
@@ -410,7 +410,7 @@ INSERT INTO `think_flink` (`id`, `title`, `name`, `description`, `ico`, `uri`, `
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_kefu`
+-- Table structure for table `think_kefu`
 --
 
 CREATE TABLE IF NOT EXISTS `think_kefu` (
@@ -422,7 +422,7 @@ CREATE TABLE IF NOT EXISTS `think_kefu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='客服表';
 
 --
--- 转存表中的数据 `think_kefu`
+-- Dumping data for table `think_kefu`
 --
 
 INSERT INTO `think_kefu` (`id`, `qq`, `name`, `status`, `time`) VALUES
@@ -434,7 +434,7 @@ INSERT INTO `think_kefu` (`id`, `qq`, `name`, `status`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_member`
+-- Table structure for table `think_member`
 --
 
 CREATE TABLE IF NOT EXISTS `think_member` (
@@ -460,7 +460,7 @@ CREATE TABLE IF NOT EXISTS `think_member` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_model`
+-- Table structure for table `think_model`
 --
 
 CREATE TABLE IF NOT EXISTS `think_model` (
@@ -481,7 +481,7 @@ CREATE TABLE IF NOT EXISTS `think_model` (
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='控制器';
 
 --
--- 转存表中的数据 `think_model`
+-- Dumping data for table `think_model`
 --
 
 INSERT INTO `think_model` (`id`, `fid`, `title`, `name`, `contr_name`, `info`, `url`, `ico`, `pic`, `sort`, `show`, `status`, `date`, `dates`) VALUES
@@ -500,47 +500,47 @@ INSERT INTO `think_model` (`id`, `fid`, `title`, `name`, `contr_name`, `info`, `
 -- --------------------------------------------------------
 
 --
--- 表的结构 `think_order`
+-- Table structure for table `think_order`
 --
 
 CREATE TABLE IF NOT EXISTS `think_order` (
   `id` int(11) NOT NULL,
-  `userid` int(11) DEFAULT NULL COMMENT ' 购买者userid',
-  `username` varchar(255) DEFAULT NULL COMMENT ' 购买者姓名',
+  `userid` int(11) DEFAULT '0' COMMENT ' 购买者userid',
+  `username` varchar(255) DEFAULT '' COMMENT ' 购买者姓名',
   `phone` varchar(15) NOT NULL COMMENT '手机号',
-  `ordid` varchar(255) DEFAULT NULL COMMENT '订单号',
-  `ordtime` int(11) DEFAULT NULL COMMENT '订单时间',
-  `finishtime` int(11) NOT NULL COMMENT '订单完成时间',
-  `productid` varchar(150) DEFAULT NULL COMMENT '产品ID',
-  `ordtitle` varchar(255) DEFAULT NULL COMMENT '订单标题',
+  `ordid` varchar(255) DEFAULT '' COMMENT '订单号',
+  `ordtime` int(11) DEFAULT '0' COMMENT '订单时间',
+  `finishtime` int(11) NOT NULL DEFAULT '0' COMMENT '订单完成时间',
+  `productid` varchar(150) DEFAULT '' COMMENT '产品ID',
+  `ordtitle` varchar(255) DEFAULT '' COMMENT '订单标题',
   `ordbuynum` int(11) DEFAULT '0' COMMENT '购买数量',
-  `sums` varchar(150) NOT NULL,
+  `sums` varchar(150) NOT NULL DEFAULT '',
   `ordprice` float(10,2) DEFAULT '0.00' COMMENT '产品单价',
   `ordfee` float(10,2) DEFAULT '0.00' COMMENT '订单总金额',
   `ordstatus` int(11) DEFAULT '0' COMMENT '订单状态',
-  `payment_type` varchar(255) DEFAULT NULL COMMENT '支付类型',
+  `payment_type` varchar(255) DEFAULT '' COMMENT '支付类型',
   `wine` varchar(250) NOT NULL COMMENT '酒水信息',
-  `payment_trade_no` varchar(255) DEFAULT NULL COMMENT '支付接口交易号',
-  `payment_trade_status` varchar(255) DEFAULT NULL COMMENT '支付接口返回的交易状态',
-  `payment_notify_id` varchar(255) DEFAULT NULL COMMENT '异步推送ID',
-  `payment_notify_time` varchar(255) DEFAULT NULL COMMENT '异步推送时间',
-  `payment_buyer_email` varchar(255) DEFAULT NULL COMMENT '购买者帐号',
-  `ordcode` varchar(255) DEFAULT NULL COMMENT '二维码',
+  `payment_trade_no` varchar(255) DEFAULT '' COMMENT '支付接口交易号',
+  `payment_trade_status` varchar(255) DEFAULT '' COMMENT '支付接口返回的交易状态',
+  `payment_notify_id` varchar(255) DEFAULT '' COMMENT '异步推送ID',
+  `payment_notify_time` varchar(255) DEFAULT '' COMMENT '异步推送时间',
+  `payment_buyer_email` varchar(255) DEFAULT '' COMMENT '购买者帐号',
+  `ordcode` varchar(255) DEFAULT '' COMMENT '二维码',
   `isused` int(11) DEFAULT '0',
-  `usetime` int(11) DEFAULT NULL,
-  `checkuser` int(11) DEFAULT NULL,
-  `shun_feng` int(11) NOT NULL COMMENT '快递费用0已付,1到付',
-  `post_address` varchar(200) NOT NULL COMMENT '邮寄地址',
-  `post_status` int(11) NOT NULL COMMENT '发送状态:0未发送,1已发送,2已完成',
-  `post_userinfo` varchar(50) NOT NULL COMMENT '接收人信息',
-  `post_goods_express` varchar(500) NOT NULL COMMENT '产品快递公司信息',
-  `post_goods_time` int(11) NOT NULL,
-  `post_wine_express` varchar(50) NOT NULL COMMENT '酒水快递公司',
-  `post_wine_time` int(11) NOT NULL
+  `usetime` int(11) DEFAULT '0',
+  `checkuser` int(11) DEFAULT '0',
+  `shun_feng` int(11) NOT NULL DEFAULT '0' COMMENT '快递费用0已付,1到付',
+  `post_address` varchar(200) NOT NULL DEFAULT '' COMMENT '邮寄地址',
+  `post_status` int(11) NOT NULL DEFAULT '0' COMMENT '发送状态:0未发送,1已发送,2已完成',
+  `post_userinfo` varchar(50) NOT NULL DEFAULT '' COMMENT '接收人信息',
+  `post_goods_express` varchar(500) NOT NULL DEFAULT '' COMMENT '产品快递公司信息',
+  `post_goods_time` int(11) NOT NULL DEFAULT '0',
+  `post_wine_express` varchar(50) NOT NULL DEFAULT '' COMMENT '酒水快递公司',
+  `post_wine_time` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `think_order`
+-- Dumping data for table `think_order`
 --
 
 INSERT INTO `think_order` (`id`, `userid`, `username`, `phone`, `ordid`, `ordtime`, `finishtime`, `productid`, `ordtitle`, `ordbuynum`, `sums`, `ordprice`, `ordfee`, `ordstatus`, `payment_type`, `wine`, `payment_trade_no`, `payment_trade_status`, `payment_notify_id`, `payment_notify_time`, `payment_buyer_email`, `ordcode`, `isused`, `usetime`, `checkuser`, `shun_feng`, `post_address`, `post_status`, `post_userinfo`, `post_goods_express`, `post_goods_time`, `post_wine_express`, `post_wine_time`) VALUES

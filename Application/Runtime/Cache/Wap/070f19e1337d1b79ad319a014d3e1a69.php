@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <title>Document</title>
+    <title>阳澄湖大闸蟹专卖店</title>
     <link rel="stylesheet" type="text/css" href="/Public/Wap/css/base.css">
     <link rel="stylesheet" type="text/css" href="/Public/Wap/css/wap.css">
     <script type="text/javascript" src="/Public/Wap/js/jquery.min.js"></script>
@@ -136,6 +136,7 @@
             $('.my_cart').html("<b>购物车</b>"+'<i>'+ sums +'</i>');
             $(".my_cart").attr('href','javascript:void(0);');
         });
+
     });
     /**
      * 获取数量

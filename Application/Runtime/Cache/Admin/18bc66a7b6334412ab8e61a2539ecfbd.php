@@ -77,7 +77,7 @@
                         <li class="admin_bg4" title="<?php echo ($vo["post_address"]); ?> <?php echo ($vo["post_userinfo"]); ?>"><?php echo ($vo["post_address"]); ?> <?php echo ($vo["post_userinfo"]); ?></li>
                         <li class="admin_bg4">
                             <?php if(!empty($vo["post_goods_express"])): ?>产品单号：<?php echo ($vo["post_goods_express"]); endif; if(!empty($vo["post_wine_express"])): ?>酒水单号：<?php echo ($vo["post_wine_express"]); endif; ?>
-                            <?php if($vo["post_goods_express"] == '' and $vo["post_wine_express"] == ''): ?>/<?php endif; ?>
+                            <?php if($vo["post_goods_express"] == '' and $vo["post_wine_express"] == ''): ?>-<?php endif; ?>
                         </li>
                         <li class="admin_bg4"><?php if(($vo["isused"]) == "2"): ?>兑换订单<?php else: if(($vo["ordstatus"]) == "0"): ?>未支付<?php endif; if(($vo["ordstatus"]) == "1"): ?>已支付<?php endif; if(($vo["ordstatus"]) == "2"): ?>取消订单<?php endif; endif; ?> </li>
                         <li class="admin_bg4">

@@ -33,7 +33,11 @@
                     <span>
                         <em>产品信息</em>
                         <volist name="oder.pro" id="pr">
-                            {$pr.title}|{$pr.count}<br/>
+                            <if condition="count($pr['box']) eq 0">
+                                商品：{$pr.title}|数量：{$pr.count}<br/>
+                                <else />
+                                商品：{$pr.title}|数量：{$pr.count} 商品：{$pr['box']['title']}|数量：{$pr['box']['sum']}<br/>
+                            </if>
                         </volist>
                     </span>
                 <div class="admin_bg_b2 admin_bg_b3">
@@ -57,10 +61,10 @@
                 $(this).ajaxSubmit({
                     success:function (data) {
                         if(data.status==0){
-                            layer.msg(data.msg,{icon:2});
+                            //layer.msg(data.msg,{icon:2});
                         }else{
                             layer.close(index);
-                            redirect(data.redirect,data.msg,1);
+                            //redirect(data.redirect,data.msg,1);
                         }
                     }
                 })
