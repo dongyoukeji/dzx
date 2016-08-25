@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>阳澄湖大闸蟹专卖店</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/wap.css">
-    <script type="text/javascript" src="/Public/Wap/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/wap.css">
+    <script type="text/javascript" src="/dzx/Public/Wap/js/jquery.min.js"></script>
 </head>
 <body>
 <div class="header"></div>
 <div class="main">
     <div class="main_top">
-        <img src="/Public/Wap/images/dpx.jpg" />
+        <img src="/dzx/Public/Wap/images/dpx.jpg" />
 			<span>
 				<a href="<?php echo U('index/discern');?>">辨别大闸蟹</a>
 				<a href="<?php echo U('index/cooking');?>">大闸蟹做法</a>
@@ -21,11 +21,11 @@
     </div>
     <div class="main_lxpz">
 			<span class="lxpz1">
-				<img src="/Public/Wap/images/point3.fw.png">
+				<img src="/dzx/Public/Wap/images/point3.fw.png">
 			</span><span class="lxpz2">
-				<img src="/Public/Wap/images/point1.fw.png">
+				<img src="/dzx/Public/Wap/images/point1.fw.png">
 			</span><span class="lxpz3">
-				<img src="/Public/Wap/images/point2.fw.png">
+				<img src="/dzx/Public/Wap/images/point2.fw.png">
 			</span>
     </div>
     <div class="main_nav">
@@ -64,8 +64,8 @@
     <a href="javascript:void(0);" class="my_cart"><b>购物车</b></a>
     <a href="<?php echo U('query/index');?>" class="my_float_r">订单查询</a>
 </div>
-<script src="/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function(){
         // 礼券

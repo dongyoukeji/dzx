@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>阳澄湖大闸蟹专卖店</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/wap.css">
-    <script type="text/javascript" src="/Public/Wap/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/wap.css">
+    <script type="text/javascript" src="/dzx/Public/Wap/js/jquery.min.js"></script>
 </head>
 <body>
 <div class="header">
-    <a href="<?php echo U('index/index');?>" class="home"><img src="/Public/Wap/images/home.fw.png" /></a>
+    <a href="<?php echo U('index/index');?>" class="home"><img src="/dzx/Public/Wap/images/home.fw.png" /></a>
 </div>
 <div class="main">
     <div class="main_nav posfix">
@@ -60,7 +60,7 @@
             p			:	p,
             oid		:	'<?php echo ($_GET['oid']); ?>'
         };
-        $.post("/Wap/Product/get_lists", json_data, function(result){
+        $.post("/dzx/Wap/Product/get_lists", json_data, function(result){
             if(result == '0'){
                 $('.wap_cp_th_m').hide();
                 $(window).unbind('scroll');
@@ -90,8 +90,8 @@
     <a href="javascript:void(0);" class="my_cart"><b>购物车</b></a>
     <a href="<?php echo U('query/index');?>" class="my_float_r">订单查询</a>
 </div>
-<script src="/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function(){
         // 礼券

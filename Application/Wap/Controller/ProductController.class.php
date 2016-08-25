@@ -104,6 +104,8 @@ class ProductController extends BaseController {
         if(empty($goods)){
             $this->redirect('index/index');
         }
+        $this->boxes = $boxes = M('article')->field('id,title,description,image,price,tprice')->where(array('status'=>0,'column_id'=>10))->select();
+        
         $this->list =$list=$this->_get_cart_list($goods);
         //p($list);die;
         $this->display();

@@ -5,7 +5,7 @@ return array(
 	'DB_HOST'   => 'localhost',          // 服务器地址
 	'DB_NAME'   => 'dzx',             // 数据库名
 	'DB_USER'   => 'root',               // 用户�?
-	'DB_PWD'    => 'jswei',                    // 密码
+	'DB_PWD'    => '',                    // 密码
 	'DB_PORT'   => 3306,                  // 端口
 	'DB_PREFIX' => 'think_',            // 数据库表前缀
 	'DB_CHARSET'=> 'utf8',              // 字符�?

@@ -5,30 +5,30 @@
     <title><?php echo C('SiteConfig.title');?>|首页</title>
     <meta name="keyword" content="<?php echo C('SiteConfig.keyword');?>" >
     <meta name="description" content="<?php echo C('SiteConfig.description');?>" >
-    <link rel="stylesheet" type="text/css" href="/Public/Home/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Home/css/index.css">
-    <script type="text/javascript" src="/Public/Home/js/jquery.min-1.7.1.js"></script>
-    <script type="text/javascript" src="/Public/Home/js/tool.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Home/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Home/css/index.css">
+    <script type="text/javascript" src="/dzx/Public/Home/js/jquery.min-1.7.1.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/tool.js"></script>
 
     <!-- 联系客服 开始 -->
-    <link href="/Public/Home/css/lrtk.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Public/Home/js/lrtk.js"></script>
+    <link href="/dzx/Public/Home/css/lrtk.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/dzx/Public/Home/js/lrtk.js"></script>
     <!-- 联系客服 结束 -->
 
     <!-- 加入购物车 开始 -->
     <style type="text/css">.u-flyer{display: block;width: 100px;height: 100px;border-radius: 50%;position: fixed;z-index: 9999;}</style>
-    <script type="text/javascript" src="/Public/Home/js/fly/jquery.fly.min.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/fly/jquery.fly.min.js"></script>
     <!-- 加入购物车 结束 -->
-    <script type="text/javascript" src="/Public/Home/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/dzx/Public/Home/js/jquery.cookie.js"></script>
 </head>
 <body>
 <!-- 站头 -->
 <div class="header">
     <div class="top">
-        <a href="<?php echo U('index/index');?>"><img src="/Public/Home/images/logo.fw.png" class="top_img img1"></a>
-        <img src="/Public/Home/images/logo2.fw.png" class="top_img img2">
-        <img src="/Public/Home/images/logo3.fw.png" class="top_img img3">
-        <img src="/Public/Home/images/logo4.fw.png" class="top_img img4">
+        <a href="<?php echo U('index/index');?>"><img src="/dzx/Public/Home/images/logo.fw.png" class="top_img img1"></a>
+        <img src="/dzx/Public/Home/images/logo2.fw.png" class="top_img img2">
+        <img src="/dzx/Public/Home/images/logo3.fw.png" class="top_img img3">
+        <img src="/dzx/Public/Home/images/logo4.fw.png" class="top_img img4">
         <span class="tips1"></span>
         <span class="tips2"></span>
         <span class="tips3"></span>
@@ -60,7 +60,7 @@
 							<label for="bzhxz<?php echo ($key); ?>">
 								<span>选择红酒包装</span><u id="wine_pic<?php echo ($key); ?>" data-key="<?php echo ($key); ?>"><small></small></u>
 							</label>
-						</div><?php endif; if(($vo1["type"]) == "1"): ?><div><img src="/Public/Home/images/zhengpin.fw.png"></div><?php endif; if(($vo1["type"]) == "3"): endif; ?>
+						</div><?php endif; if(($vo1["type"]) == "1"): ?><div><img src="/dzx/Public/Home/images/zhengpin.fw.png"></div><?php endif; if(($vo1["type"]) == "3"): endif; ?>
 							</strong>
 						</span>
 						<span class="cart_pro_right">
@@ -147,10 +147,10 @@
     <div class="clear"></div>
 </div>
 <!-- 选中地区 开始 -->
-<link rel="stylesheet" type="text/css" href="/Public/Home/js/city/city.css">
-<script src="/Public/Home/js/city/Popt.js"></script>
-<script src="/Public/Home/js/city/cityJson.js"></script>
-<script src="/Public/Home/js/city/citySet.js"></script>
+<link rel="stylesheet" type="text/css" href="/dzx/Public/Home/js/city/city.css">
+<script src="/dzx/Public/Home/js/city/Popt.js"></script>
+<script src="/dzx/Public/Home/js/city/cityJson.js"></script>
+<script src="/dzx/Public/Home/js/city/citySet.js"></script>
 <!-- 选中地区 结束 -->
 <script type="text/javascript">
 	$(function(){
@@ -215,9 +215,9 @@
 			}
 
 			$form = $('form');
-//			layer.load(2, {
-//				shade: [0.3,'#000'] //0.1透明度的白色背景
-//			});
+			//layer.load(2, {
+			//	shade: [0.3,'#000'] //0.1透明度的白色背景
+			//});
 
 			var json = $form.serialize();
 
@@ -422,7 +422,7 @@
 			btn: ['确定','取消'] //按钮
 		}, function(){
 			clearCookie();
-			$.post('/Home/Product/delItem',{i:$obj.attr('data-index')},function (data) {
+			$.post('/dzx/Home/Product/delItem',{i:$obj.attr('data-index')},function (data) {
 				if(data.status=1){
 					layer.closeAll();
 					$obj.remove();
@@ -438,7 +438,7 @@
 			btn: ['确定','取消'] //按钮
 		}, function(){
 			clearCookie();
-			$.get('/Home/Product/delItems',function (data) {
+			$.get('/dzx/Home/Product/delItems',function (data) {
 				if(data.status==1){
 					layer.closeAll();
 					$('.cart_pro_list').empty();
@@ -630,16 +630,16 @@
     <address>Copyright©2005-2015,Suxiege Co.,Ltd. All right reserved. 所有内容均由阳澄湖大闸蟹制作，未经许可不得转载</address>
     <i>经营许可证编号: 沪ICP备15028124号</i>
     <b>味道鲜美正是食蟹的大好时节</b>
-    <img src="/Public/Home/images/logo.fw.png">
+    <img src="/dzx/Public/Home/images/logo.fw.png">
 </div>
-<script type="text/javascript" src="/Public/Plug/layer-v2.2/layer/layer.min.js"></script>
+<script type="text/javascript" src="/dzx/Public/Plug/layer-v2.2/layer/layer.min.js"></script>
 <!-- 联系客服 -->
 <div id="top">
     <div id="izl_rmenu" class="izl-rmenu">
         <a href="#" id="end" class="btn btn-gwc"></a>
         <a href="tencent://Message/?Uin=123456789&websiteName=www.lanrentuku.com=&Menu=yes" class="btn btn-qq"></a>
         <div class="btn btn-wx">
-            <img class="pic" src="/Public/Home/images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
+            <img class="pic" src="/dzx/Public/Home/images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
         </div>
         <div class="btn btn-phone">
             <div class="phone">
@@ -650,8 +650,8 @@
         </div>
     </div>
 </div>
-<script src="/Public/Home/js/baguettebox.min.js" type="text/javascript"></script>
-<script src="/Public/Home/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/dzx/Public/Home/js/baguettebox.min.js" type="text/javascript"></script>
+<script src="/dzx/Public/Home/js/jquery.cookie.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function(){
         $('.btn-gwc').click(function (e) {
@@ -706,7 +706,7 @@
                 $image = $addcar.parent('div.product_price').siblings('strong.product_img');
                 var flyer = $('<img class="u-flyer" src="'+$image.find('img').attr('src')+'">');
             }else {
-                var flyer = $('<img class="u-flyer" src="/Public/Home/images/couponaddcar.jpg">');
+                var flyer = $('<img class="u-flyer" src="/dzx/Public/Home/images/couponaddcar.jpg">');
             }
             //购物车效果
             var top;
