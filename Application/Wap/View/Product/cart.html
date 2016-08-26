@@ -13,6 +13,9 @@
     <script src="__JS__/city/LAreaData1.js"></script>
     <script src="__JS__/city/LAreaData2.js"></script>
     <!-- 选中地区 结束 -->
+    <!-- 左右滑动 -->
+    <link rel="stylesheet" type="text/css" href="__CSS__/TouchStyle.css">
+    <script type="text/javascript" src="__JS__/touchslider.js"></script>
 </head>
 <body>
 <div class="header">
@@ -58,13 +61,13 @@
                         <strong class="delect" onclick="delItem(this)"><i>×</i></strong>
                         <eq name="vo1.type" value="2">
                             <div class="clear"></div>
-                            <div class="wine_box" data-key="{$key}">
-                                <ul >
+                            <div class="wine_box swipe" data-key="{$key}">
+                                <ul id="slider{$key}" class="slider">
                                     <volist name="boxes" id="vo2" key="k">
                                         <li data-key="{$key}">
-                                            <span>￥{$vo2.tprice}<input type="number" name="box_num[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]" value="1" class="wine_box_num" data-price="{$vo2.tprice}" /></span>
                                             <input type="checkbox" value="1" name="box_num_selected[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]"  id="thbzh{$vo1.id}{$key}1" class="thbzh thbzh{$key}" data-key="{$key}" onclick="showBoxPic(this)" />
                                             <label for="thbzh{$vo1.id}{$key}1"><img src="{$vo2.image}"></label>
+                                            <span>￥{$vo2.tprice}<input type="number" name="box_num[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]" value="1" class="wine_box_num" data-price="{$vo2.tprice}" /></span>
                                             <em>{$vo2.title}</em>
                                         </li>
                                     </volist>
@@ -598,6 +601,16 @@
             $('#wine_pic'+$key).find('small').empty().hide();
         }
         return $boxes_price;
+    }
+// var t11=new TouchSlider('slider',{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
+
+    window.onload = function(){
+        var key = 0;
+        $('.wine_box').each(function() {
+            key = $(this).attr('data-key');
+            var t11=new TouchSlider('slider'+key,{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
+        });
+        $('.slider').css({width:"2200px"});
     }
 </script>
 </html>

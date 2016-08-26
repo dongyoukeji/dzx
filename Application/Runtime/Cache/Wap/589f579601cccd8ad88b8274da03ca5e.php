@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/wap.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/wap.css">
     <!-- 选中地区 开始 -->
-    <link rel="stylesheet" type="text/css" href="/Public/Wap/js/city/LArea.css">
-    <script type="text/javascript" src="/Public/Wap/js/jquery.min.js"></script>
-    <script src="/Public/Wap/js/city/LArea.js"></script>
-    <script src="/Public/Wap/js/city/LAreaData1.js"></script>
-    <script src="/Public/Wap/js/city/LAreaData2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/js/city/LArea.css">
+    <script type="text/javascript" src="/dzx/Public/Wap/js/jquery.min.js"></script>
+    <script src="/dzx/Public/Wap/js/city/LArea.js"></script>
+    <script src="/dzx/Public/Wap/js/city/LAreaData1.js"></script>
+    <script src="/dzx/Public/Wap/js/city/LAreaData2.js"></script>
     <!-- 选中地区 结束 -->
+    <!-- 左右滑动 -->
+    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/TouchStyle.css">
+    <script type="text/javascript" src="/dzx/Public/Wap/js/touchslider.js"></script>
 </head>
 <body>
 <div class="header">
-    <a href="index.html" class="home"><img src="/Public/Wap/images/home.fw.png" /></a>
+    <a href="index.html" class="home"><img src="/dzx/Public/Wap/images/home.fw.png" /></a>
 </div>
 <div class="main padd">
     <form action="<?php echo U('oder/pay_for');?>" method="post" autocomplete="off">
@@ -55,12 +58,12 @@
                         </span>
                         <strong class="delect" onclick="delItem(this)"><i>×</i></strong>
                         <?php if(($vo1["type"]) == "2"): ?><div class="clear"></div>
-                            <div class="wine_box" data-key="<?php echo ($key); ?>">
-                                <ul >
+                            <div class="wine_box swipe" data-key="<?php echo ($key); ?>">
+                                <ul id="slider<?php echo ($key); ?>" class="slider">
                                     <?php if(is_array($boxes)): $k = 0; $__LIST__ = $boxes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($k % 2 );++$k;?><li data-key="<?php echo ($key); ?>">
-                                            <span>￥<?php echo ($vo2["tprice"]); ?><input type="number" name="box_num[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" /></span>
                                             <input type="checkbox" value="1" name="box_num_selected[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]"  id="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>" onclick="showBoxPic(this)" />
                                             <label for="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1"><img src="<?php echo ($vo2["image"]); ?>"></label>
+                                            <span>￥<?php echo ($vo2["tprice"]); ?><input type="number" name="box_num[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" /></span>
                                             <em><?php echo ($vo2["title"]); ?></em>
                                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
@@ -112,8 +115,8 @@
      <input type="hidden" name="totals_price" value="<?php echo ($totals); ?>" id="totals_price1"></span>
     <a href="javascript:void(0);" id="online_pay" class="my_float_r addcart orange_bg">在线支付</a>
 </div>
-<script src="/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/dzx/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
 </body>
 <script type="text/javascript">
     var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
@@ -418,7 +421,7 @@
             btn: ['确定','取消'] //按钮
         }, function(){
             clearCookie();
-            $.post('/Wap/Product/delItem',{i:$obj.attr('data-index')},function (data) {
+            $.post('/dzx/Wap/Product/delItem',{i:$obj.attr('data-index')},function (data) {
                if(data.status=1){
                    layer.closeAll();
                    $obj.remove();
@@ -436,7 +439,7 @@
             btn: ['确定','取消'] //按钮
         }, function(){
             clearCookie();
-            $.get('/Wap/Product/delItems',function (data) {
+            $.get('/dzx/Wap/Product/delItems',function (data) {
                 if(data.status==1){
                     layer.closeAll();
                     $('.cart_pro_list').empty();
@@ -590,6 +593,16 @@
             $('#wine_pic'+$key).find('small').empty().hide();
         }
         return $boxes_price;
+    }
+// var t11=new TouchSlider('slider',{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
+
+    window.onload = function(){
+        var key = 0;
+        $('.wine_box').each(function() {
+            key = $(this).attr('data-key');
+            var t11=new TouchSlider('slider'+key,{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
+        });
+        $('.slider').css({width:"2200px"});
     }
 </script>
 </html>
