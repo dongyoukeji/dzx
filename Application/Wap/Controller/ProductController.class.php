@@ -110,6 +110,10 @@ class ProductController extends BaseController {
         //p($list);die;
         $this->display();
     }
+
+
+
+    
     public function get_price($n){
         $data = file_get_contents('./Data/SFExpress.js');
         $data = json_decode(trim_all($data),true);
@@ -143,9 +147,6 @@ class ProductController extends BaseController {
                     $nums += $wine['get_num']=$k['sum'];
                     $totals += $wine['totals'] = $wine['tprice']*$k['sum'];
                     $wine['type']='2';
-                    if($wine['mass']>0){
-                        $kg += $wine['mass']*$k['sum'];
-                    }
                     $wine['tt']='wine';
                     $list['wine'][]=$wine;
                 }
@@ -178,11 +179,12 @@ class ProductController extends BaseController {
             }
         }
 
-        if($kg<=1){
-            $tal = 20;
+        if($kg<1){
+            $tal = 0;
         }else{
             $tal = 20+($kg-1)*2;
         }
+       
         $this->kg=$kg;
         $this->mass_totals= $tal;
         $this->nums = $nums;
@@ -230,14 +232,27 @@ class ProductController extends BaseController {
         if(!$i){
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除失败，请重试'));
         }
-
-        $cart = session('wap_short_cart');
-
-        unset($cart[$i]);
-        session('wap_short_cart',$cart);
+        $cart = session('short_cart');
+       
+        $temp = explode('_', $i);
+       
+        $ss = array();
+        foreach ($cart as $k => $v) {
+          if($k==$temp[0]){
+            foreach ($v as $i => $j) {
+               if($j['id']!=$temp[1]){
+                    $ss[$k][]=$j;
+               }
+            }
+          }
+        }
+       
+       
+        session('short_cart',$ss);
         $this->ajaxReturn(array('status'=>1,'msg'=>'删除成功'));
         //$this->_get_cart_list();
     }
+    
     /**
      *添加购物车
      */

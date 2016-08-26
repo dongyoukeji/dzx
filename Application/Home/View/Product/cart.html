@@ -11,7 +11,7 @@
 			<!-- 购买的商品 -->
 			<volist name="list" id="vo">
 				<volist name="vo" id="vo1">
-					<div class="cart_product car_check" data-index="{$vo1.type}">
+					<div class="cart_product car_check" data-index='<eq name="vo1.type" value="1">goods</eq><eq name="vo1.type" value="2">wine</eq><eq name="vo1.type" value="3">coupon</eq>_{$vo1.id}'>
 						<span class="cart_pro_left">
 							<input type="checkbox"  onclick="inpCheck(this)" checked />
 							<!-- <label for="product2"></label> -->
@@ -40,7 +40,7 @@
 							</strong>
 							<h2>￥<i class="single_price">{$vo1.tprice}</i><span>元</span></h2>
 						</span>
-						<span class="cart_delect" onclick="delItem(this)"><i>×</i></span>
+						<span class="cart_delect" onclick="delItem(this)" ><i>×</i></span>
 						<eq name="vo1.type" value="2">
 							<div class="clear"></div>
 							<div class="wine_box" data-key="{$key}">
@@ -126,7 +126,7 @@
 <!-- 选中地区 结束 -->
 <script type="text/javascript">
 	$(function(){
-
+		clearCookie();
 		$('.wine_box_num').change(function () {
 			get_boxes_price($(this));
 			get_all_price();

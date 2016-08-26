@@ -91,7 +91,8 @@ class OderController extends BaseController {
         $data['wine']=$list['wine'];
         $data['productid']=$list['productid'];
         $data['ordid']=get_order_trade_no();
-        $data['boxid']=$list['boxid'];
+        $data['boxid']=$list['boxid'];  
+        $data['mass']=$list['mas'];
         $data['box_price']=$list['box_price'];
         
         if(!$oid = M('order')->add($data)){

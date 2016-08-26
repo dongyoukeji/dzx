@@ -40,11 +40,15 @@ class ProductController extends BaseController {
     public function cart(){
         //session('short_cart',null);die;
         $goods = session('short_cart');
+      
         $this->boxes = $boxes = M('article')->field('id,title,description,image,price,tprice')->where(array('status'=>0,'column_id'=>10))->select();
 
-        if(empty($goods)){
+        if(!empty($goods['wine']) || !empty($goods['goods'])){
+            
+        }else{
             $this->redirect('index/index');
         }
+
         $this->list =$this->_get_cart_list($goods);
         $this->display();
     }
@@ -120,10 +124,10 @@ class ProductController extends BaseController {
         }else{
             $tal = 20+($kg-1)*2;
         }
-
+       
         $this->kg=$kg;
         $this->mass_totals= $tal;
-        $this->nums = $nums;
+        $this->nums = ($nums>0)?$nums:0;
         $this->totals =  $totals+$tal;
         
         return $list;
@@ -168,8 +172,22 @@ class ProductController extends BaseController {
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除失败，请重试'));
         }
         $cart = session('short_cart');
-        unset($cart[$i]);
-        session('short_cart',$cart);
+       
+        $temp = explode('_', $i);
+       
+        $ss = array();
+        foreach ($cart as $k => $v) {
+          if($k==$temp[0]){
+            foreach ($v as $i => $j) {
+               if($j['id']!=$temp[1]){
+                    $ss[$k][]=$j;
+               }
+            }
+          }
+        }
+       
+       
+        session('short_cart',$ss);
         $this->ajaxReturn(array('status'=>1,'msg'=>'删除成功'));
         //$this->_get_cart_list();
     }

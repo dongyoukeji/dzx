@@ -149,6 +149,7 @@
                 }
             });
         });
+    
         // 加入购物车特效
         var offset = $("#end").offset();
         var cookies = $.cookie();
@@ -164,7 +165,11 @@
 
         var sums = get_cookie_sum($.cookie('short_cart_sums'));
         if(sums<=0){
-            $("#end").html("");
+            if('<?php echo ($nums); ?>'>0){
+                $("#end").html("<i>"+'<?php echo ($nums); ?>'+"</i>");
+            }else{
+                $("#end").html("");
+            }
         }else{
             $("#end").html("<i>"+sums+"</i>");
         }
