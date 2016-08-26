@@ -108,9 +108,10 @@ class ProductController extends BaseController {
                 foreach ($goods['coupon'] as $s){
                     $coupon = M('coupons')->where("coupon_cid=".$s['id'])->find();
                     $coupon['coupons_id']=$coupon['id'];
-                    $coupon1 = M('article')->find($s['id']);
+                    $coupon1 = M('article')->where(array('column_id'=>$s['id']))->find(); 
                     $nums += $coupon['get_num']=$s['sum'];
                     $totals += $coupon['totals'] = $coupon1['tprice']*$s['sum'];
+                    $coupon1['title']=$coupon['coupons_title'];
                     $coupon['type']='3';
                     $coupon['tt']='coupon';
                     $coupon = array_merge($coupon,$coupon1);
@@ -183,7 +184,9 @@ class ProductController extends BaseController {
                     $ss[$k][]=$j;
                }
             }
-          }
+          }else{
+            $ss[$k]=$v;
+           }
         }
        
        

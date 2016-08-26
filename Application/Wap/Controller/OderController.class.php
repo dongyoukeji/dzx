@@ -45,7 +45,7 @@ class OderController extends BaseController {
         $data['ordbuynum']=1;
         $data['isused']=2;          //兑换订单
         $data['ordid']=get_order_trade_no();
-
+        p($data);die;
         $t = M('order')->save(array(
             'id'=>$order['id'],
             'ordcode'=>substr($ids,1)
@@ -98,7 +98,7 @@ class OderController extends BaseController {
         $data['ordid']=get_order_trade_no();
         $data['boxid']=$list['boxid'];
         $data['box_price']=$list['box_price'];
-       
+        p($data);die;
         if(!$oid = M('order')->add($data)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
         }

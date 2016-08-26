@@ -32,7 +32,7 @@
             <volist name="list" id="vo">
                 <!-- 商品 -->
                 <volist name="vo" id="vo1">
-                    <div class="cart_product cart_check" data-index="{$vo1.tt}">
+                    <div class="cart_product cart_check" data-index='<eq name="vo1.type" value="1">goods</eq><eq name="vo1.type" value="2">wine</eq><eq name="vo1.type" value="3">coupon</eq>_<eq name="vo1.type" value="3">{$vo1.coupon_cid}<else />{$vo1.id}</eq>'>
                         <label onclick="inpCheck(this)">
                             <input type="checkbox" checked/>
                             <b><img src="{$vo1.image}"></b>
@@ -58,13 +58,15 @@
                                 </label>
                             </div> -->
                         </span>
-                        <div class="wine_check">
-                            <input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
-                            <label for="bzhxz{$key}" class="showbzhq">
-                                <span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}">
-                                <small></small></u>
-                            </label>
-                        </div>
+                        <eq name="vo1.type" value="2">
+                            <div class="wine_check">
+                                <input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
+                                <label for="bzhxz{$key}" class="showbzhq">
+                                    <span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}">
+                                    <small></small></u>
+                                </label>
+                            </div>
+                        </eq>
                         <strong class="delect" onclick="delItem(this)"  data-index='<eq name="vo1.type" value="1">goods</eq><eq name="vo1.type" value="2">wine</eq><eq name="vo1.type" value="3">coupon</eq>_{$vo1.id}'><i>×</i></strong>
                         <eq name="vo1.type" value="2">
                             <div class="clear"></div>
@@ -479,7 +481,7 @@
         }, function(){
             clearCookie();
             $.post('__URL__/delItem',{i:$obj.attr('data-index')},function (data) {
-               if(data.status=1){
+                if(data.status=1){
                    layer.closeAll();
                    $obj.remove();
                     $('#totals_price').text(get_all_price());

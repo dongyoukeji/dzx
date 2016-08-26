@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/wap.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/wap.css">
     <!-- 选中地区 开始 -->
-    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/js/city/LArea.css">
-    <script type="text/javascript" src="/dzx/Public/Wap/js/jquery.min.js"></script>
-    <script src="/dzx/Public/Wap/js/city/LArea.js"></script>
-    <script src="/dzx/Public/Wap/js/city/LAreaData1.js"></script>
-    <script src="/dzx/Public/Wap/js/city/LAreaData2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/js/city/LArea.css">
+    <script type="text/javascript" src="/Public/Wap/js/jquery.min.js"></script>
+    <script src="/Public/Wap/js/city/LArea.js"></script>
+    <script src="/Public/Wap/js/city/LAreaData1.js"></script>
+    <script src="/Public/Wap/js/city/LAreaData2.js"></script>
     <!-- 选中地区 结束 -->
     <!-- 左右滑动 -->
-    <link rel="stylesheet" type="text/css" href="/dzx/Public/Wap/css/TouchStyle.css">
-    <script type="text/javascript" src="/dzx/Public/Wap/js/touchslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Public/Wap/css/TouchStyle.css">
+    <script type="text/javascript" src="/Public/Wap/js/touchslider.js"></script>
 </head>
 <body>
 <div class="header">
-    <a href="index.html" class="home"><img src="/dzx/Public/Wap/images/home.fw.png" /></a>
+    <a href="index.html" class="home"><img src="/Public/Wap/images/home.fw.png" /></a>
 </div>
 <div class="main padd">
     <form action="<?php echo U('oder/pay_for');?>" method="post" autocomplete="off">
@@ -30,7 +30,7 @@
         <!-- 商品列表 -->
         <div class="cart_pro_list">
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 商品 -->
-                <?php if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><div class="cart_product cart_check" data-index="<?php echo ($vo1["tt"]); ?>">
+                <?php if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><div class="cart_product cart_check" data-index='<?php if(($vo1["type"]) == "1"): ?>goods<?php endif; if(($vo1["type"]) == "2"): ?>wine<?php endif; if(($vo1["type"]) == "3"): ?>coupon<?php endif; ?>_<?php if(($vo1["type"]) == "3"): echo ($vo1["coupon_cid"]); else: echo ($vo1["id"]); endif; ?>'>
                         <label onclick="inpCheck(this)">
                             <input type="checkbox" checked/>
                             <b><img src="<?php echo ($vo1["image"]); ?>"></b>
@@ -48,23 +48,36 @@
                                 <input type="hidden" name="id[<?php echo ($vo1["tt"]); ?>][]" value="<?php echo ($vo1["id"]); ?>">
                             </strong>
                             <h2 class="red_col">￥<font><?php echo ($vo1["tprice"]); ?></font></h2>
-                            <div class="wine_check">
+                            <!-- <div class="wine_check">
                                 <input type="checkbox" id="bzhxz<?php echo ($key); ?>" class="bzhxz" data-key="<?php echo ($key); ?>" onclick="showBox(this)" />
                                 <label for="bzhxz<?php echo ($key); ?>" class="showbzhq">
                                     <span>选择红酒包装</span><u id="wine_pic<?php echo ($key); ?>" data-key="<?php echo ($key); ?>">
                                     <small></small></u>
                                 </label>
-                            </div>
+                            </div> -->
                         </span>
-                        <strong class="delect" onclick="delItem(this)"><i>×</i></strong>
+                        <?php if(($vo1["type"]) == "2"): ?><div class="wine_check">
+                                <input type="checkbox" id="bzhxz<?php echo ($key); ?>" class="bzhxz" data-key="<?php echo ($key); ?>" onclick="showBox(this)" />
+                                <label for="bzhxz<?php echo ($key); ?>" class="showbzhq">
+                                    <span>选择红酒包装</span><u id="wine_pic<?php echo ($key); ?>" data-key="<?php echo ($key); ?>">
+                                    <small></small></u>
+                                </label>
+                            </div><?php endif; ?>
+                        <strong class="delect" onclick="delItem(this)"  data-index='<?php if(($vo1["type"]) == "1"): ?>goods<?php endif; if(($vo1["type"]) == "2"): ?>wine<?php endif; if(($vo1["type"]) == "3"): ?>coupon<?php endif; ?>_<?php echo ($vo1["id"]); ?>'><i>×</i></strong>
                         <?php if(($vo1["type"]) == "2"): ?><div class="clear"></div>
                             <div class="wine_box swipe" data-key="<?php echo ($key); ?>">
+                                <div class="lrhdxz">左右滑动选择包装盒</div>
                                 <ul id="slider<?php echo ($key); ?>" class="slider">
                                     <?php if(is_array($boxes)): $k = 0; $__LIST__ = $boxes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($k % 2 );++$k;?><li data-key="<?php echo ($key); ?>">
                                             <input type="checkbox" value="1" name="box_num_selected[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]"  id="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>" onclick="showBoxPic(this)" />
                                             <label for="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1"><img src="<?php echo ($vo2["image"]); ?>"></label>
-                                            <span>￥<?php echo ($vo2["tprice"]); ?><input type="number" name="box_num[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" /></span>
                                             <em><?php echo ($vo2["title"]); ?></em>
+                                            <span>
+                                                <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,<?php echo ($vo2["tprice"]); ?>)" />
+                                                <input type="number" class="wine_box_num" name="box_num[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]" value="1" class="wine_box_num" data-price="<?php echo ($vo2["tprice"]); ?>" />
+                                                <input type="button" name="plus" value="+" class="jiajian plus" onclick="doPlus(this,<?php echo ($vo2["tprice"]); ?>)" />
+                                                <b>￥<?php echo ($vo2["tprice"]); ?></b>
+                                            </span>
                                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </div><?php endif; ?>
@@ -115,13 +128,13 @@
      <input type="hidden" name="totals_price" value="<?php echo ($totals); ?>" id="totals_price1"></span>
     <a href="javascript:void(0);" id="online_pay" class="my_float_r addcart orange_bg">在线支付</a>
 </div>
-<script src="/dzx/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="/dzx/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
+<script src="/Public/Wap/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="/Public/Wap/js/layer/layer.js" type="text/javascript"></script>
 </body>
 <script type="text/javascript">
     var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
     $(function(){
-
+        clearCookie();
         $('.wine_box_num').change(function () {
             get_boxes_price($(this));
             get_all_price();
@@ -261,31 +274,32 @@
     function doPlus(obj,p){
         $obj = $(obj);
         var num = $obj.siblings('input[type="number"]').val();
-        if(num == 0){
-            $('.minus').on('click',function(){
-                doMinus(this);
-            });
-        }
-        ++num;
-        if (num < 0)
-            num = 1;
+        // if(num == 0){
+        //     $('.minus').on('click',function(){
+        //         doMinus(this);
+        //     });
+        // }
+        num++;
+        
         $obj.prev().val(num);
-        $tt = get_orther_price($obj,num);
+        get_boxes_price($obj);
+        get_all_price();
         // $obj.siblings('input[type="number"]').val(num);
-        $('#totals_price').text($tt);
+        // $('#totals_price').text($tt);
     }
     function doMinus(obj,p){
         $obj = $(obj);
         var num = $obj.siblings('input[type="number"]').val();
         --num;
-        if (num < 0) {
-            $obj.removeAttr('onclick');
-            num = 0;
+        if (num < 1) {
+            // $obj.removeAttr('onclick');
+            num =1;
         }
         $obj.siblings('input[type="number"]').val(num);
-        $tt = get_orther_price($obj,num);
-        $('#totals_price').text($tt);
-        $('#totals_price1').val($tt);
+        get_boxes_price($obj);
+        get_all_price();
+        // $('#totals_price').text($tt);
+        // $('#totals_price1').val($tt);
     }
 
     /**
@@ -456,8 +470,8 @@
             btn: ['确定','取消'] //按钮
         }, function(){
             clearCookie();
-            $.post('/dzx/Wap/Product/delItem',{i:$obj.attr('data-index')},function (data) {
-               if(data.status=1){
+            $.post('/Wap/Product/delItem',{i:$obj.attr('data-index')},function (data) {
+                if(data.status=1){
                    layer.closeAll();
                    $obj.remove();
                     $('#totals_price').text(get_all_price());
@@ -474,7 +488,7 @@
             btn: ['确定','取消'] //按钮
         }, function(){
             clearCookie();
-            $.get('/dzx/Wap/Product/delItems',function (data) {
+            $.get('/Wap/Product/delItems',function (data) {
                 if(data.status==1){
                     layer.closeAll();
                     $('.cart_pro_list').empty();
@@ -504,10 +518,10 @@
             if($('.thbzh'+key).is(':checked')){
                 $obj.next('label').children('u').children('small').show();
             }
-            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').show();
+            $obj.parent('div.wine_check').siblings('div.wine_box').show();
         }else{
             $obj.next().children('u').children('small').hide();
-            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').hide();
+            $obj.parent('div.wine_check').siblings('div.wine_box').hide();
         }
 
         get_all_price();
@@ -516,7 +530,7 @@
     // 显示红酒包装盒价格
     function showBoxPic(obj) {
         $obj = $(obj);
-        var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('span').children('label').children('u').children('small');
+        var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('div.wine_check').children('label').children('u').children('small');
         if ($obj.is(":checked")) {
             sPosition.show();
         }else{
@@ -538,11 +552,12 @@
         $('.wine_check').each(function(){
             $ckeckbox = $(this).children('input.bzhxz');
             // $ckeckbox1 = $(this).parent('strong').siblings('input[type="checkbox"]');
-            $ckeckbox1 = $(this).parent('span').siblings('label').children('input[type="checkbox"]');
+            // $ckeckbox1 = $(this).parent('span').siblings('label').children('input[type="checkbox"]');
+            $ckeckbox1 = $(this).siblings('label').children('input[type="checkbox"]');
+            $ckeckbox2 = $(this).siblings('div.wine_box').children('ul').children('li').children('input[type="checkbox"]');
             var pric = $(this).children('label').children('u').find('small').text();
             if($ckeckbox1.is(':checked')){
                 if($ckeckbox.is(':checked')){
-                    
                     if(pric!=''){
                         pric = pric.match(reg);
                         $boxes_totals += parseFloat(pric);
@@ -574,7 +589,7 @@
     function get_boxes_price(obj) {
         $boxes_price=0;
         $element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
-        $key = $element.attr('data-key');
+        $key = $element.attr('data-key');  
         $('.wine_box').each(function () {
             if($(this).attr('data-key')==$key){
                 $(this).find('ul>li').each(function () {
@@ -609,8 +624,8 @@
     function get_boxes_price_by_images(obj) {
         $boxes_price=0;
         // $element = obj.parent('li');
-        $element = obj.parent('li').parent('ul').parent('div.wine_box');
-        $key = $element.attr('data-key');
+        $element1 = obj.parent('li').parent('ul').parent('div.wine_box');
+        $key = $element1.attr('data-key');
         $('.wine_box').each(function () {
             if($(this).attr('data-key')==$key){
                 $(this).find('ul>li').each(function () {
@@ -631,7 +646,6 @@
         }
         return $boxes_price;
     }
-// var t11=new TouchSlider('slider',{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
 
     window.onload = function(){
         var key = 0;

@@ -101,9 +101,11 @@ class ProductController extends BaseController {
     public function cart(){
         //session('short_cart',null);die;
         $goods = session('wap_short_cart');
+       
         if(empty($goods)){
             $this->redirect('index/index');
         }
+
         $this->boxes = $boxes = M('article')->field('id,title,description,image,price,tprice')->where(array('status'=>0,'column_id'=>10))->select();
         
         $this->list =$list=$this->_get_cart_list($goods);
@@ -143,7 +145,7 @@ class ProductController extends BaseController {
         if($goods){
             if($goods['wine']){
                 foreach ($goods['wine'] as $k){
-                    $wine = M('article')->find($k['id']);
+                    $wine = M('article')->field('id,column_id,title,keywords,description,image,mass,price,tprice')->find($k['id']);
                     $nums += $wine['get_num']=$k['sum'];
                     $totals += $wine['totals'] = $wine['tprice']*$k['sum'];
                     $wine['type']='2';
@@ -153,7 +155,7 @@ class ProductController extends BaseController {
             }
             if($goods['goods']){
                 foreach ($goods['goods'] as $j){
-                    $xie = M('article')->find($j['id']);
+                    $xie = M('article')->field('id,column_id,title,keywords,description,image,mass,price,tprice')->find($j['id']);
                     $nums += $xie['get_num']=$j['sum'];
                     $totals +=  $xie['totals'] = $xie['tprice']*$j['sum'];
                     $xie['type']='1';
@@ -165,12 +167,14 @@ class ProductController extends BaseController {
                 }
             }
             if($goods['coupon']){
+
                 foreach ($goods['coupon'] as $s){
                     $coupon = M('coupons')->where("coupon_cid=".$s['id'])->find();
                     $coupon['coupons_id']=$coupon['id'];
-                    $coupon1 = M('article')->find($s['id']);
+                    $coupon1 = M('article')->where(array('column_id'=>$s['id']))->find(); 
                     $nums += $coupon['get_num']=$s['sum'];
                     $totals += $coupon['totals'] = $coupon1['tprice']*$s['sum'];
+                    $coupon1['title']=$coupon['coupons_title'];
                     $coupon['type']='3';
                     $coupon['tt']='coupon';
                     $coupon = array_merge($coupon,$coupon1);
@@ -189,7 +193,7 @@ class ProductController extends BaseController {
         $this->mass_totals= $tal;
         $this->nums = $nums;
         $this->totals =  $totals+$tal;
-      
+        
 
         return $list;
     }
@@ -206,6 +210,7 @@ class ProductController extends BaseController {
 
         if($t=='coupon'){
             $count = M('coupons')->where(array('coupons_status'=>0,'coupon_cid'=>$id))->count('*');
+            p(M('coupons')->getlastsql());die;
         }else{
             $article = M('article')->field('id,sum')->find($id);
             $count = $article['sum'];
@@ -229,30 +234,33 @@ class ProductController extends BaseController {
      * @param string $i
      */
     public function delItem($i=''){
+
         if(!$i){
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除失败，请重试'));
         }
-        $cart = session('short_cart');
-       
+        $cart = session('wap_short_cart');
         $temp = explode('_', $i);
+        
        
         $ss = array();
         foreach ($cart as $k => $v) {
+
           if($k==$temp[0]){
             foreach ($v as $i => $j) {
                if($j['id']!=$temp[1]){
                     $ss[$k][]=$j;
                }
             }
-          }
+          }else{
+            $ss[$k]=$v;
+           }
         }
-       
-       
-        session('short_cart',$ss);
+        
+        session('wap_short_cart',$ss);
         $this->ajaxReturn(array('status'=>1,'msg'=>'删除成功'));
         //$this->_get_cart_list();
     }
-    
+
     /**
      *添加购物车
      */

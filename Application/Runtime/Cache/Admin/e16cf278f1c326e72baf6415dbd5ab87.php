@@ -54,7 +54,7 @@
     <div class="admin_bg_all">
         <div class="admin_bg_t">
             <a href="/Admin/Article/index?cid=<?php echo ($_GET['cid']); echo ($info["column_id"]); ?>">返回列表</a>
-            <a href="/Admin/Article/add?cid=10" id="admin_bg_t_x">文档添加</a>
+            <a href="/Admin/Article/add?aid=5" id="admin_bg_t_x">文档添加</a>
         </div>
         <form action="/Admin/Article/addhandler" method="post">
             <div class="admin_bg_fb">

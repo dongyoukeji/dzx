@@ -155,6 +155,7 @@
                 }
             });
         });
+    
         // 加入购物车特效
         var offset = $("#end").offset();
         var cookies = $.cookie();
@@ -190,61 +191,61 @@
             $.post('<?php echo U("product/check_pro");?>',{t:$type,id:$id},function (data) {
                 if(data.status==0){
                     layer.alert(data.msg,{icon:2});
+                }else{
+                     //飞入购物车效果
+                    if($type!='coupon'){
+                        $image = $addcar.parent('div.product_price').siblings('strong.product_img');
+                        var flyer = $('<img class="u-flyer" src="'+$image.find('img').attr('src')+'">');
+                    }else {
+                        var flyer = $('<img class="u-flyer" src="/Public/Home/images/couponaddcar.jpg">');
+                    }
+                    //购物车效果
+                    var top;
+                    if($(document).scrollTop()>0){
+                        top = event.pageY - $(document).scrollTop();
+                    }else{
+                        top = event.pageY;
+                    }
+
+                    flyer.fly({
+                        start: {
+                            left: event.pageX-300,
+                            top: top-200
+                        },
+                        end: {
+                            left: offset.left+10,
+                            top: offset.top+10,
+                            width: 0,
+                            height: 0
+                        },
+                        onEnd: function(){
+                            ++sums;
+                            $("#end").html("<i>"+sums+"</i>");
+                            $("#end").attr('href','javascript:void(0);');
+                            $.cookie('short_cart_sums',sums,{expires: 1,path: '/'});
+                        }
+                    });
+
+
+                    var sum1=1,sum2=1,sum3=1;
+                    if($type=='coupon'){
+                        sum1 = $sum;
+                        ++sum1;
+                        $.cookie('short_cart_coupon'+$id,['coupon',$id,sum1],{expires: 1,path:'/'});
+                        $addcar.attr('data-sum',sum1);
+                    }else if ($type=='goods'){
+                        sum2 = $sum;
+                        ++sum2;
+                        $.cookie('short_cart_goods'+$id,['goods',$id,sum2],{expires: 1,path: '/'});
+                        $addcar.attr('data-sum',sum2);
+                    }else {
+                        sum3 = $sum;
+                        ++sum3;
+                        $.cookie('short_cart_wine'+$id,['wine',$id,sum3],{expires: 1,path:'/'});
+                        $addcar.attr('data-sum',sum3);
+                    }
                 }
             });
-
-            //飞入购物车效果
-            if($type!='coupon'){
-                $image = $addcar.parent('div.product_price').siblings('strong.product_img');
-                var flyer = $('<img class="u-flyer" src="'+$image.find('img').attr('src')+'">');
-            }else {
-                var flyer = $('<img class="u-flyer" src="/Public/Home/images/couponaddcar.jpg">');
-            }
-            //购物车效果
-            var top;
-            if($(document).scrollTop()>0){
-                top = event.pageY - $(document).scrollTop();
-            }else{
-                top = event.pageY;
-            }
-
-            flyer.fly({
-                start: {
-                    left: event.pageX-300,
-                    top: top-200
-                },
-                end: {
-                    left: offset.left+10,
-                    top: offset.top+10,
-                    width: 0,
-                    height: 0
-                },
-                onEnd: function(){
-                    ++sums;
-                    $("#end").html("<i>"+sums+"</i>");
-                    $("#end").attr('href','javascript:void(0);');
-                    $.cookie('short_cart_sums',sums,{expires: 1,path: '/'});
-                }
-            });
-
-
-            var sum1=1,sum2=1,sum3=1;
-            if($type=='coupon'){
-                sum1 = $sum;
-                ++sum1;
-                $.cookie('short_cart_coupon'+$id,['coupon',$id,sum1],{expires: 1,path:'/'});
-                $addcar.attr('data-sum',sum1);
-            }else if ($type=='goods'){
-                sum2 = $sum;
-                ++sum2;
-                $.cookie('short_cart_goods'+$id,['goods',$id,sum2],{expires: 1,path: '/'});
-                $addcar.attr('data-sum',sum2);
-            }else {
-                sum3 = $sum;
-                ++sum3;
-                $.cookie('short_cart_wine'+$id,['wine',$id,sum3],{expires: 1,path:'/'});
-                $addcar.attr('data-sum',sum3);
-            }
         });
 
         $('.fetch').live('click',function (e) {

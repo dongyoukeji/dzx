@@ -12,125 +12,80 @@
 <div class="header">
     <a href="<?php echo U('index/index');?>" class="home"><img src="/Public/Wap/images/home.fw.png" /></a>
 </div>
-<div class="main padd">
-    <div class="query_title">
-        <div class="query_enter">
-            <div class="query_enter_top">
-                <b class="red_bg" id="current">领取礼盒</b><b class="gray_bg" id="logistics">查询订单状态</b>
-            </div>
-            <div class="query_enter_down">
-                <input type="text" placeholder="请输入订单号" class="enter2" />
-                <input type="button" value="查询" class="draw2 gray_bg" />
-            </div>
-        </div>
-        <!-- 无物流信息 -->
-        <div class="nothing">
-            暂无物流信息
-        </div>
-        <!-- 有物流信息 -->
-        <div class="wine_progream">因红酒无法空运，我们将双向发货！请注意查收您购买的商品，如有任何问题请联系在线客服</div>
+<div class="main">
+    <div class="main_nav posfix">
+        <a href="<?php echo U('product/index?oid=1');?>" class="hairy_bg">
+            礼品盒
+        </a><a href="<?php echo U('product/index?oid=2');?>" class="coupon_bg">
+        礼品券
+    </a><a href="<?php echo U('product/index?oid=5');?>" class="wine_bg">
+        红酒
+    </a>
     </div>
-    <div id="continer" style="display:none;">
-        <!-- 商品列表 -->
-        <div class="cart_pro_list">
-            <!-- 商品 -->
-            <div class="cart_product">
-                <label>
-                    <b><img src="images/prduct1.fw.png"></b>
-                </label>
-				<span>
-					<h3>8只大众蟹豪华礼盒</h3>
-					<p class="gray_col2">4只公蟹2.5-3两</p>
-					<p class="gray_col2">4只母蟹2.0-2.5两</p>
+    <div class="pro_list" style="margin-top:60px;">
+        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 商品 -->
+            <a href="<?php echo U('product/details?id='.$vo['id'].'&t=c');?>" class="pro_coupon">
+				<span class="coupon_left">
 					<strong>
-                        <input type="button" name="minus" value="-" class="jiajian minus" />
-                        <input type="number" name="num" value="1" class="number">
-                        <input type="button" name="plus" value="+" class="jiajian plus" />
+                        <h4><?php echo ($vo["coupons_title"]); ?></h4>
+                        <p class="yellow_col"><?php echo (get_pro_left($vo['pro']['description'])); ?></p>
+                        <p class="yellow_col"><?php echo (get_pro_right($vo['pro']['description'])); ?></p>
                     </strong>
-					<h2 class="red_col">￥999.00</h2>
 				</span>
-            </div>
-            <!-- 商品 -->
-            <div class="cart_product">
-                <label>
-                    <b><img src="images/prduct1.fw.png"></b>
-                </label>
-				<span>
-					<h3>8只大众蟹豪华礼盒</h3>
-					<p class="gray_col2">4只公蟹2.5-3两</p>
-					<p class="gray_col2">4只母蟹2.0-2.5两</p>
+				<span class="coupon_rigt">
 					<strong>
-                        <input type="button" name="minus" value="-" class="jiajian minus" />
-                        <input type="number" name="num" value="1" class="number">
-                        <input type="button" name="plus" value="+" class="jiajian plus" />
+                        <h4 class="white_col">礼品券</h4>
+                        <b class="yellow_col">￥<?php echo ($vo['pro']['tprice']); ?></b>
                     </strong>
-					<h2 class="red_col">￥999.00</h2>
 				</span>
-            </div>
-            <!-- 商品 -->
-            <div class="cart_product">
-                <label>
-                    <b><img src="images/prduct1.fw.png"></b>
-                </label>
-				<span>
-					<h3>8只大众蟹豪华礼盒</h3>
-					<p class="gray_col2">4只公蟹2.5-3两</p>
-					<p class="gray_col2">4只母蟹2.0-2.5两</p>
-					<strong>
-                        <input type="button" name="minus" value="-" class="jiajian minus" />
-                        <input type="number" name="num" value="1" class="number">
-                        <input type="button" name="plus" value="+" class="jiajian plus" />
-                    </strong>
-					<h2 class="red_col">￥999.00</h2>
-				</span>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <!-- 用户信息 -->
-        <div class="user_info">
-            <!-- 购买人 -->
-            <div class="sl_user">
-                <h3>购买人信息</h3>
-                <input type="text" name="suser" placeholder="姓名">
-                <input type="tel" name="sphone" placeholder="联系电话">
-            </div>
-            <!-- 收货人 -->
-            <div class="sl_user">
-                <h3>收货人信息</h3>
-                <input type="text" name="suser" placeholder="姓名">
-                <input type="tel" name="sphone" placeholder="联系电话">
-                <style type="text/css">
-                    ._citys{width: 97%;}
-                </style>
-                <input type="text" name="city" readonly="true" id="city" placeholder="选择省市">
-                <textarea placeholder="街道信息"></textarea>
-            </div>
-        </div>
-        <div class="query_info">
-            <div class="query_info_title">
-                <h4>物流信息<span class="coupon_bg">礼品券</span></h4>
-                <h4>
-                    顺丰单号/<font class="red_col">K6544165412345</font>
-                    <input type="checkbox" checked="checked" id="logistics" />
-                    <label for="logistics">到付</label>
-                </h4>
-            </div>
-            <div class="logistics_info"></div>
-        </div>
-        <div class="query_info">
-            <div class="query_info_title">
-                <h4 style="font-size: 1.2em;">物流信息<span class="wine_bg">红酒</span></h4>
-                <h4 class="gray_col2">
-                    顺丰单号/<font class="red_col">K6544165412345</font>
-                    <input type="checkbox" checked="checked" id="logistics" />
-                    <label for="logistics">到付</label>
-                </h4>
-            </div>
-            <div class="logistics_info"></div>
-        </div>
+            </a><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="clear"></div>
 </div>
+<script type="text/javascript">
+    var p = 1;//页数
+    var page_size = '<?php echo ($pagination); ?>';//每页条数
+    var p_type = 1;
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if($(document).height() - $(window).height() - 200 < $(document).scrollTop() && p_type == 1){
+                p_type = 0;
+                getScrollPage();
+            }
+        });
+    });
+
+    //分页
+    function getScrollPage(){
+        p++;
+        var json_data = {
+            p			:	p,
+            oid		:	'<?php echo ($_GET['oid']); ?>'
+        };
+        $.post("/Wap/Product/get_lists", json_data, function(result){
+            if(result == '0'){
+                $('.wap_cp_th_m').hide();
+                $(window).unbind('scroll');
+            }else{
+                $('.pro_list').append(result);
+            }
+        },"html");
+    }
+
+    //判断是否还有分页
+    function IsPage(){
+        var list_num = $('#p'+p+'_num').val();//当前条数
+        if(page_size != list_num){
+            $('.wap_cp_th_m').hide();
+            $(window).unbind('scroll');
+            p_type = 0;
+        }else{
+            $('.wap_cp_th_m').show();
+            p_type = 1;
+        }
+    }
+</script>
 <div class="footer"></div>
 <!-- 底部导航栏 -->
 <div class="mytools">

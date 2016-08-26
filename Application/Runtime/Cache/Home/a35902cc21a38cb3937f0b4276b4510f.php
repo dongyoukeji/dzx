@@ -128,6 +128,7 @@
                 }
             });
         });
+    
         // 加入购物车特效
         var offset = $("#end").offset();
         var cookies = $.cookie();
