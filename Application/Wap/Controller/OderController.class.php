@@ -91,10 +91,14 @@ class OderController extends BaseController {
         $data['ordfee']=$list['totals'];
         $data['ordbuynum']=$list['muns'];
         $data['sums']=$list['details'];
+        $data['mass']=$list['mas'];
         $data['ordtime']=time();
+        $data['wine']=$list['wine'];
         $data['productid']=$list['productid'];
         $data['ordid']=get_order_trade_no();
-
+        $data['boxid']=$list['boxid'];
+        $data['box_price']=$list['box_price'];
+       
         if(!$oid = M('order')->add($data)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
         }
@@ -156,14 +160,17 @@ class OderController extends BaseController {
         $price = I('post.price');
         $id= I('post.id');
 
+        $box = $this->_get_box();
         $city = explode('-',$_POST['city']);
         $ac = $this->get_price($city[0]);
+        $box_price = $this->_get_box_price();
 
         $total = 0;
         $kg = 0;
         $details='';
         $sums=0;
         $productid ='';
+        $wines='';
         $update=array();
         foreach ($id as $k => $v){
             for ($i=0;$i<count($v);$i++){
@@ -187,12 +194,24 @@ class OderController extends BaseController {
                         'price'=>$p,
                     );
                 }else{
+                    $ff='';
+                    $boxid ='';
+                    foreach ($box as $j => $jj) {
+                        $temp = explode('_',$jj);
+                        $boxid .= "|".$jj;
+                        if($temp[1]==$v[$i]){
+                            $ff .= ",".$jj;
+                        }
+                        
+                    }
                     $update[$k][$i]=array(
                         'id'=>$v[$i],
                         'sum'=>$n,
                         'c'=>0,
                         'price'=>$p,
+                        'box'=>substr($ff,1)
                     );
+                    $wines .= "|".$k."_".$v[$i]."_".$n."_".$p;
                 }
                 //类型_ID_数量_价格
                 $details .= "|".$k."_".$v[$i]."_".$n."_".$p;
@@ -200,15 +219,64 @@ class OderController extends BaseController {
 
             }
         }
+        
         $list['details']=substr($details,1);
         $list['mas']=$this->_get_mass_price($ac['price'],$ac['overweight'],$kg);
         $list['productid']=substr($productid,1);
+        $list['boxid']=substr($boxid,1);
         $list['muns']=$sums;
         $list['total']=$total;
-        $list['totals']=$total+$list['mas'];
+        $list['wine']=substr($wines, 1);
+        $list['box_price']=$box_price;
+        $list['totals']=$total+$list['mas']+$box_price;
         $list['update']=$update;
-
+       
         return $list;
+    }
+
+
+    /**
+     * [_get_box_price 获取包装价格]
+     * @return [type] [description]
+     */
+    private function _get_box_price(){
+        $box =I('post.box_num');
+        $isbox = I('post.box_num_selected');
+
+        $_result=0;
+
+        foreach ($isbox as $k => $v) {
+
+            if($v[0]==1){
+                
+                $tmp = explode('_', $k);
+                $pi = M('article')->field('id,price,tprice')->find($tmp[2]);
+                $sums = $box[$k][0];
+                $_result += $pi['tprice']*$sums;
+            }
+        }
+
+        return $_result;
+    }
+    /**
+     * [_get_box 获取包装盒信息]
+     * @return [type] [description]
+     */
+    private function _get_box(){
+        $box =I('post.box_num');
+        $isbox = I('post.box_num_selected');
+
+        $_result=array();
+        foreach ($isbox as $k => $v) {
+            if($v[0]==1){
+                $tmp = explode('_', $k);
+                $pi = M('article')->field('id,price,tprice')->find($tmp[2]);
+                $sums = $box[$k][0];
+                //类型_产品ID_盒子id_数量_价格
+                $_result[] = $k."_".$box[$k][0]."_".$pi['tprice']*$sums;
+            }
+        }
+        return $_result;
     }
     /**
      * 获取地区价格
@@ -241,14 +309,21 @@ class OderController extends BaseController {
      * @return mixed
      */
     private function _get_mass_price($p,$p1,$h){
-        if($h<1){
+        if($h==0){
+            return 0;
+        }
+        if($h==1){
             return $p;
         }else{
             return $p+($h-1)*$p1;
         }
     }
 
-
+    /**
+     * [cancel 取消订单]
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
     public function cancel($id){
         if(!M('order')->save(array(
             'id'=>$id,
@@ -258,7 +333,10 @@ class OderController extends BaseController {
         }
         $this->ajaxReturn(array('status'=>1,'msg'=>'取消订单成功','redirect'=>U('index/index')));
     }
-
+    /**
+     * [details 订单详情]
+     * @return [type] [description]
+     */
     public function details() {
         $sid = explode('|',I('get.sid'));
         $order = M('order')->field('username,ordtime,finishtime,productid,ordtitle,ordbuynum,ordprice,ordfee,ordstatus,post_address,post_express')->where('ordid='.$sid[1])->find();
@@ -334,7 +412,7 @@ class OderController extends BaseController {
         $unifiedOrder->setParameter("body","阳澄湖大闸蟹专卖店");//商品描述
         $unifiedOrder->setParameter("out_trade_no","$out_trade_no");//商户订单号
         $unifiedOrder->setParameter("total_fee","$total_fee");//总金额
-        $unifiedOrder->setParameter("notify_url", 'http://www.pinkan.com/Notify/WeChatPay');//通知地址
+        $unifiedOrder->setParameter("notify_url", 'http://www.pinkan.cn/Notify/WeChatPay');//通知地址
         $unifiedOrder->setParameter("trade_type","NATIVE");//交易类型
 
 

@@ -42,7 +42,7 @@
                                 <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo1.tprice})" />
                                 <input type="number" name="num[{$vo1.tt}][]" value="{$vo1.get_num}" class="number" onkeyup="change_sum(this,{$vo1.tprice})">
                                 <input type="button" name="plus" value="+" class="jiajian plus" onclick="doPlus(this,{$vo1.tprice})" />
-                                <input type="hidden" name="mass[{$vo1.tt}][]" class="mass" value="{$vo1.mass}" data-fufei='<eq name="vo1.type" value="2">1</eq><eq name="vo1.type" value="1">1</eq><eq name="vo1.type" value="3">0</eq>'>
+                                <input type="hidden" name="mass[{$vo1.tt}][]" class="mass" value="{$vo1.mass}" data-fufei='<eq name="vo1.type" value="2">0</eq><eq name="vo1.type" value="1">1</eq><eq name="vo1.type" value="3">0</eq>'>
                                 <input type="hidden" name="price[{$vo1.tt}][]" value="{$vo1.tprice}">
                                 <input type="hidden" name="id[{$vo1.tt}][]" value="{$vo1.id}">
                             </strong>
@@ -55,7 +55,7 @@
                                 </label>
                             </div>
                         </span>
-                        <strong class="delect" onclick="delItem(this)"><i>×</i></strong>
+                        <strong class="delect" onclick="delItem(this)"  data-index='<eq name="vo1.type" value="1">goods</eq><eq name="vo1.type" value="2">wine</eq><eq name="vo1.type" value="3">coupon</eq>_{$vo1.id}'><i>×</i></strong>
                         <eq name="vo1.type" value="2">
                             <div class="clear"></div>
                             <div class="wine_box" data-key="{$key}">
@@ -126,7 +126,7 @@
 <script type="text/javascript">
     var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
     $(function(){
-
+        clearCookie();
         $('.wine_box_num').change(function () {
             get_boxes_price($(this));
             get_all_price();
@@ -185,9 +185,9 @@
             }
 
             $form = $('form');
-            layer.load(2, {
-                shade: [0.3,'#000'] //0.1透明度的白色背景
-            });
+            // layer.load(2, {
+            //     shade: [0.3,'#000'] //0.1透明度的白色背景
+            // });
             $.post($form.attr('action'),$form.serialize(),function (data) {
                 if (data.status == 1) {
                     layer.closeAll('loading');
@@ -348,6 +348,7 @@
             $tt=0;
         }
         $pry = $prices + $tt + $pp;
+      
         $('#totals_price1').val($pry);
         $('#totals_price').text($pry);
         return $pry;
@@ -358,11 +359,39 @@
     }
 
     // 快递钱
+    // function get_ems_price() {
+    //     $mass=0;
+    //     $price = 0;
+    //     $tal=0;
+    //     $kg=0;
+    //     $('.cart_product').each(function () {
+    //         if($(this).children('label').children('input[type="checkbox"]').is(':checked')){
+    //             $number = $(this).children('span').children('strong').children('input.number').val();
+    //             $input = $(this).children('span').children('strong').children('input.mass');
+    //             if($input.attr('data-fufei')==1){
+    //                 if($input.val()!=''){
+    //                     $mass = parseFloat($input.val());
+    //                     $kg +=$mass*$number;
+    //                 }
+    //             }
+    //         }
+    //     });
+    //     $price = $('#express_price').text();
+    //     alert($price);
+    //     $overweight = $('#express_overweight').text();
+    //     $tal = overweight(parseFloat($price),parseFloat($overweight),parseFloat($kg));
+
+    //     if($('#sfkd').is(':checked')){
+    //         $tal = 0;
+    //     }
+    //     $('#shunfeng').text($tal);
+    //     return parseFloat($tal);
+    // }
+
     function get_ems_price() {
         $mass=0;
-        $price = 22;
         $tal=0;
-        $kg=0;
+        $kg = 0;
         $('.cart_product').each(function () {
             if($(this).children('label').children('input[type="checkbox"]').is(':checked')){
                 $number = $(this).children('span').children('strong').children('input.number').val();
@@ -375,16 +404,22 @@
                 }
             }
         });
-        $price = $('#express_price').text();
-        $overweight = $('#express_overweight').text();
-        $tal = overweight(parseFloat($price),parseFloat($overweight),parseFloat($kg));
 
-        if($('#sfkd').is(':checked')){
-            $tal = 0;
+        if($kg>0){
+            $price = $('#express_price').text();
+            $overweight = $('#express_overweight').text();
+            $tal = overweight(parseFloat($price),parseFloat($overweight),parseFloat($kg));
+
         }
-        $('#shunfeng').text($tal);
-        return parseFloat($tal);
+        if($tal!=NaN){
+            $('#shunfeng').text("￥"+$tal);
+            return parseFloat($tal);
+        }else {
+            return 0;
+        }
     }
+
+
 
     /**
      *计算价格
@@ -479,6 +514,8 @@
             $obj.next().children('u').children('small').hide();
             $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').hide();
         }
+
+        get_all_price();
     }
 
     // 显示红酒包装盒价格
