@@ -50,25 +50,38 @@
                                 <input type="hidden" name="id[{$vo1.tt}][]" value="{$vo1.id}">
                             </strong>
                             <h2 class="red_col">￥<font>{$vo1.tprice}</font></h2>
-                            <div class="wine_check">
+                            <!-- <div class="wine_check">
                                 <input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
                                 <label for="bzhxz{$key}" class="showbzhq">
                                     <span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}">
                                     <small></small></u>
                                 </label>
-                            </div>
+                            </div> -->
                         </span>
+                        <div class="wine_check">
+                            <input type="checkbox" id="bzhxz{$key}" class="bzhxz" data-key="{$key}" onclick="showBox(this)" />
+                            <label for="bzhxz{$key}" class="showbzhq">
+                                <span>选择红酒包装</span><u id="wine_pic{$key}" data-key="{$key}">
+                                <small></small></u>
+                            </label>
+                        </div>
                         <strong class="delect" onclick="delItem(this)"  data-index='<eq name="vo1.type" value="1">goods</eq><eq name="vo1.type" value="2">wine</eq><eq name="vo1.type" value="3">coupon</eq>_{$vo1.id}'><i>×</i></strong>
                         <eq name="vo1.type" value="2">
                             <div class="clear"></div>
                             <div class="wine_box swipe" data-key="{$key}">
+                                <div class="lrhdxz">左右滑动选择包装盒</div>
                                 <ul id="slider{$key}" class="slider">
                                     <volist name="boxes" id="vo2" key="k">
                                         <li data-key="{$key}">
                                             <input type="checkbox" value="1" name="box_num_selected[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]"  id="thbzh{$vo1.id}{$key}1" class="thbzh thbzh{$key}" data-key="{$key}" onclick="showBoxPic(this)" />
                                             <label for="thbzh{$vo1.id}{$key}1"><img src="{$vo2.image}"></label>
-                                            <span>￥{$vo2.tprice}<input type="number" name="box_num[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]" value="1" class="wine_box_num" data-price="{$vo2.tprice}" /></span>
                                             <em>{$vo2.title}</em>
+                                            <span>
+                                                <input type="button" name="minus" value="-" class="jiajian minus" onclick="doMinus(this,{$vo2.tprice})" />
+                                                <input type="number" class="wine_box_num" name="box_num[{$vo1.tt}_{$vo1.id}_{$vo2.id}][]" value="1" class="wine_box_num" data-price="{$vo2.tprice}" />
+                                                <input type="button" name="plus" value="+" class="jiajian plus" onclick="doPlus(this,{$vo2.tprice})" />
+                                                <b>￥{$vo2.tprice}</b>
+                                            </span>
                                         </li>
                                     </volist>
                                 </ul>
@@ -269,31 +282,32 @@
     function doPlus(obj,p){
         $obj = $(obj);
         var num = $obj.siblings('input[type="number"]').val();
-        if(num == 0){
-            $('.minus').on('click',function(){
-                doMinus(this);
-            });
-        }
-        ++num;
-        if (num < 0)
-            num = 1;
+        // if(num == 0){
+        //     $('.minus').on('click',function(){
+        //         doMinus(this);
+        //     });
+        // }
+        num++;
+        
         $obj.prev().val(num);
-        $tt = get_orther_price($obj,num);
+        get_boxes_price($obj);
+        get_all_price();
         // $obj.siblings('input[type="number"]').val(num);
-        $('#totals_price').text($tt);
+        // $('#totals_price').text($tt);
     }
     function doMinus(obj,p){
         $obj = $(obj);
         var num = $obj.siblings('input[type="number"]').val();
         --num;
-        if (num < 0) {
-            $obj.removeAttr('onclick');
-            num = 0;
+        if (num < 1) {
+            // $obj.removeAttr('onclick');
+            num =1;
         }
         $obj.siblings('input[type="number"]').val(num);
-        $tt = get_orther_price($obj,num);
-        $('#totals_price').text($tt);
-        $('#totals_price1').val($tt);
+        get_boxes_price($obj);
+        get_all_price();
+        // $('#totals_price').text($tt);
+        // $('#totals_price1').val($tt);
     }
 
     /**
@@ -512,10 +526,10 @@
             if($('.thbzh'+key).is(':checked')){
                 $obj.next('label').children('u').children('small').show();
             }
-            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').show();
+            $obj.parent('div.wine_check').siblings('div.wine_box').show();
         }else{
             $obj.next().children('u').children('small').hide();
-            $obj.parent('div.wine_check').parent('span').siblings('div.wine_box').hide();
+            $obj.parent('div.wine_check').siblings('div.wine_box').hide();
         }
 
         get_all_price();
@@ -524,7 +538,7 @@
     // 显示红酒包装盒价格
     function showBoxPic(obj) {
         $obj = $(obj);
-        var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('span').children('label').children('u').children('small');
+        var sPosition = $obj.parent('li').parent('ul').parent('div.wine_box').siblings('div.wine_check').children('label').children('u').children('small');
         if ($obj.is(":checked")) {
             sPosition.show();
         }else{
@@ -546,11 +560,12 @@
         $('.wine_check').each(function(){
             $ckeckbox = $(this).children('input.bzhxz');
             // $ckeckbox1 = $(this).parent('strong').siblings('input[type="checkbox"]');
-            $ckeckbox1 = $(this).parent('span').siblings('label').children('input[type="checkbox"]');
+            // $ckeckbox1 = $(this).parent('span').siblings('label').children('input[type="checkbox"]');
+            $ckeckbox1 = $(this).siblings('label').children('input[type="checkbox"]');
+            $ckeckbox2 = $(this).siblings('div.wine_box').children('ul').children('li').children('input[type="checkbox"]');
             var pric = $(this).children('label').children('u').find('small').text();
             if($ckeckbox1.is(':checked')){
                 if($ckeckbox.is(':checked')){
-                    
                     if(pric!=''){
                         pric = pric.match(reg);
                         $boxes_totals += parseFloat(pric);
@@ -582,7 +597,7 @@
     function get_boxes_price(obj) {
         $boxes_price=0;
         $element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
-        $key = $element.attr('data-key');
+        $key = $element.attr('data-key');  
         $('.wine_box').each(function () {
             if($(this).attr('data-key')==$key){
                 $(this).find('ul>li').each(function () {
@@ -617,8 +632,8 @@
     function get_boxes_price_by_images(obj) {
         $boxes_price=0;
         // $element = obj.parent('li');
-        $element = obj.parent('li').parent('ul').parent('div.wine_box');
-        $key = $element.attr('data-key');
+        $element1 = obj.parent('li').parent('ul').parent('div.wine_box');
+        $key = $element1.attr('data-key');
         $('.wine_box').each(function () {
             if($(this).attr('data-key')==$key){
                 $(this).find('ul>li').each(function () {
@@ -639,7 +654,6 @@
         }
         return $boxes_price;
     }
-// var t11=new TouchSlider('slider',{duration:300, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false});
 
     window.onload = function(){
         var key = 0;
