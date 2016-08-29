@@ -215,9 +215,29 @@ a.addcart{display: inline-block; width: 45%; text-align: center; font-size: 1.4e
 .wine_box ul li label img{width: 100%; min-height: 140px;}
 .wine_box ul li em{display: block; margin: 8px 0 5px 0;}
 
-.lrhdxz{text-align: center; border: 1px solid #ccc; line-height: 20px; font-size: 0.8em; color: #999;}
-
-
+// .lrhdxz{text-align: center; line-height: 22px; font-size: 0.8em; color: #999;}
+.lrhdxz{
+	text-align: center; 
+	line-height: 30px; 
+	font-size: 0.9em; 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0BA0F3), color-stop(1, #77d3f6)); opacity: 0.9;
+}
+.lrhdxz span{
+	display: block;
+	background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
+	background-clip: text;
+	text-fill-color: transparent;
+	animation: slidetounlock 5s infinite;
+	text-size-adjust: none;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: slidetounlock 5s infinite;
+	-webkit-text-size-adjust: none;
+}
+@-webkit-keyframes slidetounlock {
+	0% {background-position: -100px 0;}
+	100%{background-position: 100px 0;}
+}
 
 
 .submit{line-height: 50px; text-align: center; width: 100%; color: #fff; font-size: 1.4em; background: orange; border: 0; border-radius: 5px;}
