@@ -577,7 +577,7 @@
 		"title": "浙江",
 		"price": [
 			{
-				"price": 20,
+				"price": 12,
 				"date": 2,
 				"area": "浙江",
 				"mass": 1,
@@ -597,7 +597,7 @@
 		"title": "江苏",
 		"price": [
 			{
-				"price": 20,
+				"price": 12,
 				"date": 2,
 				"area": "江苏",
 				"mass": 1,

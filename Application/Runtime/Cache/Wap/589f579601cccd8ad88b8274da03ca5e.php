@@ -66,7 +66,7 @@
                         <strong class="delect" onclick="delItem(this)"  data-index='<?php if(($vo1["type"]) == "1"): ?>goods<?php endif; if(($vo1["type"]) == "2"): ?>wine<?php endif; if(($vo1["type"]) == "3"): ?>coupon<?php endif; ?>_<?php echo ($vo1["id"]); ?>'><i>×</i></strong>
                         <?php if(($vo1["type"]) == "2"): ?><div class="clear"></div>
                             <div class="wine_box swipe" data-key="<?php echo ($key); ?>">
-                                <div class="lrhdxz">左右滑动选择包装盒</div>
+                                <div class="lrhdxz"><span>左右滑动选择包装盒</span></div>
                                 <ul id="slider<?php echo ($key); ?>" class="slider">
                                     <?php if(is_array($boxes)): $k = 0; $__LIST__ = $boxes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($k % 2 );++$k;?><li data-key="<?php echo ($key); ?>">
                                             <input type="checkbox" value="1" name="box_num_selected[<?php echo ($vo1["tt"]); ?>_<?php echo ($vo1["id"]); ?>_<?php echo ($vo2["id"]); ?>][]"  id="thbzh<?php echo ($vo1["id"]); echo ($key); ?>1" class="thbzh thbzh<?php echo ($key); ?>" data-key="<?php echo ($key); ?>" onclick="showBoxPic(this)" />
@@ -235,10 +235,16 @@
     // 购物车商品选中状态
     function inpCheck(obj){
         $obj =$(obj);
+        var wine_box = $obj.siblings('div.wine_check').children('input');
         if($obj.children('input').is(':checked')){
             $obj.parent().addClass('cart_check');
         }else{
             $obj.parent().removeClass('cart_check');
+            if(wine_box.is(':checked')){
+                wine_box.removeAttr('checked');
+                wine_box.siblings('label').children('u').children('small').hide();
+                $obj.siblings('div.wine_box').hide();
+            }
         }
         $('#totals_price').text(get_all_price());
     }
@@ -586,7 +592,7 @@
      * @param obj
      * @returns {number}
      */
-    function get_boxes_price(obj) {
+    function get_boxes_price(obj) {     //obj == wine_box_num
         $boxes_price=0;
         $element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
         $key = $element.attr('data-key');  
@@ -621,7 +627,7 @@
      * @param obj
      * @returns {number}
      */
-    function get_boxes_price_by_images(obj) {
+    function get_boxes_price_by_images(obj) {          //obj == thbzh
         $boxes_price=0;
         // $element = obj.parent('li');
         $element1 = obj.parent('li').parent('ul').parent('div.wine_box');

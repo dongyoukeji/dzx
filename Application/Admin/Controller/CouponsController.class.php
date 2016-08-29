@@ -11,7 +11,7 @@ class CouponsController extends BaseController {
 
 	public function index(){
         $map=$this->_search();
-        $map['coupons_status']=array('neq',3);
+        //$map['coupons_status']=array('neq',3);
         $this->list = $list = $this->getlist(M('coupons'),$map,'coupons_no asc');
 		$this->display();
 	}
@@ -154,11 +154,18 @@ class CouponsController extends BaseController {
         } else {
             $status = intval($_GET['coupons_type']);
         }
+        if ($_GET['coupons_type1'] == null) {
+            $status1 = -1;
+        } else {
+            $status1 = intval($_GET['coupons_type1']);
+        }
         $status >= 0 && $map['coupons_type'] = array('eq', $status);
+        $status1 >= 0 && $map['coupons_status'] = array('eq', $status1);
         //输出
         $this->assign('search', array(
             'title' => $title,
             'status' => $status,
+            'status1' => $status1,
         ));
 
         return $map;

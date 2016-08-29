@@ -27,10 +27,12 @@ class GetgoodsController extends BaseController{
             $this->ajaxReturn(array('status'=>0,'msg'=>'输入的兑换券不正确或已使用'));
         }
         $this->nums = $nums = 1;
-        if($coupons['mass']<=1){
-            $tal = 22;
-        }else {
-            $tal = 22+(($coupons['mass']*1)-1)*14;
+        $kg  =$coupons['mass'];
+        $this->nums = $nums = 1;
+        if($kg<1){
+            $tal = 0;
+        }else{
+            $tal = 12+($kg-1)*2;
         }
         $this->mass_totals= $mass_totals = $tal;
         $this->totals =  $nums*$coupons['tprice']+$tal;

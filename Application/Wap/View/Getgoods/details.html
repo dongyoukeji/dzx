@@ -6,18 +6,21 @@
             <label>
                 <b><img src="{$vo.image}"></b>
             </label>
-        <span title="{$vo.title}">
-            <h3>{$vo.title}</h3>
-            <p class="gray_col2"> {$vo.description|get_pro_details}</p>
-            <!--<p class="gray_col2">4只母蟹2.0-2.5两</p>-->
-            <!--<strong>-->
-                <!--<input type="button" name="minus" value="-" class="jiajian minus" disabled />-->
-                <!--<input type="number" name="num" value="{$nums}" class="number" disabled>-->
-                <!--<input type="button" name="plus" value="+" class="jiajian plus" disabled/>-->
-            <!--</strong>-->
-            <label>数量：{$nums}个</label>
-            <h2 class="red_col">￥{$totals}</h2>
-        </span>
+            <span>
+                <h3>{$vo.title}</h3>
+                <p class="gray_col2">{$vo.description|get_pro_left}</p>
+                <p class="gray_col2">{$vo.description|get_pro_right}</p>
+                <strong style="display:none;">
+                    <input type="hidden" name="mass" value="{$vo.mass}" id="mass" class="mass" data-fufei='1'>
+                    <input type="hidden" name="huan" value="1" id="huan" class="number">
+                    <input type="hidden" name="coupon_cid" value="{$vo.coupon_cid}">
+                </strong>
+                <h2 class="red_col">￥<font>{$vo.tprice}</font></h2>
+                 <input type="hidden" name="id" value="{$vo.coupons_id}" id="id">
+                 <input type="hidden" name="tprice" value="{$vo.tprice}" id="tprice">
+                 <input type="hidden" name="coupon_cid" value="{$vo.coupon_cid}" id="coupon_cid">
+                 <input type="hidden" name="shunfeng_price" value="0" id="shunfeng_price">
+            </span>
         </div>
     </div>
     <div class="clear"></div>
@@ -31,16 +34,20 @@
             <style type="text/css">
                 ._citys{width: 97%;}
             </style>
-            <input type="text" name="city" readonly="true" id="city" placeholder="选择省市">
+            <input type="text" name="city" readonly="true" id="city" placeholder="选择省市" value="江苏省-苏州市-姑苏区">
             <textarea placeholder="街道信息" name="street" id="street"></textarea>
         </div>
     </div>
-    <input type="hidden" name="id" value="{$vo.coupons_id}" id="id">
-    <input type="hidden" name="tprice" value="{$vo.tprice}" id="tprice">
-    <input type="hidden" name="coupon_cid" value="{$vo.coupon_cid}" id="coupon_cid">
-    <input type="hidden" name="mass" value="{$vo.mass}" id="mass">
-    <input type="hidden" name="huan" value="1" id="huan">
-    <input type="button" value="确认兑换" id="online_pay" class="submit" />
+    <div class="kd_info">
+        <em>顺丰快递/<font class="red_col" id="shunfeng">{$mass_totals}</font>元</em>
+        <input type="checkbox" class="shunfeng_ems" id="sfkd" style="display:none;" onclick="plushEMS(this)" value="1" name="shunfeng_ems"/>
+        <label for="sfkd">到付</label>
+    </div>
+    <input type="button" value="确认兑换" id="online_pay" class="submit" style="margin-top:10px;"/>
+
+    <label id="express_price" style="display:none;">12</label>
+    <label id="express_overweight" style="display:none;">2</label>
+    <label id="express_kg" style="display:none;">{$kg}</label>
 </form>
 <script>
     $(function(){
@@ -99,4 +106,81 @@
             });
         });
     });
+    function plushEMS(obj) {
+        $('#totals_price').text(get_all_price());
+    }
+    /**
+     * 获取所有的价格
+     * @returns {number}
+     */
+    function get_all_price() {
+        $prices =0;
+        $sf=0;
+//        $('.cart_product').each(function () {
+//            if($(this).children('label').children('input[type="checkbox"]').is(':checked')){
+//                $price = $(this).children('span').children('h2').children('font').text();
+//                $sum = $(this).children('span').children('strong').children('input[type="number"]').val();
+//                $ll =parseInt($price)*parseInt($sum);
+//                $prices +=$ll;
+//                $sf += parseInt($sum);
+//            }
+//        });
+        $('#pro_sum').text($sf);
+
+        // 邮费价格
+        $tt= get_ems_price();
+        if($('#sfkd').is(':checked')){
+            $tt=0;
+        }
+        $pry = $tt;
+        $('#shunfeng').text("￥"+$pry);
+        $('#shunfeng_price').val($pry);
+        return $pry;
+    }
+
+    function get_ems_price() {
+        $mass=0;
+        $tal=0;
+        $kg = 0;
+        $('.cart_product').each(function () {
+
+            $number = $(this).children('span').children('strong').children('input.number').val();
+            $input = $(this).children('span').children('strong').children('input.mass');
+            if($input.attr('data-fufei')==1){
+                if($input.val()!=''){
+                    $mass = parseFloat($input.val());
+                    $kg +=$mass*$number;
+                }
+            }
+
+        });
+
+        if($kg>0){
+            $price = $('#express_price').text();
+            $overweight = $('#express_overweight').text();
+            $tal = overweight(parseFloat($price),parseFloat($overweight),parseFloat($kg));
+
+        }
+        if($tal!=NaN){
+            //$('#shunfeng').text("￥"+$tal);
+            return parseFloat($tal);
+        }else {
+            return 0;
+        }
+    }
+    /**
+     *计算价格
+     * @param p
+     * @param p1
+     * @param h
+     * @returns {*}
+     */
+    function overweight(p,p1,h) {
+        if(h<=1){
+            return p;
+        }else{
+            return p+(h-1)*p1;
+        }
+    }
+
 </script>

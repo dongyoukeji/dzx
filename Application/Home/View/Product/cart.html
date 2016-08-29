@@ -126,7 +126,6 @@
 <!-- 选中地区 结束 -->
 <script type="text/javascript">
 	$(function(){
-		clearCookie();
 		$('.wine_box_num').change(function () {
 			get_boxes_price($(this));
 			get_all_price();
@@ -187,13 +186,11 @@
 			}
 
 			$form = $('form');
-			//layer.load(2, {
-			//	shade: [0.3,'#000'] //0.1透明度的白色背景
-			//});
+			layer.load(2, {
+				shade: [0.3,'#000'] //0.1透明度的白色背景
+			});
 
 			var json = $form.serialize();
-
-
 
 			$.post($form.attr('action'),$form.serialize(),function (data) {
 				if(data.status==1){
@@ -381,7 +378,7 @@
 		$pry =$prices + $tt + $pp;
 		$('#totals_price1').val($pry);
 		$('#totals_price').text($pry);
-		
+
 		return $pry;
 	}
 	/**

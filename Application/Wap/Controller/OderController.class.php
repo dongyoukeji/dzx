@@ -18,34 +18,34 @@ class OderController extends BaseController {
         $map['ordcode']=array('like','%'.$id.'%');
         $order = M('order')->where($map)->find();
 
-        $flag=false;
-        $ids = '';
-
         $exp = explode(',',$order['ordcode']);
+        $ids = '';
+        $flag = false;
         foreach ($exp as $v){
-            if($v==$id){
-                $flag=true;
+            if($v!=$id){
+
+                $ids.=','.$v;
+            }else{
+                $flag = true;
                 $data['productid']=$v;
                 $ids.=','."d_".$v;
-            }else{
-                $ids.=','.$v;
             }
         }
-
         if(!$flag){
             $this->ajaxReturn(array('status'=>0,'msg'=>'你已经领取了，不能重复领取'));
         }
 
 
         $time = time();
+        $data['ordid']=get_order_trade_no();
         $data['username']=I('post.suser');
+        $data['phone']=I('post.sphone');
         $data['phone']=I('post.sphone');
         $data['ordtime']=$time;
         $data['finishtime']=$time;
         $data['ordbuynum']=1;
-        $data['isused']=2;          //兑换订单
-        $data['ordid']=get_order_trade_no();
-        p($data);die;
+        $data['isused']=2;
+
         $t = M('order')->save(array(
             'id'=>$order['id'],
             'ordcode'=>substr($ids,1)
@@ -98,7 +98,7 @@ class OderController extends BaseController {
         $data['ordid']=get_order_trade_no();
         $data['boxid']=$list['boxid'];
         $data['box_price']=$list['box_price'];
-        p($data);die;
+
         if(!$oid = M('order')->add($data)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
         }
@@ -112,7 +112,8 @@ class OderController extends BaseController {
                 }
             }else if($k=='coupon'){
                 foreach ($j as $v) {
-                    $_id = M('article')->execute('UPDATE `think_article` SET `sum`=sum-' . $v['sum'] . '  WHERE `id`=' . $v['id']);
+                    $column = M('article')->field('id,column_id,title')->find($v['id']);
+                    $_id = M('article')->execute('UPDATE `think_article` SET `sum`=sum-' . $v['sum'] . '  WHERE `id`=' . $column['id']);
                     $coupons = M('coupons')->where(array('coupon_cid' => $v['id'], 'coupons_status' => 0))->limit($v['sum'])->select();
                     foreach ($coupons as $kk) {
                         $_ids .= ',' . $kk['id'];

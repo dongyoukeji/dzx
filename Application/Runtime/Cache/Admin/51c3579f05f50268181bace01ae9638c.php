@@ -53,9 +53,8 @@
                     <strong>
                         <select name="coupons_type">
                             <option value="-1">筛选</option>
-                            <option value="0" <?php if(($search["status"]) == "0"): ?>selected<?php endif; ?>>未支付订单</option>
-                            <option value="1" <?php if(($search["status"]) == "1"): ?>selected<?php endif; ?>>支付订单</option>
-                            <option value="2" <?php if(($search["status"]) == "2"): ?>selected<?php endif; ?>>兑换订单</option>
+                            <option value="0" <?php if(($search["status"]) == "0"): ?>selected<?php endif; ?>>未发送</option>
+                            <option value="1" <?php if(($search["status"]) == "1"): ?>selected<?php endif; ?>>已发送</option>
                         </select>
                     </strong>
                 </form>

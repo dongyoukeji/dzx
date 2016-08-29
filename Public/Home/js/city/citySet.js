@@ -148,6 +148,7 @@ function  getExpessPrice(n) {
 
         $('.cart_product').each(function () {
             if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
+
                 $number = $(this).children('span.cart_pro_right').children('strong').children('input.number').val();
                 $input = $(this).children('span.cart_pro_right').children('strong').children('input.mass');
                 if($input.attr('data-fufei')==1){
@@ -158,7 +159,7 @@ function  getExpessPrice(n) {
                 }
             }
         });
-        
+
         if(kg==1){
             price = data.list.price;
         }else {

@@ -57,6 +57,14 @@
                         <input  type="button" onclick="javascript:window.location.href='<?php echo U('index');?>'" value="全部">
                     </span>
                     <strong>
+                        <select name="coupons_type1">
+                            <option value="-1">筛选</option>
+                            <option value="0" <?php if(($search["status1"]) == "0"): ?>selected<?php endif; ?>>未发放</option>
+                            <option value="1" <?php if(($search["status1"]) == "1"): ?>selected<?php endif; ?>>已发放</option>
+                            <option value="2" <?php if(($search["status1"]) == "2"): ?>selected<?php endif; ?>>以使用</option>
+                        </select>
+                    </strong>
+                    <strong>
                         <select name="coupons_type">
                             <option value="-1">筛选</option>
                             <option value="0" <?php if(($search["status"]) == "0"): ?>selected<?php endif; ?>>实物卡券</option>

@@ -146,16 +146,12 @@ class WineController extends BaseController {
 		//控制器名称
 		($title = I('get.coupons_title','', 'trim')) && $map['username'] = array('like', '%' . $title . '%');
 		//状态（正常，禁用）
-		if ($_GET['coupons_type'] == null) {
-			$status = -1;
-		} else {
-			$status = intval($_GET['coupons_type']);
-		}
-		if($status!=2){
-			$status >= 0 && $map['ordstatus'] = array('eq', $status);
-		}else{
-			$status >= 0 && $map['isused'] = array('eq', 2);
-		}
+        if ($_GET['coupons_type'] == null) {
+            $status = -1;
+        } else {
+            $status = intval($_GET['coupons_type']);
+        }
+        $status >= 0 && $map['post_status'] = array('eq',$status);
 		//输出
 		$this->assign('search', array(
 			'title' => $title,

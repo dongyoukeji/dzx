@@ -18,6 +18,14 @@
                         <input  type="button" onclick="javascript:window.location.href='{:U('index')}'" value="全部">
                     </span>
                     <strong>
+                        <select name="coupons_type1">
+                            <option value="-1">筛选</option>
+                            <option value="0" <eq name="search.status1" value="0">selected</eq>>未发放</option>
+                            <option value="1" <eq name="search.status1" value="1">selected</eq>>已发放</option>
+                            <option value="2" <eq name="search.status1" value="2">selected</eq>>以使用</option>
+                        </select>
+                    </strong>
+                    <strong>
                         <select name="coupons_type">
                             <option value="-1">筛选</option>
                             <option value="0" <eq name="search.status" value="0">selected</eq>>实物卡券</option>

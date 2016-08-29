@@ -17,7 +17,7 @@ class OderController extends BaseController {
 
         $id = I('post.id');
         $map['ordcode']=array('like','%'.$id.'%');
-        $order = M('order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time,payment_buyer_email',false)->where($map)->find();
+        $order = M('order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time,payment_buyer_email',true)->where($map)->find();
 
         if(empty($order['ordcode']) || !strstr($order['ordcode'],$id)){
             $this->ajaxReturn(array('status'=>0,'msg'=>'你已经领取了，不能重复领取'));
@@ -25,15 +25,24 @@ class OderController extends BaseController {
 
         $exp = explode(',',$order['ordcode']);
         $ids = '';
+        $flag = false;
         foreach ($exp as $v){
             if($v!=$id){
+
                 $ids.=','.$v;
             }else{
+                $flag = true;
                 $data['productid']=$v;
                 $ids.=','."d_".$v;
             }
         }
+        if(!$flag){
+            $this->ajaxReturn(array('status'=>0,'msg'=>'你已经领取了，不能重复领取'));
+        }
+
+
         $time = time();
+        $data['ordid']=get_order_trade_no();
         $data['username']=I('post.suser');
         $data['phone']=I('post.sphone');
         $data['phone']=I('post.sphone');
@@ -99,6 +108,8 @@ class OderController extends BaseController {
             $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
         }
         $_ids='';
+
+
         foreach ($list['update'] as $k => $j){
             if($k=='goods'){
                foreach ($j as $v){
@@ -107,7 +118,8 @@ class OderController extends BaseController {
                }
             }else if($k=='coupon'){
                 foreach ($j as $v) {
-                    $_id = M('article')->execute('UPDATE `think_article` SET `sum`=sum-' . $v['sum'] . '  WHERE `id`=' . $v['id']);
+                    $column = M('article')->field('id,column_id,title')->find($v['id']);
+                    $_id = M('article')->execute('UPDATE `think_article` SET `sum`=sum-' . $v['sum'] . '  WHERE `id`=' . $column['id']);
                     $coupons = M('coupons')->where(array('coupon_cid' => $v['id'], 'coupons_status' => 0))->limit($v['sum'])->select();
                     foreach ($coupons as $kk) {
                         $_ids .= ',' . $kk['id'];
@@ -128,6 +140,7 @@ class OderController extends BaseController {
                 }
             }
         }
+
         //新增物流
 //        $exp=array(
 //            'orderid'=>$oid,
@@ -140,8 +153,6 @@ class OderController extends BaseController {
 //        if(!M('express')->add($exp)){
 //            $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
 //        };
-
-
         session('short_cart',null);
         $this->ajaxReturn(array('status'=>1,'msg'=>'恭喜你下单成功','order_id'=>$oid,'redirect'=>U('doAlyPay?order_id='.$oid)));
     }

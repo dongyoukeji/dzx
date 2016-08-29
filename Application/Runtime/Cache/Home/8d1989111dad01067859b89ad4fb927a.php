@@ -45,7 +45,7 @@
 		<!-- 购物列表 -->
 		<div class="cart_pro_list">
 			<!-- 购买的商品 -->
-			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><div class="cart_product car_check" data-index='<?php if(($vo1["type"]) == "1"): ?>goods<?php endif; if(($vo1["type"]) == "2"): ?>wine<?php endif; if(($vo1["type"]) == "3"): ?>coupon<?php endif; ?>_<?php echo ($vo1["id"]); ?>'>
+			<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo1): $mod = ($i % 2 );++$i;?><div class="cart_product car_check" data-index='<?php if(($vo1["type"]) == "1"): ?>goods<?php endif; if(($vo1["type"]) == "2"): ?>wine<?php endif; if(($vo1["type"]) == "3"): ?>coupon<?php endif; ?>_<?php if(($vo1["type"]) == "3"): echo ($vo1["coupon_cid"]); else: echo ($vo1["id"]); endif; ?>'>
 						<span class="cart_pro_left">
 							<input type="checkbox"  onclick="inpCheck(this)" checked />
 							<!-- <label for="product2"></label> -->
@@ -154,7 +154,6 @@
 <!-- 选中地区 结束 -->
 <script type="text/javascript">
 	$(function(){
-		clearCookie();
 		$('.wine_box_num').change(function () {
 			get_boxes_price($(this));
 			get_all_price();
@@ -215,15 +214,13 @@
 			}
 
 			$form = $('form');
-			//layer.load(2, {
-			//	shade: [0.3,'#000'] //0.1透明度的白色背景
-			//});
+			layer.load(2, {
+				shade: [0.3,'#000'] //0.1透明度的白色背景
+			});
 
 			var json = $form.serialize();
 
-
-
-			$.post($form.attr('action'),$form.serialize(),function (data) {
+			$.post($form.attr('action'),json,function (data) {
 				if(data.status==1){
 					layer.closeAll('loading');
 					clearCookie();

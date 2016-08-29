@@ -43,7 +43,7 @@ class ProductController extends BaseController {
       
         $this->boxes = $boxes = M('article')->field('id,title,description,image,price,tprice')->where(array('status'=>0,'column_id'=>10))->select();
 
-        if(!empty($goods['wine']) || !empty($goods['goods'])){
+        if(!empty($goods['wine']) || !empty($goods['goods']) || !empty($goods['coupon'])){
             
         }else{
             $this->redirect('index/index');
@@ -123,7 +123,7 @@ class ProductController extends BaseController {
         if($kg<1){
             $tal = 0;
         }else{
-            $tal = 20+($kg-1)*2;
+            $tal = 12+($kg-1)*2;
         }
        
         $this->kg=$kg;
