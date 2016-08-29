@@ -144,12 +144,27 @@ function  getExpessPrice(n) {
     $.getJSON('/Product/get_price',{n:n},function (data) {
         $('#express_price').text(data.list.price);
         $('#express_overweight').text(data.list.overweight);
-        var kg = $('#express_kg').text();
-        if(kg!=''){
-            kg = parseFloat(kg);
-        }
+        var kg=0;
 
-        var price = overweight(data.list.price,data.list.overweight,kg);
+        $('.cart_product').each(function () {
+            if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
+                $number = $(this).children('span.cart_pro_right').children('strong').children('input.number').val();
+                $input = $(this).children('span.cart_pro_right').children('strong').children('input.mass');
+                if($input.attr('data-fufei')==1){
+                    if($input.val()!=''){
+                        $mass = parseFloat($input.val());
+                        kg +=$mass*$number;
+                    }
+                }
+            }
+        });
+        
+        if(kg==1){
+            price = data.list.price;
+        }else {
+            price = data.list.price+(kg-1)*data.list.overweight;
+        }
+       
         $('#shunfeng').text(price);
     });
 }
