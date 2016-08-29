@@ -71,7 +71,7 @@
                         <eq name="vo1.type" value="2">
                             <div class="clear"></div>
                             <div class="wine_box swipe" data-key="{$key}">
-                                <div class="lrhdxz">左右滑动选择包装盒</div>
+                                <div class="lrhdxz"><span>左右滑动选择包装盒</span></div>
                                 <ul id="slider{$key}" class="slider">
                                     <volist name="boxes" id="vo2" key="k">
                                         <li data-key="{$key}">
@@ -245,10 +245,16 @@
     // 购物车商品选中状态
     function inpCheck(obj){
         $obj =$(obj);
+        var wine_box = $obj.siblings('div.wine_check').children('input');
         if($obj.children('input').is(':checked')){
             $obj.parent().addClass('cart_check');
         }else{
             $obj.parent().removeClass('cart_check');
+            if(wine_box.is(':checked')){
+                wine_box.removeAttr('checked');
+                wine_box.siblings('label').children('u').children('small').hide();
+                $obj.siblings('div.wine_box').hide();
+            }
         }
         $('#totals_price').text(get_all_price());
     }
@@ -596,7 +602,7 @@
      * @param obj
      * @returns {number}
      */
-    function get_boxes_price(obj) {
+    function get_boxes_price(obj) {     //obj == wine_box_num
         $boxes_price=0;
         $element = obj.parent('span').parent('li').parent('ul').parent('div.wine_box');
         $key = $element.attr('data-key');  
@@ -631,7 +637,7 @@
      * @param obj
      * @returns {number}
      */
-    function get_boxes_price_by_images(obj) {
+    function get_boxes_price_by_images(obj) {          //obj == thbzh
         $boxes_price=0;
         // $element = obj.parent('li');
         $element1 = obj.parent('li').parent('ul').parent('div.wine_box');
