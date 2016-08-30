@@ -482,7 +482,7 @@ class BaseController extends Controller {
     public function delFile($id=0){
         $id=$id?$id:I('id','',intval);
         $file=!empty($_POST['file'])?$_POST['file']:'';
-        if(emnpty($file)){
+        if(empty($file)){
             $f =M('file')->find($id);
             $file=$f['path'];
         }
