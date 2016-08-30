@@ -19,7 +19,7 @@ class GoodsController extends BaseController {
 	public function add($id=0){
 		if($id){
 			$order = M('Order')->field('id,username,ordid,sums,mass,shun_feng,post_address,post_userinfo,post_goods_express,isused')->find($id);
-			
+
 			if($order['isused']==2){
 				$goods= M('article')->find($order['productid']);
 				$goods['count']=1;
@@ -35,7 +35,8 @@ class GoodsController extends BaseController {
 						$order['pro'][]=$goods;
 					}
 					if(strstr($v,'coupon')){
-						$coupon= M('coupons')->field('id,coupons_title')->where(array('coupon_cid'=>$temp[1]))->find();
+                        $goods= M('article')->field('id,column_id')->find($temp[1]);
+						$coupon= M('coupons')->field('id,coupons_title')->where(array('coupon_cid'=>$goods['column_id']))->find();
 						$coupon['title']=$coupon['coupons_title'];
 						$coupon['count']=$temp[2];
 						$order['pro'][]=$coupon;

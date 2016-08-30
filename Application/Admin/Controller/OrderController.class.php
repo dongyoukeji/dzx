@@ -47,7 +47,8 @@ class OrderController extends BaseController {
 						$goods['count']=$temp[2];
 						$order['pro'][]=$goods;
 					}else{
-						$coupon= M('coupons')->where(array('coupon_cid'=>$temp[1]))->find();
+                        $goods= M('article')->field('id,column_id')->find($temp[1]);
+                        $coupon= M('coupons')->field('id,coupons_title')->where(array('coupon_cid'=>$goods['column_id']))->find();
 						$coupon['title']=$coupon['coupons_title'];
 						$coupon['count']=$temp[2];
 						$order['pro'][]=$coupon;
