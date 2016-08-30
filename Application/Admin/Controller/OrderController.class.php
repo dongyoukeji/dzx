@@ -26,9 +26,11 @@ class OrderController extends BaseController {
 	public function see($id=0){
 		if($id){
 			$order = M('Order')->field('payment_type,payment_trade_no,payment_trade_status,payment_notify_id,payment_notify_time',true	)->find($id);
+
 			$box = $this->_get_box_info($order);
 			if($order['isused']==2){
-				$goods= M('article')->find($order['productid']);
+				$coupons= M('coupons')->field('id,coupon_cid,coupons_val,coupons_use_order')->find($order['productid']);
+                $goods= M('article')->field('id,title')->find($coupons['coupon_cid']);
 				$goods['count']=1;
 				$order['pro'][]=$goods;
 			}else{

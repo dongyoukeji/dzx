@@ -18,7 +18,7 @@ class GoodsController extends BaseController {
     }
 	public function add($id=0){
 		if($id){
-			$order = M('Order')->field('id,username,ordid,sums,post_address,post_userinfo,post_goods_express,isused')->find($id);
+			$order = M('Order')->field('id,username,ordid,sums,mass,shun_feng,post_address,post_userinfo,post_goods_express,isused')->find($id);
 			
 			if($order['isused']==2){
 				$goods= M('article')->find($order['productid']);

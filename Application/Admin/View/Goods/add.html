@@ -18,9 +18,17 @@
                         <input name='id' id="id" type="hidden" value="{$oder.id}" />
                         <input name='orderId' type="hidden" value="{$oder.ordid}" />
                     </span>
-                        <span>
+                    <span>
                         <em>收货手机</em>
                         <input name='phones' id="phones" type="text" value="{$oder.post_userinfo|get_user_right}" class="required"/>
+                    </span>
+                    <span>
+                       <em>付费</em>
+                        <label><eq name="oder.shun_feng" value="1">到付<else />已付</eq></label>
+                    </span>
+                    <span>
+                       <em>邮费</em>
+                        <label>{$oder.mass}</label>
                     </span>
                     <span>
                         <em>收货地址</em>

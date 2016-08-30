@@ -165,7 +165,7 @@ function  getExpessPrice(n) {
         }else {
             price = data.list.price+(kg-1)*data.list.overweight;
         }
-       
         $('#shunfeng').text(price);
+        plushEMS($('#shunfeng_ems'));
     });
 }

@@ -35,7 +35,7 @@
             <span class="cart_pro_right">
                         <h2>￥<i class="single_price"><?php echo ($vo["tprice"]); ?></i><span>元</span></h2>
                     <strong style="display:none;">
-                        <input type="hidden" value="1">
+
                          <input type="hidden" name="mass" value="<?php echo ($vo["mass"]); ?>" id="mass" class="mass" data-fufei='1'>
                          <input type="hidden" name="huan" value="1" id="huan" class="number">
                     </strong>
@@ -43,6 +43,7 @@
                 <input type="hidden" name="id" value="<?php echo ($vo["coupons_id"]); ?>" id="id">
                 <input type="hidden" name="tprice" value="<?php echo ($vo["tprice"]); ?>" id="tprice">
                 <input type="hidden" name="coupon_cid" value="<?php echo ($vo["coupon_cid"]); ?>" id="coupon_cid">
+                <input type="hidden" name="shunfeng_price" value="0" id="shunfeng_price">
         </div>
     </div>
     <!-- 用户信息 -->
@@ -91,7 +92,7 @@
 				<div class="clear"></div>
 				<i>如未收到短信息请联系客服</i>
 			</span>
-            <label id="express_price" style="display:none;">20</label>
+            <label id="express_price" style="display:none;">12</label>
             <label id="express_overweight" style="display:none;">2</label>
             <label id="express_kg" style="display:none;"><?php echo ($kg); ?></label>
     </div>
@@ -190,13 +191,37 @@
 //                shade: [0.3,'#000'] //0.1透明度的白色背景
 //            });
             $.post($form.attr('action'),$form.serialize(),function (data) {
-                if(data.status==1){
+                if(data.status==2){
+                    layer.closeAll('loading');
+                    clearCookie();
+                    //询问框
+                    layer.confirm(data.msg, {
+                        btn: ['我选好了现在支付','不买了我没有想好'] //按钮
+                    }, function(){
+                        layer.closeAll();
+                        layer.open({
+                            type: 2,
+                            area: ['1024px', '850px'],
+                            fix: false, //不固定
+                            maxmin: true,
+                            content: data.redirect
+                        });
+                    }, function(){
+//                        $.post('<?php echo U("oder/cancel");?>',{id:data.order_id},function (data) {
+//                            if(data.status==1){
+//                                window.location.href=data.redirect;
+//                            }else {
+//                                layer.alert(data.msg,{icon:2});
+//                            }
+//                        });
+                    });
+                }else if (data.status==1){
                     layer.alert(data.msg,{icon:1,end:function () {
-                       // window.location.reload();
+                        window.location.reload();
                     }});
-                }else{
+                }else {
                     layer.alert(data.msg,{icon:2,end:function () {
-                        //window.location.reload();
+                        window.location.reload();
                     }});
                 }
             });
@@ -275,6 +300,7 @@
             $tt=0;
         }
         $('#totals_price1').val($tt);
+        $('#shunfeng_price').val($tt);
         return $tt;
     }
     /**
@@ -311,6 +337,7 @@
     }
 
     function plushEMS(obj) {
+
         $('#totals_price').text(get_all_price());
     }
 
@@ -338,6 +365,7 @@
 
         if($tal!=NaN){
             $('#shunfeng').text("￥"+$tal);
+            $('#totals_price').val($tal);
             return parseFloat($tal);
         }else {
             return 0;

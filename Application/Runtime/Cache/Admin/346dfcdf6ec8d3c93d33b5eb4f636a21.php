@@ -57,9 +57,17 @@
                         <input name='id' id="id" type="hidden" value="<?php echo ($oder["id"]); ?>" />
                         <input name='orderId' type="hidden" value="<?php echo ($oder["ordid"]); ?>" />
                     </span>
-                        <span>
+                    <span>
                         <em>收货手机</em>
                         <input name='phones' id="phones" type="text" value="<?php echo (get_user_right($oder["post_userinfo"])); ?>" class="required"/>
+                    </span>
+                    <span>
+                       <em>付费</em>
+                        <label><?php if(($oder["shun_feng"]) == "1"): ?>到付<?php else: ?>已付<?php endif; ?></label>
+                    </span>
+                    <span>
+                       <em>邮费</em>
+                        <label><?php echo ($oder["mass"]); ?></label>
                     </span>
                     <span>
                         <em>收货地址</em>

@@ -147,7 +147,7 @@ class OderController extends BaseController {
 //            $this->ajaxReturn(array('status'=>0,'msg'=>'下单失败请重试'));
 //        };
 
-        session('short_cart',null);
+        session('wap_short_cart',null);
         $this->ajaxReturn(array('status'=>1,'msg'=>'恭喜你下单成功','order_id'=>$oid,'redirect'=>U('doWechatPay?order_id='.$oid)));
     }
 

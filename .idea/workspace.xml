@@ -2,41 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33831485-4166-4c42-8916-81124a95c259" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/CouponsController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/CouponsController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Coupons/index.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Coupons/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Wine/index.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Wine/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/GetgoodsController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/GetgoodsController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/OrderController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/OrderController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Goods/add.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Goods/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Wine/add.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Wine/add.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/OderController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/OderController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ProductController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ProductController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Getgoods/details.html" afterPath="$PROJECT_DIR$/Application/Home/View/Getgoods/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Product/cart.html" afterPath="$PROJECT_DIR$/Application/Home/View/Product/cart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/51c3579f05f50268181bace01ae9638c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/51c3579f05f50268181bace01ae9638c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/cc86584be0c8c7ca9a8ae0a8c9d2de4d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/14f245992849797c92ec741952d07590.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/14f245992849797c92ec741952d07590.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/7d60a0b248cbfac91494830d5f3b23ce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8d1989111dad01067859b89ad4fb927a.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8d1989111dad01067859b89ad4fb927a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a35902cc21a38cb3937f0b4276b4510f.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a35902cc21a38cb3937f0b4276b4510f.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/346dfcdf6ec8d3c93d33b5eb4f636a21.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/346dfcdf6ec8d3c93d33b5eb4f636a21.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/77a6066030b19b25a41c89a644d2839b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/77a6066030b19b25a41c89a644d2839b.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a7a4c583fec9f63bca267aebd4ffb8d5.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a7a4c583fec9f63bca267aebd4ffb8d5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Wap/589f579601cccd8ad88b8274da03ca5e.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Wap/589f579601cccd8ad88b8274da03ca5e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/16_08_26.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/16_08_26.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Wap/16_08_26.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Wap/16_08_26.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/117137a23c3cb95237b2d20d067dd0b9.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/117137a23c3cb95237b2d20d067dd0b9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/19ab714d37b7e44a596b6479b933de05.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/19ab714d37b7e44a596b6479b933de05.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/26986ed0c61bdaf4111065b3d71fb701.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/26986ed0c61bdaf4111065b3d71fb701.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/426a68d547bf6fa7ff667b551627ad45.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/426a68d547bf6fa7ff667b551627ad45.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/674f10ce1dd349f06c84ce9d1a74925e.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/674f10ce1dd349f06c84ce9d1a74925e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/7b5a988c80e3a9cd9272866feff1663b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/7b5a988c80e3a9cd9272866feff1663b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/991d6e799f270ae4a11c19577957b98e.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/991d6e799f270ae4a11c19577957b98e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/9a500ffe8fd8527ccd07fdd7a6d9053e.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/9a500ffe8fd8527ccd07fdd7a6d9053e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/af44d2686509d67c2b7c46794358446d.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/af44d2686509d67c2b7c46794358446d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Temp/d53a5ad92c87810b3befc7c4bd6d8f7b.php" afterPath="$PROJECT_DIR$/Application/Runtime/Temp/d53a5ad92c87810b3befc7c4bd6d8f7b.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wap/Controller/GetgoodsController.class.php" afterPath="$PROJECT_DIR$/Application/Wap/Controller/GetgoodsController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php" afterPath="$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html" afterPath="$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Wap/View/Query/details.html" afterPath="$PROJECT_DIR$/Application/Wap/View/Query/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/SFExpress.js" afterPath="$PROJECT_DIR$/Data/SFExpress.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/city/citySet.js" afterPath="$PROJECT_DIR$/Public/Home/js/city/citySet.js" />
     </list>
     <list id="cfee3b30-fb69-40ff-88ae-0d4d921e00d7" name="Failed commit: Default" comment="去掉注释代码" />
@@ -59,30 +34,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="details.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html">
+      <file leaf-file-name="GoodsController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="20" column="77" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="77" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OderController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php">
+      <file leaf-file-name="WineController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-              <folding>
-                <marker date="1472464922891" expanded="true" signature="3365:3428" ph="UPDATE `thin... " />
-                <marker date="1472464922891" expanded="true" signature="3491:3602" ph="UPDATE `thin... " />
-                <marker date="1472464922891" expanded="true" signature="3846:3913" ph="UPDATE `thin... " />
-                <marker date="1472464922891" expanded="true" signature="4672:4735" ph="UPDATE `thin... " />
-              </folding>
+            <state relative-caret-position="585">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/OrderController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="31" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wine/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,19 +95,23 @@
         <option value="$PROJECT_DIR$/Application/Wap/View/Product/cart.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/CouponsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Coupons/index.html" />
-        <option value="$PROJECT_DIR$/Public/Home/js/city/citySet.js" />
         <option value="$PROJECT_DIR$/Data/SFExpress.js" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ProductController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/GetgoodsController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/OderController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Wine/index.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php" />
         <option value="$PROJECT_DIR$/Application/Wap/View/Query/details.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Product/cart.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Getgoods/details.html" />
         <option value="$PROJECT_DIR$/Application/Wap/Controller/GetgoodsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html" />
         <option value="$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Home/js/city/citySet.js" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/OderController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Getgoods/details.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Goods/add.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Wine/add.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/OrderController.class.php" />
       </list>
     </option>
   </component>
@@ -152,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,11 +201,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Wap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,25 +219,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Wap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dzx.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dzx.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Wap" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -248,8 +229,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,11 +298,12 @@
       <workItem from="1472448930998" duration="137000" />
       <workItem from="1472449140268" duration="2231000" />
       <workItem from="1472452263467" duration="12353000" />
+      <workItem from="1472521742134" duration="5482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14721000" />
+    <option name="totallyTimeSpent" value="20203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,14 +315,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23552124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21787094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18002081" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -353,6 +332,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -395,6 +375,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1472522039990" expanded="true" signature="3365:3428" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="3491:3602" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="3846:3913" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="4672:4735" ph="UPDATE `thin... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -422,9 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -432,18 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="0" column="3458" selection-start-line="0" selection-start-column="3458" selection-end-line="0" selection-end-column="3458" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/city/citySet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding>
-            <marker date="1472456818531" expanded="true" signature="260:272" ph="..." />
-            <marker date="1472456818531" expanded="true" signature="321:333" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -451,7 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,35 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wine/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="140" column="67" selection-start-line="134" selection-start-column="8" selection-end-line="140" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wine/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="107" selection-start-line="17" selection-start-column="107" selection-end-line="17" selection-end-column="107" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -501,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="107" selection-start-line="16" selection-start-column="27" selection-end-line="17" selection-end-column="107" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -509,24 +471,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="818">
           <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/GetgoodsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wap/View/Product/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="362" column="5" selection-start-line="331" selection-start-column="4" selection-end-line="362" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="149" column="31" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#6;n#empty#0;n#div#0;n#!!top" expanded="false" />
+            <marker date="1472522039990" expanded="true" signature="3365:3428" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="3491:3602" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="3846:3913" ph="UPDATE `thin... " />
+            <marker date="1472522039990" expanded="true" signature="4672:4735" ph="UPDATE `thin... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Product/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="380" column="8" selection-start-line="380" selection-start-column="8" selection-end-line="380" selection-end-column="8" />
+        <state relative-caret-position="600">
+          <caret line="219" column="17" selection-start-line="195" selection-start-column="16" selection-end-line="219" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/city/citySet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="169" column="7" selection-start-line="169" selection-start-column="7" selection-end-line="169" selection-end-column="7" />
+          <folding>
+            <marker date="1472524112789" expanded="true" signature="260:272" ph="..." />
+            <marker date="1472524112789" expanded="true" signature="321:333" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Getgoods/details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="45" column="89" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+        <state relative-caret-position="519">
+          <caret line="215" column="29" selection-start-line="215" selection-start-column="29" selection-end-line="215" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#span#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -539,11 +548,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/GetgoodsController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OderController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="690">
+          <caret line="86" column="82" selection-start-line="86" selection-start-column="74" selection-end-line="86" selection-end-column="82" />
+          <folding>
+            <marker date="1472525530175" expanded="true" signature="4159:4222" ph="UPDATE `thin... " />
+            <marker date="1472525530175" expanded="true" signature="4284:4395" ph="UPDATE `thin... " />
+            <marker date="1472525530175" expanded="true" signature="4638:4705" ph="UPDATE `thin... " />
+            <marker date="1472525530175" expanded="true" signature="5464:5527" ph="UPDATE `thin... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -555,48 +569,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/OderController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <marker date="1472461234635" expanded="true" signature="3681:3744" ph="UPDATE `thin... " />
-            <marker date="1472461234635" expanded="true" signature="3806:3917" ph="UPDATE `thin... " />
-            <marker date="1472461234635" expanded="true" signature="4160:4227" ph="UPDATE `thin... " />
-            <marker date="1472461234635" expanded="true" signature="4986:5049" ph="UPDATE `thin... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wap/View/Product/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="362" column="5" selection-start-line="331" selection-start-column="4" selection-end-line="362" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="31" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wap/View/Getgoods/details.html">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wine/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#strong#0;n#span#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Wap/Controller/OderController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-          <folding>
-            <marker date="1472464922891" expanded="true" signature="3365:3428" ph="UPDATE `thin... " />
-            <marker date="1472464922891" expanded="true" signature="3491:3602" ph="UPDATE `thin... " />
-            <marker date="1472464922891" expanded="true" signature="3846:3913" ph="UPDATE `thin... " />
-            <marker date="1472464922891" expanded="true" signature="4672:4735" ph="UPDATE `thin... " />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="77" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/WineController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/OrderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
