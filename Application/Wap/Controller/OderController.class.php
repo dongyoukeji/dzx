@@ -13,6 +13,8 @@ class OderController extends BaseController {
             'post_address'=>str_replace(',','_',I('post.city')).'|'.I('post.street'),
             'shun_feng'=>$_POST['shunfeng_ems']?$_POST['shunfeng_ems']:0
         );
+        $city = explode('-',$_POST['city']);
+        $ac = $this->get_price($city[0]);
 
         $id = I('post.id');
         $map['ordcode']=array('like','%'.$id.'%');
@@ -36,6 +38,7 @@ class OderController extends BaseController {
         }
 
 
+        $kg=I('post.mass');
         $time = time();
         $data['ordid']=get_order_trade_no();
         $data['username']=I('post.suser');
@@ -45,6 +48,8 @@ class OderController extends BaseController {
         $data['finishtime']=$time;
         $data['ordbuynum']=1;
         $data['isused']=2;
+        $data['ordfee']=$this->_get_mass_price($ac['price'],$ac['overweight'],$kg);
+        $data['mass']=$this->_get_mass_price($ac['price'],$ac['overweight'],$kg);
 
         $t = M('order')->save(array(
             'id'=>$order['id'],
@@ -70,8 +75,11 @@ class OderController extends BaseController {
 //            'express_geter'=>I('post.huser')."|".I('post.hphone').'|'.I('post.city').'|'.I('post.street')
 //        );
 //        M('express')->add($exp);
-
-        $this->ajaxReturn(array('status'=>1,'msg'=>'领取成功请等待发货，在此期间请保持手机通畅，我们将会以短信形式通知您'));
+        if($_POST['shun_feng']==1){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'恭喜你领取成功,您选择了到付'));
+        }else{
+            $this->ajaxReturn(array('status'=>2,'msg'=>'恭喜你领取成功,请完成运费操作','order_id'=>$oid,'redirect'=>U('doAlyPay?order_id='.$oid)));
+        }
     }
 
     /**

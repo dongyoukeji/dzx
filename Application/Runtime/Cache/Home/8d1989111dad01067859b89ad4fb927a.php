@@ -220,7 +220,7 @@
 
 			var json = $form.serialize();
 
-			$.post($form.attr('action'),json,function (data) {
+			$.post($form.attr('action'),$form.serialize(),function (data) {
 				if(data.status==1){
 					layer.closeAll('loading');
 					clearCookie();
@@ -406,7 +406,7 @@
 		$pry =$prices + $tt + $pp;
 		$('#totals_price1').val($pry);
 		$('#totals_price').text($pry);
-		
+
 		return $pry;
 	}
 	/**

@@ -4,6 +4,7 @@
         <!-- 商品 -->
         <div class="cart_product">
             <label>
+                <input type="checkbox" checked style="display:none;">
                 <b><img src="<?php echo ($vo["image"]); ?>"></b>
             </label>
             <span>
@@ -32,9 +33,10 @@
             <input type="text" name="suser" id="suser" placeholder="姓名">
             <input type="tel" name="sphone" id="sphone" placeholder="联系电话">
             <style type="text/css">
-                ._citys{width: 97%;}
+                .area_ctrl{height: 240px;}
             </style>
-            <input type="text" name="city" readonly="true" id="city" placeholder="选择省市" value="江苏省-苏州市-姑苏区">
+            <input type="text" name="city" id="demo1" readonly="true" placeholder="选择省市" value="江苏省-苏州市-姑苏区" />
+            <input id="value1" type="hidden" />
             <textarea placeholder="街道信息" name="street" id="street"></textarea>
         </div>
     </div>
@@ -51,11 +53,10 @@
 </form>
 <script>
     $(function(){
-        var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
         // 选择城市
         var area1 = new LArea();
         area1.init({
-            'trigger': '#city',
+            'trigger': '#demo1',
             'valueTo': '#value1',
             'keys' :{
                 id:'value',
@@ -64,6 +65,7 @@
             'type': 2,
             'data': [provs_data, citys_data, dists_data]
         });
+        var phoneReg = /^1[3|4|5|7|8]\d{9}$/;
         // 去除input样式
         $('.user_info input,.user_info textarea').focus(function() {
             $(this).removeClass('enter_error');
@@ -92,9 +94,9 @@
             }
             $form = $('#form');
 
-            layer.load(2, {
-                shade: [0.3,'#000'] //0.1透明度的白色背景
-            });
+//            layer.load(2, {
+//                shade: [0.3,'#000'] //0.1透明度的白色背景
+//            });
             $.post($form.attr('action'),$form.serialize(),function (data) {
                 if(data.status==1){
                     layer.alert(data.msg,{icon:1,end:function () {

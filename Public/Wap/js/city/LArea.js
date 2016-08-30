@@ -323,10 +323,11 @@ window.LArea = (function() {
             var countyCode = area_county.childNodes[countyVal].getAttribute('ref');
             _self.trigger.value = provinceText + ((cityText)?('-' + cityText):(''))+ ((countyText)?('-' + countyText):(''));
             _self.value = [provinceVal, cityVal, countyVal];
+
             if(this.valueTo){
                 this.valueTo.value= provinceCode +((cityCode)?('-' + cityCode):('')) + ((countyCode)?('-' + countyCode):(''));
+                this.getProviceName(this.valueTo.value);
             }
-            this.getProviceName(this.valueTo.value);
             _self.close(e);
         },
         close: function(e) {
@@ -370,6 +371,7 @@ window.LArea = (function() {
                     price = data.list.price+(kg-1)*data.list.overweight;
                 }
                 $('#shunfeng').text(price);
+                $('#shunfeng_price').val(price);
             });
         },
         /**
