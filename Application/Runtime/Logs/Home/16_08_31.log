@@ -1,0 +1,822 @@
+[ 2016-08-31T10:40:03+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+
+[ 2016-08-31T12:07:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` IN ('1','2','3','4') LIMIT 5   [ RunTime:0.0104s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007808s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007852s ]
+NOTIC: [8] Undefined variable: nums /home/wwwroot/dzx.com/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 321 行.
+NOTIC: [8] Undefined variable: nums /home/wwwroot/dzx.com/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 322 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-08-31T12:07:36+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:07:44+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:07:44+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0004s ]
+
+[ 2016-08-31T12:07:44+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:07:51+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001323s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001620s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000300s ]
+
+[ 2016-08-31T12:07:57+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:08:18+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-08-31T12:09:15+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:10:15+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2016-08-31T12:10:35+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001291s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:11:24+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:29:30+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Tool\Qcloud::__construct(), called in /home/wwwroot/dzx.com/Application/Home/Controller/IndexController.class.php on line 22 and defined /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 12 行.
+NOTIC: [2] Missing argument 2 for Tool\Qcloud::__construct(), called in /home/wwwroot/dzx.com/Application/Home/Controller/IndexController.class.php on line 22 and defined /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 12 行.
+NOTIC: [8] Undefined variable: secretId /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 13 行.
+NOTIC: [8] Undefined variable: secretKey /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 14 行.
+
+[ 2016-08-31T12:29:48+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Tool\Qcloud::__construct(), called in /home/wwwroot/dzx.com/Application/Home/Controller/IndexController.class.php on line 22 and defined /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 12 行.
+NOTIC: [8] Undefined variable: secretKey /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 14 行.
+
+[ 2016-08-31T12:30:10+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: Tool\Qcloud::$SecretId /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 44 行.
+
+[ 2016-08-31T12:30:36+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined property: Tool\Qcloud::$SecretId /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 42 行.
+
+[ 2016-08-31T12:31:33+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:31:34+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:31:39+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:31:40+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:32:17+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: Tool\Qcloud::$SecretId /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 42 行.
+
+[ 2016-08-31T12:33:38+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: Tool\Qcloud::$SecretId /home/wwwroot/dzx.com/Application/Tool/Qcloud.class.php 第 42 行.
+
+[ 2016-08-31T12:33:56+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:33:58+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:33:59+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:33:59+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:33:59+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+
+[ 2016-08-31T12:33:59+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:33:59+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:23+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:24+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:24+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0004s ]
+
+[ 2016-08-31T12:34:24+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:34:24+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:25+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:25+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:34:25+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:25+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:34:31+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0005s ]
+
+[ 2016-08-31T12:34:32+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+
+[ 2016-08-31T12:34:32+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:34:33+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:34:33+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:34:33+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:35:03+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:38:33+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:08+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:08+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:39:09+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:10+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:10+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:39:10+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:39:10+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:11+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:11+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:11+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:11+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:19+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+
+[ 2016-08-31T12:39:20+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0009s ]
+
+[ 2016-08-31T12:39:21+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:39:21+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0007s ]
+
+[ 2016-08-31T12:39:21+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+
+[ 2016-08-31T12:41:29+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:41:30+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
+
+[ 2016-08-31T12:41:30+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:42:21+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:42:22+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:42:22+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:42:23+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+
+[ 2016-08-31T12:42:34+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0001s ]
+
+[ 2016-08-31T12:43:49+08:00 ] 127.0.0.1 /index/get_teng
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0002s ]
+

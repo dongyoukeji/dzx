@@ -1,0 +1,440 @@
+[ 2016-08-31T10:40:02+08:00 ] 127.0.0.1 /Admin/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016569s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015534s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015676s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2016-08-31T10:40:10+08:00 ] 127.0.0.1 /Admin/public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `think_admin` [ RunTime:0.1107s ]
+SQL: SELECT * FROM `think_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' /home/wwwroot/dzx.com/Application/Admin/Controller/PublicController.class.php 第 37 行.
+SQL: UPDATE `think_admin` SET `last_date`='1472611210',`last_ip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0260s ]
+NOTIC: [8] Undefined index: logintime /home/wwwroot/dzx.com/Application/Admin/Controller/PublicController.class.php 第 58 行.
+NOTIC: [8] Undefined index: loginip /home/wwwroot/dzx.com/Application/Admin/Controller/PublicController.class.php 第 59 行.
+
+[ 2016-08-31T10:40:10+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0288s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0143s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `column_id` = 3 LIMIT 1   [ RunTime:0.0102s ]
+SQL: SELECT * FROM `think_article` WHERE `column_id` = 3 ORDER BY date desc,id desc LIMIT 0,1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_column` WHERE ( fid=0 ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2016-08-31T10:40:10+08:00 ] 127.0.0.1 /Admin/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::_details() should be compatible with Admin\Controller\BaseController::_details($attr) /home/wwwroot/dzx.com/Application/Admin/Controller/MemberController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: status /home/wwwroot/dzx.com/Application/Admin/Controller/MemberController.class.php 第 601 行.
+NOTIC: [8] Undefined index: package /home/wwwroot/dzx.com/Application/Admin/Controller/MemberController.class.php 第 629 行.
+NOTIC: [8] Undefined index: pname /home/wwwroot/dzx.com/Application/Admin/Controller/MemberController.class.php 第 630 行.
+NOTIC: [8] Undefined variable: map /home/wwwroot/dzx.com/Application/Admin/Controller/MemberController.class.php 第 632 行.
+SQL: SHOW COLUMNS FROM `think_member` [ RunTime:0.0109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_member` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_member` WHERE `status` = 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8] Undefined index: cid /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined index: cid /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+NOTIC: [8] Undefined variable: inIt /home/wwwroot/dzx.com/Application/Runtime/Cache/Admin/cd4483014f2e11fff8848d4b0b1995b7.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000293s ]
+
+[ 2016-08-31T10:40:13+08:00 ] 127.0.0.1 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000266s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000289s ]
+
+[ 2016-08-31T10:40:16+08:00 ] 127.0.0.1 /Admin/Article/del?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: DELETE FROM `think_article` WHERE `id` = 2 [ RunTime:0.0002s ]
+
+[ 2016-08-31T10:40:18+08:00 ] 127.0.0.1 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2016-08-31T10:40:21+08:00 ] 127.0.0.1 /Admin/Article/del?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: DELETE FROM `think_article` WHERE `id` = 3 [ RunTime:0.0001s ]
+
+[ 2016-08-31T10:40:23+08:00 ] 127.0.0.1 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2016-08-31T10:40:26+08:00 ] 127.0.0.1 /Admin/Article/del?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: DELETE FROM `think_article` WHERE `id` = 4 [ RunTime:0.0001s ]
+
+[ 2016-08-31T10:40:28+08:00 ] 127.0.0.1 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2016-08-31T10:40:30+08:00 ] 127.0.0.1 /Admin/Article/del?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_article` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: DELETE FROM `think_article` WHERE `id` = 5 [ RunTime:0.0001s ]
+
+[ 2016-08-31T10:40:32+08:00 ] 127.0.0.1 /Admin/Article/index?cid=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [2048] Declaration of Admin\Controller\ArticleController::del() should be compatible with Admin\Controller\BaseController::del($id = 0) /home/wwwroot/dzx.com/Application/Admin/Controller/ArticleController.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `think_model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_model` WHERE ( fid=0 and "show"=0 and status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 3 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 5 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 8 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 10 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 9 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `think_model` WHERE `fid` = 11 AND `status` = 0 AND `show` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `think_column` WHERE `status` = 0 AND `type` < 3 ORDER BY id asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`fid` FROM `think_column` WHERE ( status=0 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `fid` = 5 AND `status` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`fid`,`title` FROM `think_column` WHERE `id` = 5 AND `status` = 0 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+NOTIC: [2] Missing argument 2 for Tool\Category::getChildrens(), called in /home/wwwroot/dzx.com/Application/Tool/Category.class.php on line 114 and defined /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/dzx.com/Application/Tool/Category.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `think_article` WHERE `title` LIKE '%%' AND `column_id` = 5 LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000260s ]
+

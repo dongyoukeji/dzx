@@ -186,7 +186,7 @@ class ProductController extends BaseController {
         if($kg<1){
             $tal = 0;
         }else{
-            $tal = 20+($kg-1)*2;
+            $tal = 12+($kg-1)*2;
         }
        
         $this->kg=$kg;

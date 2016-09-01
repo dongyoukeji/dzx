@@ -90,7 +90,7 @@
 		</div>
 		<div class="clear"></div>
 
-		<label id="express_price" style="display:none;">20</label>
+		<label id="express_price" style="display:none;">12</label>
 		<label id="express_overweight" style="display:none;">2</label>
 		<label id="express_kg" style="display:none;">{$kg}</label>
 
@@ -248,13 +248,20 @@
 	// 购物车商品选中状态
 	function inpCheck(obj){
 		$obj =$(obj);
+		var wine_box = $obj.siblings('strong').children('div.wine_check').children('input');
 		if($obj.is(':checked')){
 			$obj.parent().parent().attr('class','cart_product car_check');
 		}else{
 			$obj.parent().parent().attr('class','cart_product car_uncheck');
+			if(wine_box.is(':checked')){
+                wine_box.removeAttr('checked');
+                wine_box.siblings('label').children('u').children('small').hide();
+                $obj.parent('span.cart_pro_left').siblings('div.wine_box').hide();
+            }
 			//$('#wine_pic'+$key).find('small').empty().hide();
 		}
-		get_all_price();
+		//get_all_price();
+		$('#totals_price').text(get_all_price());
 		//$('#totals_price').text(get_all_price());
 	}
 
@@ -354,10 +361,12 @@
 	function get_all_price() {
 		$prices =0;
 		$sf=0;
+		$pp = 0;
 		$('.cart_product').each(function () {
 			if($(this).children('span.cart_pro_left').children('input[type="checkbox"]').is(':checked')){
 				$price = $(this).children('span.cart_pro_right').children('h2').children('i.single_price').text();
 				$sum = $(this).children('span.cart_pro_right').children('strong').children('input[type="text"]').val();
+				var boxbz = $(this).children('span.cart_pro_left').children('strong').children('div.wine_check').children('input.bzhxz');
 				$ll =parseInt($price)*parseInt($sum);
 				$prices +=$ll;
 				$sf += parseInt($sum);
@@ -369,7 +378,6 @@
 		}
 		//盒子价格
 		$pp = get_boxes_totals();
-		
 		//邮费价格
 		$tt= get_ems_price();
 		if($('.shunfeng_ems').is(':checked')){
@@ -378,7 +386,6 @@
 		$pry =$prices + $tt + $pp;
 		$('#totals_price1').val($pry);
 		$('#totals_price').text($pry);
-
 		return $pry;
 	}
 	/**
@@ -472,6 +479,7 @@
 			$obj.next().children('u').children('small').hide();
 			$obj.parent().parent().parent().siblings('div.wine_box').hide();
 		}
+		get_all_price();
 	}
 
 	// 显示红酒包装盒价格
@@ -503,7 +511,6 @@
 			var pric = $(this).children('label').children('u').find('small').text();
 			if($ckeckbox1.is(':checked')){
 				if($ckeckbox.is(':checked')){
-					
 					if(pric!=''){
 						pric = pric.match(reg);
 						$boxes_totals += parseFloat(pric);
@@ -518,7 +525,7 @@
 			}
 		});
 		
-		// $tp = {$totals};		
+		// $tp = {$totals};
 		
 		// if($boxes_totals!=0){
 		// 	$tp = parseFloat($tp)+$boxes_totals;

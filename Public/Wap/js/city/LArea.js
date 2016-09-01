@@ -372,6 +372,7 @@ window.LArea = (function() {
                 }
                 $('#shunfeng').text(price);
                 $('#shunfeng_price').val(price);
+                get_all_price();
             });
         },
         /**

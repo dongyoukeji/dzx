@@ -18,6 +18,7 @@ class IndexController extends BaseController {
         $_result = sendSMS($data['phone'],$_var,$sms_info1);
     }
 
+ 
     /**
      * 生成短网址
      * @param string $u 生成地址
