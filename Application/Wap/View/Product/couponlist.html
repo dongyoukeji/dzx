@@ -1,33 +1,56 @@
 <include file="Common:header1" />
 <div class="main">
     <div class="main_nav posfix">
-        <a href="{:U('product/index?oid=1')}" class="hairy_bg">
-            礼品盒
-        </a><a href="{:U('product/index?oid=2')}" class="coupon_bg">
-        礼品券
-    </a><a href="{:U('product/index?oid=5')}" class="wine_bg">
-        红酒
-    </a>
+       <div class="product_nav">
+            <ul>
+                <li><span>礼品盒</span></li>
+                <li><span>礼品券</span></li>
+                <li class="nav_posab"><span>红酒</span></li>
+            </ul>            
+        </div>
+        <div class="nav_absload">
+            <ul class="product_nav_list bzhxz">
+                <li><a href="{:U('product/index?oid=1&sid=4')}" <eq name="Think.get.cid" value="4">class="active"</eq>>大众蟹礼盒</a></li>
+                <li><a href="{:U('product/index?oid=1&sid=2')}" <eq name="Think.get.cid" value="2">class="active"</eq>>外贸蟹礼盒</a></li>
+                <li><a href="{:U('product/index?oid=1&sid=1')}" <eq name="Think.get.cid" value="1">class="active"</eq>>移民蟹礼盒</a></li>
+            </ul>
+            <ul class="product_nav_list bzhxz">
+                <li><a href="{:U('product/index?oid=2&sid=4')}" <if condition="$Think.get.sid eq 4 and $Think.get.oid eq 2">class="active"</if>>大众蟹礼品券</a></li>
+                <li><a href="{:U('product/index?oid=2&sid=2')}"<if condition="$Think.get.sid eq 2 and $Think.get.oid eq 2">class="active"</if>>外贸蟹礼品券</a></li>
+                <li><a href="{:U('product/index?oid=2&sid=1')}" <if condition="$Think.get.sid eq 1 and $Think.get.oid eq 2">class="active"</if>>移民蟹礼品券</a></li>
+            </ul>
+            <ul class="product_nav_list bzhxz">
+                <li><a href="{:U('product/index?oid=3&to=199')}" <eq name="hg" value="1">class="active"</eq>>0-199</a></li>
+                <li><a href="{:U('product/index?oid=3&from=200&to=399')}" <eq name="hg" value="2">class="active"</eq>>200-399</a></li>
+                <li><a href="{:U('product/index?oid=3&from=400&to=599')}" <eq name="hg" value="4">class="active"</eq>>400-599</a></li>
+                <li><a href="{:U('product/index?oid=3&from=600')}" <eq name="hg" value="6">class="active"</eq>>600+</a></li>
+            </ul>
+        </div>
     </div>
     <div class="pro_list" style="margin-top:60px;">
-        <volist name="list" id="vo">
-            <!-- 商品 -->
-            <a href="{:U('product/details?id='.$vo['id'].'&t=c')}" class="pro_coupon">
-				<span class="coupon_left">
-					<strong>
-                        <h4>{$vo.coupons_title}</h4>
-                        <p class="yellow_col">{$vo['pro']['description']|get_pro_left}</p>
-                        <p class="yellow_col">{$vo['pro']['description']|get_pro_right}</p>
-                    </strong>
-				</span>
-				<span class="coupon_rigt">
-					<strong>
-                        <h4 class="white_col">礼品券</h4>
-                        <b class="yellow_col">￥{$vo['pro']['tprice']}</b>
-                    </strong>
-				</span>
-            </a>
-        </volist>
+		<empty name="list">
+			<div class="not_product">暂无相关产品</div>
+			<else />
+			<volist name="list" id="vo">
+				<!-- 商品 -->
+				<a href="{:U('product/details?id='.$vo['id'].'&t=c')}" class="pro_coupon">
+					<span class="coupon_left">
+						<strong>
+							<h4>{$vo.coupons_title}</h4>
+							<p class="yellow_col">{$vo['pro']['description']|get_pro_left}</p>
+							<p class="yellow_col">{$vo['pro']['description']|get_pro_right}</p>
+						</strong>
+					</span>
+					<span class="coupon_rigt">
+						<strong>
+							<h4 class="white_col">礼品券</h4>
+							<b class="yellow_col">￥{$vo['pro']['tprice']}</b>
+						</strong>
+					</span>
+				</a>
+			</volist>
+		</empty>
+        
     </div>
     <div class="clear"></div>
 </div>

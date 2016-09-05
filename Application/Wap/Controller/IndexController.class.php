@@ -3,6 +3,46 @@ namespace Wap\Controller;
 use Think\Controller;
 class IndexController extends BaseController {
     public function index() {
+        vendor('wechatThinkPHP.Wechat');
+
+        $options = array(
+			'token'=>'pinkanQW', //填写你设定的key
+			'encodingaeskey'=>'uNXYHP7HGp2mVlgKuLC5ReKi0Yi85LEPv3j1ZCg0yUw', //填写加密用的EncodingAESKey
+			'appid'=>'wxf02790fbcadf974a', //填写高级调用功能的app id
+ 			'appsecret'=>'d5f062346b24ca499e6997fc2f38d4db' //填写高级调用功能的密钥
+         );
+        $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
+        $weObj = new \Wechat($options);
+        $type = $weObj->getRev()->getRevType();
+        $path='./Data/Log/'.date('Y-m-d',time());
+        if (!file_exists($path)){
+            mkdir($path,0777,true);
+        }
+        //file_put_contents($path."/".time().'.txt',$postStr);
+        switch($type) {
+            case \Wechat::MSGTYPE_TEXT:
+                $weObj->text("hello, I'm wechat")->reply();
+                exit;
+                break;
+            case \Wechat::EVENT_MENU_VIEW:
+                $openid = $weObj->getRevFrom();
+                file_put_contents($path."/".time().'.txt',$postStr);
+                exit;
+                break;
+            default:
+                $weObj->text("欢迎关注，品看生活网")->reply();
+        }
+//
+//        $newmenu =  array(
+//   		    "button"=>
+//                array(
+//
+//                    array('type'=>'view','name'=>'品看生活','url'=>'http://www.pinkan.cn/wap')
+//                )
+//   		);
+//
+//        $weObj->createMenu($newmenu);
+
         $this->com_list=$this->get_com_list(6);
         $this->display();
     }

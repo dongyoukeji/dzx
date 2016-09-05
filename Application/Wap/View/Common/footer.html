@@ -9,6 +9,16 @@
 <script src="__JS__/layer/layer.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function(){
+		//展示导航
+        $('.product_nav ul li').live('click',function(e){
+            var index = $(this).index();
+            $('.nav_absload ul').eq(index).toggle().siblings().hide();
+            $(document).on('click', function(e){
+                $('.nav_absload ul').hide();
+            });
+            e.stopPropagation();
+        });
+
         // 礼券
         $('#current').click(function(){
             var content = '<input type="text" placeholder="请输入礼品券号码" class="enter1" /><input type="button" value="领取" class="draw1 red_bg" />';

@@ -208,21 +208,22 @@
                         btn: ['想好了现在支付', '不买了没想好'] //按钮
                     }, function () {
                         layer.closeAll();
-                        layer.open({
-                            type: 2,
-                            area: ['1024px', '850px'],
-                            fix: false, //不固定
-                            maxmin: true,
-                            content: data.redirect
-                        });
+//                        layer.open({
+//                            type: 2,
+//                            area: ['1024px', '850px'],
+//                            fix: false, //不固定
+//                            maxmin: true,
+//                            content: data.redirect
+//                        });
+                        window.location.href=data.redirect;
                     }, function () {
-                        $.post('{:U("oder/cancel")}', {id: data.order_id}, function (data) {
-                            if (data.status == 1) {
-                                window.location.href = data.redirect;
-                            } else {
-                                layer.alert(data.msg, {icon: 2});
-                            }
-                        });
+//                        $.post('{:U("oder/cancel")}', {id: data.order_id}, function (data) {
+//                            if (data.status == 1) {
+//                                window.location.href = data.redirect;
+//                            } else {
+//                                layer.alert(data.msg, {icon: 2});
+//                            }
+//                        });
                     });
                 }
             });

@@ -23,28 +23,32 @@
         <div class="main_top_right"></div>
     </div>
     <div class="proudct_list small_product_list">
-        <!-- 产品 -->
-        <volist name="list" id="vo">
-            <div class="product_info small_product">
-                <strong class="product_img"><img src="{$vo.image}"></strong>
-                <div class="product_price">
-                    <strong>
-                        <em class="triangle-left"></em>
-                        <i>抢鲜价</i>
-                        <b><font>￥{$vo.tprice}</font>元</b>
-                        <small class="triangle-topleft"></small>
-                    </strong>
-                    <span>
-                        <i>市场价：{$vo.price}元</i>
-                        <b>{$vo.title}</b>
-                        <u>产品规格</u>
-                        {$vo.description|get_pro_details}
-                    </span>
-                    <img src="__IMAGES__/zhengpin.fw.png">
-                    <a href="{:U('product/details?id='.$vo['id'])}" class="raisecar raisecar_pos">查看详情</a>
-                </div>
-            </div>
-        </volist>
+		<empty name="list">
+			<div class="not_product">暂无相关产品</div>
+			<else />
+			<!-- 产品 -->
+			<volist name="list" id="vo">
+				<div class="product_info small_product">
+					<strong class="product_img"><img src="{$vo.image}"></strong>
+					<div class="product_price">
+						<strong>
+							<em class="triangle-left"></em>
+							<i>抢鲜价</i>
+							<b><font>￥{$vo.tprice}</font>元</b>
+							<small class="triangle-topleft"></small>
+						</strong>
+						<span>
+							<i>市场价：{$vo.price}元</i>
+							<b>{$vo.title}</b>
+							<u>产品规格</u>
+							{$vo.description|get_pro_details}
+						</span>
+						<img src="__IMAGES__/zhengpin.fw.png">
+						<a href="{:U('product/details?id='.$vo['id'])}" class="raisecar raisecar_pos">查看详情</a>
+					</div>
+				</div>
+			</volist>
+		</empty>
         <div class="clear"></div>
         <div class="page">
             {$page}

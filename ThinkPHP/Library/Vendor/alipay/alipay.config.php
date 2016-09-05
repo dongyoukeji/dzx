@@ -24,10 +24,10 @@ $alipay_config['seller_id']	= $alipay_config['partner'];
 $alipay_config['key']			= 'o70trv4tkum55i4ym0oqqvng21x0eu66';
 
 // 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['notify_url'] = "http://www.dzx.com/Notify/Alipay";
+$alipay_config['notify_url'] = "http://www.pinkan.cn/Notify/Alipay";
 
 // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['return_url'] = "http://www.dzx.com/Notify/Alipay";
+$alipay_config['return_url'] = "http://www.pinkan.cn/Notify/Alipay";
 
 //签名方式
 $alipay_config['sign_type']    = strtoupper('MD5');

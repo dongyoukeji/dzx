@@ -38,11 +38,31 @@ class NotifyController extends PublicController {
         }
         $returnXml = $notify->returnXml();
         echo $returnXml;
-        
+
         $return_data = (array)$notify;
-        $tree = (array)json_decode($return_data['data']['attach']);
-        
-        $this->OperationSql($tree['type'],$tree['id'],$tree['user_id']);
+        $info = json_decode($return_data['data'],true);
+		$order = json_decode($return_data['data']['attach'],true);
+		
+		$order1 = M('order')->find($order['id']);
+		if($order1['ordstatus']!=1){
+	        if(!M('order')->save(array(
+				'id'=>$order['id'],
+				'ordstatus'=>1,
+				'payment_type'=>'wechat',
+				'payment_trade_status'=>$info['result_code'],
+				'payment_notify_id'=>$info['transaction_id'],
+				'payment_notify_time'=>strtotime($info['time_end']),
+				'payment_buyer_email'=>$info['openid'],
+				'finishtime'=>time()
+			))){
+				echo "fail";
+			};
+			$sms_info1 ="尊敬的".$order['username']."，你成功支付了订单号为".$order['ordid']."的账单".$order['ordfee']."元，现等待官方发货。";
+			$_var = random(4,1);
+			session('var',$_var);
+			$_result = sendSMS($order['phone'],$_var,$sms_info1);
+		}
+		echo '';
 	}
 	/**
 	 * @todo 回调支付宝支付

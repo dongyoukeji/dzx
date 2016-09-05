@@ -156,7 +156,7 @@ class OderController extends BaseController {
 //        };
 
         session('wap_short_cart',null);
-        $this->ajaxReturn(array('status'=>1,'msg'=>'恭喜你下单成功','order_id'=>$oid,'redirect'=>U('doWechatPay?order_id='.$oid)));
+        $this->ajaxReturn(array('status'=>1,'msg'=>'恭喜你下单成功','order_id'=>$oid,'redirect'=>'http://pinkan.cn/wap/oder/WeChatPay?order_id='.$oid));        //U('WeChatPay?order_id='.$oid)
     }
 
     /**
@@ -421,7 +421,7 @@ class OderController extends BaseController {
         $unifiedOrder->setParameter("body","阳澄湖大闸蟹专卖店");//商品描述
         $unifiedOrder->setParameter("out_trade_no","$out_trade_no");//商户订单号
         $unifiedOrder->setParameter("total_fee","$total_fee");//总金额
-        $unifiedOrder->setParameter("notify_url", 'http://www.pinkan.cn/Notify/WeChatPay');//通知地址
+        $unifiedOrder->setParameter("notify_url", 'http://www.pinkan.cn/wap/Notify/WeChatPay');//通知地址
         $unifiedOrder->setParameter("trade_type","NATIVE");//交易类型
 
 
@@ -437,6 +437,40 @@ class OderController extends BaseController {
         //获取统一支付接口结果
         $unifiedOrderResult = $unifiedOrder->getResult();
         p($unifiedOrderResult);
+    }
+    public function pay_session(){
+        p($_REQUEST);die;
+    }
+    /**
+     * @todo 微信支付
+     */
+    public function WeChatPay($order_id){
+        $order1 = M('order')->field('id,ordfee,ordid,phone,username')->find($order_id);
+        $total_fee = $order1['ordfee'] * 100;          //
+        $out_trade_no = $order1['ordid'];
+
+        //引入WxPayPubHelper
+        vendor("WxPayPub.WxPayJsApiPay");
+        $tools = new \JsApiPay();
+
+        //②、统一下单
+        $input = new \WxPayUnifiedOrder();
+        $input->SetBody("阳澄湖大闸蟹专卖店");
+        $input->SetAttach(json_encode($order1));
+        $input->SetOut_trade_no("$out_trade_no");
+        $input->SetTotal_fee("$total_fee");//$total_fee
+        $input->SetTime_start(date("YmdHis"));
+        $input->SetTime_expire(date("YmdHis", time() + 600));
+        $input->SetGoods_tag("");
+        $input->SetNotify_url(WEB_HOST."Wap/Notify/WeChatPay");
+        $input->SetTrade_type("JSAPI");
+        $input->SetOpenid($tools->GetOpenid());                    //'onP74wOKIE0qSq54D1Qqr_0gypyY'
+        $order = \WxPayApi::unifiedOrder($input);
+       
+        $jsApiParameters = $tools->GetJsApiParameters($order);
+        $this->assign('jsApiParameters',$jsApiParameters);  
+        $this->assign('order',$order1);
+        $this->display('Product/wechat_pay');
     }
 
     /**

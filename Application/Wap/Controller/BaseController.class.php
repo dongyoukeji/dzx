@@ -35,7 +35,7 @@ class BaseController extends Controller {
         $show=$p->show();
         $this->assign('page', $show);
         $res = $model->where($map)->cache(true)->field($field)->group($group)->limit($p->firstRow . ',' . $p->listRows)->order($order)->select();
-
+		
         return $res;
     }
     /**

@@ -64,3 +64,31 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
 SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0007s ]
 SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0003s ]
 
+[ 2016-09-01T14:49:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `think_column` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `think_column` WHERE ( status=0 and id!=5 and id!=10 )  [ RunTime:0.0201s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` IN ('1','2','3','4') LIMIT 5   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `think_article` WHERE `status` = 0 AND `column_id` = 5 LIMIT 6   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.014581s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.014621s ]
+NOTIC: [8] Undefined variable: nums /home/wwwroot/dzx.com/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 321 行.
+NOTIC: [8] Undefined variable: nums /home/wwwroot/dzx.com/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 322 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008297s ]
+

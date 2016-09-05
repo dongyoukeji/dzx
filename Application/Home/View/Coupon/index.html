@@ -22,26 +22,30 @@
         <div class="main_top_right"></div>
     </div>
     <div class="proudct_list small_product_list">
-        <volist name="list" id="vo">
-            <a href="{:U('Coupon/details?id='.$vo['id'])}">
-                <div class="gift_token gift_token_list">
-                    <b class="wihe1 yhq_bg gift_token_bg1"><img src="__IMAGES__/yhq_bg1.fw.png" /></b>
-                    <em class="wihe2 yhq_bg gift_token_bg2"><img src="__IMAGES__/yhq_bg2.fw.png" /></em>
-				<span class="gift_token_left">
-					<h2>{$vo.coupons_title}</h2>
-					<strong>
-                        <!--<h2>4只公蟹2.5-3两</h2>-->
-                        <!--<h2>4只母蟹2.0-2.5两</h2>-->
-                        {$vo['coupons_product']['description']|get_pro_details1}
-                    </strong>
-				</span>
-				<span class="gift_token_right">
-					<h2>礼品券</h2>
-					<h3>￥{$vo['coupons_product']['tprice']}</h3>
-				</span>
-                </div>
-            </a>
-        </volist>
+		<empty name="list">
+			<div class="not_product">暂无相关产品</div>
+			<else />
+			<volist name="list" id="vo">
+				<a href="{:U('Coupon/details?id='.$vo['id'])}">
+					<div class="gift_token gift_token_list">
+						<b class="wihe1 yhq_bg gift_token_bg1"><img src="__IMAGES__/yhq_bg1.fw.png" /></b>
+						<em class="wihe2 yhq_bg gift_token_bg2"><img src="__IMAGES__/yhq_bg2.fw.png" /></em>
+					<span class="gift_token_left">
+						<h2>{$vo.coupons_title}</h2>
+						<strong>
+							<!--<h2>4只公蟹2.5-3两</h2>-->
+							<!--<h2>4只母蟹2.0-2.5两</h2>-->
+							{$vo['coupons_product']['description']|get_pro_details1}
+						</strong>
+					</span>
+					<span class="gift_token_right">
+						<h2>礼品券</h2>
+						<h3>￥{$vo['coupons_product']['tprice']}</h3>
+					</span>
+					</div>
+				</a>
+			</volist>
+		</empty>
     </div>
     <div class="clear"></div>
     <!--<div class="page" style="margin-top:20px;">-->

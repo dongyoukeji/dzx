@@ -21,15 +21,28 @@ class RedwineController extends BaseController{
 
         $form = I('get.from');
         $to = I('get.to');
-        if($form || $to){
+        if($form || $to){	
+			//$map['tprice']  = array('between',array($form,$to));
+			if(!$form){
+				$form=10;
+			}
+			if($form){
+				$map['tprice']  = array('egt',$form);
+			}
 
-            $map['tprice']  = array('between',array($form,$to));
-            if(!$form){
-                $form=10;
-            }
-            $hg = substr($form,0,1);
-            $this->hg= ($hg!='-')?$hg:1;
-        }
+			if($to){
+				$map['tprice']  = array('egt',$to);
+			}
+
+			if($form && $to){
+				$map['tprice']  = array('between',array($form,$to));
+			}
+			
+			
+
+			$hg = substr($form,0,1);
+			$this->hg= ($hg!='-')?$hg:1;
+		}
         $list = $this->getlist(M('article'),$map,'','',8);
         $this->list=$list;
         $this->display();

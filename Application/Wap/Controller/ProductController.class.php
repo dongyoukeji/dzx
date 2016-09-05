@@ -2,26 +2,64 @@
 namespace Wap\Controller;
 use Think\Controller;
 class ProductController extends BaseController {
-    public function index($oid=0) {
-        if($oid==1){
+    public function index($oid=0,$sid=0) {
+		$order="date desc";
+        if($oid==1){	//螃蟹
             $map['status']=0;
-            $map['column_id']=array('in','1,2,3,4');
-            $this->list = $list = $this->getlist(M('article'),$map,'date desc','','','id,title,description,image,price,tprice');
-            $tpl="index";
-        }else if($oid==2){
+			if($sid!=0){
+				$map['column_id']=array('eq',$sid);
+			}else{
+				$map['column_id']=array('in','1,2,3,4');
+			}
+            $this->list = $list = $this->getlist(M('article'),$map,$order,'','','id,title,description,image,price,tprice');
+            $this->type=1;
+			$tpl="index";
+        }else if($oid==2){		//礼券
             $map['status']=0;
+			if($sid!=0){
+				$map['coupon_cid']=array('eq',$sid);
+			}
             $list = $this->getlist(M('coupons'),$map,'','coupons_name,coupon_cid','','id,coupons_title,coupon_cid,coupon_content');
             foreach ($list as $k=>$v){
                 $list[$k]['pro']=M('article')->field('id,title,description,image,price,tprice')->find($v['coupon_cid']);
             }
             $this->list =$list;
+			$this->type=2;
             $tpl="couponlist";
-        }else{
-            $map['status']=0;
-            $map['column_id']=5;
-            $this->list = $list = $this->getlist(M('article'),$map,'date desc','','','id,title,description,image,price,tprice');
+        }else{			//红酒
+			$map['status']=0;
+			$map['column_id']=array('eq',5);
+
+			$form = I('get.from');
+			$to = I('get.to');
+			if($form || $to){	
+				//$map['tprice']  = array('between',array($form,$to));
+				if(!$form){
+					$form=10;
+				}
+				if($form){
+					$map['tprice']  = array('egt',$form);
+				}
+
+				if($to){
+					$map['tprice']  = array('egt',$to);
+				}
+
+				if($form && $to){
+					$map['tprice']  = array('between',array($form,$to));
+				}
+				
+				
+
+				$hg = substr($form,0,1);
+				$this->hg= ($hg!='-')?$hg:1;
+			}
+			
+            $this->list = $list = $this->getlist(M('article'),$map,$order,'','','id,title,description,image,price,tprice',5);
             $tpl="index";
+			$this->type=3;
         }
+
         $this->display($tpl);
     }
 
@@ -29,16 +67,25 @@ class ProductController extends BaseController {
      * 获取异步加载信息
      * @param $oid
      */
-    public function get_lists($oid){
+    public function get_lists($oid,$sid,$form,$to){
+		
+		$order="date desc";
         if($_REQUEST['p']){
             $_GET['p']=$_REQUEST['p'];
         }
         if($oid==1){
             $map['status']=0;
-            $map['column_id']=array('in','1,2,3,4');
-            $this->list = $list = $this->getlist(M('article'),$map);
+            if($sid!=0){
+				$map['column_id']=array('eq',$sid);
+			}else{
+				$map['column_id']=array('in','1,2,3,4');
+			}
+            $this->list = $list = $this->getlist(M('article'),$map,$order);
         }else if($oid==2){
             $map['status']=0;
+			if($sid!=0){
+				$map['coupon_cid']=array('eq',$sid);
+			}
             $list = $this->getlist(M('coupons'),$map,'','coupons_name,coupon_cid');
             foreach ($list as $k=>$v){
                 $list[$k]['pro']=M('article')->find($v['coupon_cid']);
@@ -47,7 +94,29 @@ class ProductController extends BaseController {
         }else{
             $map['status']=0;
             $map['column_id']=5;
-            $this->list = $list = $this->getlist(M('article'),$map);
+
+			//$form = $_POST['form'];
+			//$to = $_POST['to'];
+			
+			if($form || $to){	
+				//$map['tprice']  = array('between',array($form,$to));
+				
+				if($form){
+					$map['tprice']  = array('egt',$form);
+				}
+
+				if($to){
+					$map['tprice']  = array('egt',$to);
+				}
+
+				if($form && $to){
+					$map['tprice']  = array('between',array($form,$to));
+				}
+				$hg = substr($form,0,1);
+				$this->hg= ($hg!='-')?$hg:1;
+			}
+			
+            $this->list = $list = $this->getlist(M('article'),$map,$order);
         }
 
         if($list){
@@ -92,6 +161,7 @@ class ProductController extends BaseController {
         $this->assign('page', $show);
         $this->assign('p',$_GET['p']);
         $res = $model->where($map)->cache(true)->field($field)->group($group)->limit($p->firstRow . ',' . $p->listRows)->order($order)->select();
+		
         return $res;
     }
 

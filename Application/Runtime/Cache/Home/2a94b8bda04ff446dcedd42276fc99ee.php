@@ -263,7 +263,7 @@
 <!-- 站尾 -->
 <div class="footer">
     <address>Copyright©2005-2015,Suxiege Co.,Ltd. All right reserved. 所有内容均由阳澄湖大闸蟹制作，未经许可不得转载</address>
-    <i>经营许可证编号: 沪ICP备15028124号</i>
+    <i>苏ICP备16011318号-4</i>
     <b>味道鲜美正是食蟹的大好时节</b>
     <img src="/Public/Home/images/logo.fw.png">
 </div>
@@ -274,7 +274,7 @@
         <a href="#" id="end" class="btn btn-gwc"></a>
         <a href="tencent://Message/?Uin=123456789&websiteName=www.lanrentuku.com=&Menu=yes" class="btn btn-qq"></a>
         <div class="btn btn-wx">
-            <img class="pic" src="/Public/Home/images/weixin.jpg" onclick="window.location.href='http://www.lanrentuku.com'"/>
+            <img class="pic" src="/Public/Home/images/weixin.jpg" />
         </div>
         <div class="btn btn-phone">
             <div class="phone">
@@ -378,17 +378,17 @@
                     if($type=='coupon'){
                         sum1 = $sum;
                         ++sum1;
-                        $.cookie('short_cart_coupon'+$id,['coupon',$id,sum1],{expires: 1,path:'/'});
+                        $.cookie('short_cart_coupon'+$id,['coupon',$id,sum1],{expires: 30,path:'/'});
                         $addcar.attr('data-sum',sum1);
                     }else if ($type=='goods'){
                         sum2 = $sum;
                         ++sum2;
-                        $.cookie('short_cart_goods'+$id,['goods',$id,sum2],{expires: 1,path: '/'});
+                        $.cookie('short_cart_goods'+$id,['goods',$id,sum2],{expires: 30,path: '/'});
                         $addcar.attr('data-sum',sum2);
                     }else {
                         sum3 = $sum;
                         ++sum3;
-                        $.cookie('short_cart_wine'+$id,['wine',$id,sum3],{expires: 1,path:'/'});
+                        $.cookie('short_cart_wine'+$id,['wine',$id,sum3],{expires: 30,path:'/'});
                         $addcar.attr('data-sum',sum3);
                     }
                 }
